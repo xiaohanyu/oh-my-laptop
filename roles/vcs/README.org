@@ -1,0 +1,6 @@
+This module install svn, mercurial and git, and some helper packages for git.
+
+Git helper packages:
+- [[https://github.com/tj/git-extras][git-extras]]: some quite useful and convenient sub command for git
+- [[http://jonas.nitro.dk/tig/][tig]]: text-mode interface for git
+- git-svn: a bridge between svn and git

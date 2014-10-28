@@ -5,3 +5,6 @@
     whoami: xiao
   roles:
     - cc
+    - java
+    - javascript
+    - vcs

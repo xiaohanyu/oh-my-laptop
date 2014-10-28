@@ -1,0 +1,15 @@
+---
+
+- name: install svn and mercurial
+  apt: pkg={{item}} state=present
+  with_items:
+    - subversion
+    - mercurial
+
+- name: install git and some helper packages
+  apt: pkg={{item}} state=present
+  with_items:
+    - git
+    - git-svn
+    - git-extras
+    - tig
