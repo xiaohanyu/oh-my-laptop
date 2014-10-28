@@ -1,6 +1,6 @@
 ---
 
-- name: install svn and mercurial
+- name: install subversion and mercurial
   apt: pkg={{item}} state=present
   with_items:
     - subversion

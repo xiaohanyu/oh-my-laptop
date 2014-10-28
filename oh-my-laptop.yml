@@ -6,5 +6,6 @@
   roles:
     - cc
     - java
+    - clojure
     - javascript
     - vcs

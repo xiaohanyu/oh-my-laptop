@@ -1,0 +1,2 @@
+Just install [[https://github.com/technomancy/leiningen/][leiningen]] and you will get most of your need for developing
+clojure programs.
