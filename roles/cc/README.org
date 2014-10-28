@@ -1,0 +1,1 @@
+Oh-my-laptop ansible cc role just install clang package.

@@ -1,0 +1,7 @@
+- hosts: localhost
+  connection: local
+  sudo: yes
+  vars:
+    whoami: xiao
+  roles:
+    - cc
