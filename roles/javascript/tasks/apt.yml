@@ -1,0 +1,6 @@
+---
+- name: JavaScript packages
+  apt: pkg={{item}} state=present
+  with_items:
+    - nodejs
+    - npm
