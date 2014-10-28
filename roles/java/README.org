@@ -1,0 +1,8 @@
+This module comes from [[https://github.com/ANXS/oracle-jdk][oracle-jdk]].
+
+There're some small minor annoying [[http://stackoverflow.com/questions/22358071/differences-between-oracle-jdk-and-open-jdk-and-garbage-collection][difference]] between [[http://openjdk.java.net/][openjdk]] and
+[[http://www.oracle.com/technetwork/java/javase/downloads/index.html][oracle-jdk]]. However, if you wanna to write production programs, I recommend
+that you should have oracle jdk at your fingertips.
+
+Due to some license limitations of Oracle, to install Oracle JDK on ubuntu, you
+need to add a [[https://launchpad.net/~webupd8team/+archive/ubuntu/java][ppa]], accept some oracle license, etc.

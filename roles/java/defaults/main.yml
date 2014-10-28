@@ -1,0 +1,4 @@
+---
+
+oracle_jdk_java_versions: [6, 7, 8] # A list of java versions you want to have installed (6, 7 and/or 8)
+oracle_jdk_java_version_default: 8 # The java version you want to be the system default
