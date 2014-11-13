@@ -1,0 +1,26 @@
+---
+
+- name: install some small, awesome packages to boost your life
+  apt: pkg={{item}} state=present
+  with_items:
+    - autoconf
+    - aptitude
+    - ack-grep
+    - byobu
+    - cloc
+    - cscope
+    - curl
+    - htop
+    - make
+    - nmap
+    - nmon
+    - pinfo
+    - proxychains
+    - ranger
+    - rlwrap
+    - texinfo
+    - tig
+
+# (HACK): Some linux distributions didn't provide a default .bashrc.
+- name: ensure $HOME/.bashrc is present
+  command: touch /home/{{whoami}}/.bashrc

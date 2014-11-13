@@ -4,6 +4,7 @@
   vars:
     whoami: xiao
   roles:
+    - base
     - cc
     # - java
     # - clojure
