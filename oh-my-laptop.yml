@@ -5,7 +5,7 @@
     whoami: xiao
   roles:
     - cc
-    - java
-    - clojure
-    - javascript
+    # - java
+    # - clojure
+    # - javascript
     - vcs

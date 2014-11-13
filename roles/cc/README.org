@@ -1,1 +1,3 @@
-Oh-my-laptop ansible cc role just install clang package.
+* How to run it.
+
+=ansible-playbook -i localhost oh-my-laptop.yml -K=
