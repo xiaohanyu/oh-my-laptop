@@ -5,6 +5,7 @@
   with_items:
     - subversion
     - mercurial
+    - cvs
 
 - name: install git and some helper packages
   apt: pkg={{item}} state=present

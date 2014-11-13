@@ -5,6 +5,7 @@
   homebrew: pkg={{item}} state=present
   with_items:
     - mercurial
+    - cvs
 
 - name: install some enhancements for git
   homebrew: pkg={{item}} state=present
