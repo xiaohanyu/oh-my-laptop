@@ -27,11 +27,11 @@
 # the default locale of OSX is "C", which is not proper in many cases. Better
 # change it to UTF-8
 - name: change locale from "C" to "en_US.UTF-8" in bash
-  copy: src=bash_profile.osx dest={{user_home}}/.profile
+  copy: src=bash_profile.osx.sh dest={{user_home}}/.profile
 
 # zsh is not totally compatible with bash
 - name: change locale from "C" to "en_US.UTF-8" in zsh
-  copy: src=bash_profile.osx dest={{user_home}}/.zprofile
+  copy: src=bash_profile.osx.sh dest={{user_home}}/.zprofile
 
 # zsh and oh-my-zsh
 - name: install zsh
