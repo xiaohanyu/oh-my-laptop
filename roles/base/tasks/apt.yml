@@ -24,3 +24,26 @@
 # (HACK): Some linux distributions didn't provide a default .bashrc.
 - name: ensure $HOME/.bashrc is present
   command: touch /home/{{whoami}}/.bashrc
+
+- name: ensure $HOME/.zshrc is present
+  command: touch /home/{{whoami}}/.zshrc
+
+# zsh and oh-my-zsh
+- name: install zsh
+  apt: pkg={{item}} state=present
+  with_items:
+    - zsh
+    - zsh-lovers
+
+- name: clone oh-my-zsh repo
+  git: repo=https://github.com/robbyrussell/oh-my-zsh.git
+       dest=/home/{{whoami}}/.oh-my-zsh
+
+- name: backup original zshrc
+  copy: src=/home/{{whoami}}/.zshrc dest=/home/{{whoami}}/.zshrc.orig
+
+- name: deploy .zshrc
+  template: src=files/zshrc.sh dest=/home/{{whoami}}/.zshrc owner={{whoami}}
+
+- name: set zsh as default user shell
+  user: name={{whoami}} shell=/usr/bin/zsh

@@ -18,3 +18,27 @@
 
 - name: ensure $HOME/.bashrc is present
   command: touch /Users/{{whoami}}/.bashrc
+
+- name: ensure $HOME/.zshrc is present
+  command: touch /Users/{{whoami}}/.zshrc
+
+# zsh and oh-my-zsh
+- name: install zsh
+  homebrew: pkg={{item}} state=present
+  with_items:
+    - zsh
+    - zsh-lovers
+
+- name: clone oh-my-zsh repo
+  git: repo=https://github.com/robbyrussell/oh-my-zsh.git
+       dest=/Users/{{whoami}}/.oh-my-zsh
+
+- name: backup original zshrc
+  copy: src=/Users/{{whoami}}/.zshrc dest=/Users/{{whoami}}/.zshrc.orig
+
+- name: deploy .zshrc
+  template: src=zshrc.sh dest=/Users/{{whoami}}/.zshrc owner={{whoami}}
+
+- name: set zsh as default user shell
+  sudo: yes
+  command: chsh -s /bin/zsh {{whoami}}

@@ -3,6 +3,7 @@
   sudo: yes
   vars:
     whoami: xiao
+    user_home: "{{ lookup('env','HOME') }}"
   roles:
     - base
     - cc
