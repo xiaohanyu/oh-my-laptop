@@ -2,8 +2,8 @@
   connection: local
   sudo: yes
   vars:
-    whoami: xiao
-    user_home: "{{ lookup('env','HOME') }}"
+    whoami: "{{ lookup('env', 'USER') }}"
+    user_home: "{{ lookup('env', 'HOME') }}"
   roles:
     - base
     - cc
