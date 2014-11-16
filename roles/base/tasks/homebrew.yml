@@ -20,10 +20,10 @@
 
 # shell
 - name: ensure $HOME/.bashrc is present
-  command: touch /Users/{{whoami}}/.bashrc
-  
+  command: touch {{user_home}}/.bashrc
+
 - name: ensure $HOME/.zshrc is present
-  command: touch /Users/{{whoami}}/.zshrc
+  command: touch {{user_home}}/.zshrc
 
 # http://stackoverflow.com/questions/7165108/in-osx-lion-lang-is-not-set-to-utf8-how-fix
 # the default locale of OSX is "C", which is not proper in many cases. Better
@@ -44,13 +44,13 @@
 
 - name: clone oh-my-zsh repo
   git: repo=https://github.com/robbyrussell/oh-my-zsh.git
-       dest=/Users/{{whoami}}/.oh-my-zsh
+       dest={{user_home}}/.oh-my-zsh
 
 - name: backup original zshrc
-  copy: src=/Users/{{whoami}}/.zshrc dest=/Users/{{whoami}}/.zshrc.orig
+  copy: src={{user_home}}/.zshrc dest={{user_home}}/.zshrc.orig
 
 - name: deploy .zshrc
-  template: src=zshrc.sh dest=/Users/{{whoami}}/.zshrc owner={{whoami}}
+  template: src=zshrc.sh dest={{user_home}}/.zshrc owner={{whoami}}
 
 - name: set zsh as default user shell
   sudo: yes
