@@ -4,6 +4,7 @@
   homebrew: pkg={{item}} state=present
   with_items:
     - ack
+    - ag
     - byobu
     - cloc
     - cscope
@@ -15,11 +16,12 @@
     - ranger
     - rlwrap
     - texinfo
+    - wget
 
 # shell
 - name: ensure $HOME/.bashrc is present
   command: touch /Users/{{whoami}}/.bashrc
-
+  
 - name: ensure $HOME/.zshrc is present
   command: touch /Users/{{whoami}}/.zshrc
 
