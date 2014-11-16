@@ -55,3 +55,7 @@
 - name: set zsh as default user shell
   sudo: yes
   command: chsh -s /bin/zsh {{whoami}}
+
+# add a tmux.conf
+- name: settings tmux.conf
+  copy: src=tmux.conf dest={{user_home}}/.tmux.conf

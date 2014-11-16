@@ -6,7 +6,6 @@
     - autoconf
     - aptitude
     - ack-grep
-    - byobu
     - cloc
     - cscope
     - curl
@@ -20,6 +19,7 @@
     - rlwrap
     - texinfo
     - tig
+    - tmux
 
 # (HACK): Some linux distributions didn't provide a default .bashrc.
 - name: ensure $HOME/.bashrc is present
@@ -47,3 +47,7 @@
 
 - name: set zsh as default user shell
   user: name={{whoami}} shell=/usr/bin/zsh
+
+# add a tmux.conf
+- name: settings tmux.conf
+  copy: src=tmux.conf dest={{user_home}}/.tmux.conf
