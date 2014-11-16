@@ -33,7 +33,7 @@
 
 # zsh is not totally compatible with bash
 - name: change locale from "C" to "en_US.UTF-8" in zsh
-  copy: src=bash_profile.osx.sh dest={{user_home}}/.zprofile
+  copy: src=zsh_profile.osx.sh dest={{user_home}}/.zprofile
 
 # zsh and oh-my-zsh
 - name: install zsh
