@@ -9,6 +9,7 @@
     - cloc
     - cscope
     - htop-osx
+    - md5sha1sum
     - nmap
     # - nmon   # not found in homebrew
     # - pinfo  # not found in homebrew
