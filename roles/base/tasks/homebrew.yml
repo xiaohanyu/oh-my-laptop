@@ -26,15 +26,12 @@
 - name: ensure $HOME/.zshrc is present
   command: touch {{user_home}}/.zshrc
 
-# http://stackoverflow.com/questions/7165108/in-osx-lion-lang-is-not-set-to-utf8-how-fix
-# the default locale of OSX is "C", which is not proper in many cases. Better
-# change it to UTF-8
-- name: change locale from "C" to "en_US.UTF-8" in bash
-  copy: src=bash_profile.osx.sh dest={{user_home}}/.profile
+- name: update bash profile
+  copy: src=bash_profile.sh dest={{user_home}}/.profile
 
 # zsh is not totally compatible with bash
-- name: change locale from "C" to "en_US.UTF-8" in zsh
-  copy: src=zsh_profile.osx.sh dest={{user_home}}/.zprofile
+- name: update zsh profile
+  copy: src=zsh_profile.sh dest={{user_home}}/.zprofile
 
 # zsh and oh-my-zsh
 - name: install zsh

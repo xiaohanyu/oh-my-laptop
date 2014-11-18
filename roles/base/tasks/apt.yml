@@ -28,6 +28,13 @@
 - name: ensure $HOME/.zshrc is present
   command: touch {{user_home}}/.zshrc
 
+- name: update bash profile
+  copy: src=bash_profile.sh dest={{user_home}}/.profile
+
+# zsh is not totally compatible with bash
+- name: update zsh profile
+  copy: src=zsh_profile.sh dest={{user_home}}/.zprofile
+
 # zsh and oh-my-zsh
 - name: install zsh
   apt: pkg={{item}} state=present
@@ -43,10 +50,11 @@
   copy: src={{user_home}}/.zshrc dest={{user_home}}/.zshrc.orig
 
 - name: deploy .zshrc
-  template: src=files/zshrc.sh dest={{user_home}}/.zshrc owner={{whoami}}
+  template: src=zshrc.sh dest={{user_home}}/.zshrc owner={{whoami}}
 
 - name: set zsh as default user shell
-  user: name={{whoami}} shell=/usr/bin/zsh
+  sudo: yes
+  command: chsh -s /usr/bin/zsh {{whoami}}
 
 # add a tmux.conf
 - name: settings tmux.conf
