@@ -4,3 +4,6 @@ export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
 export EDITOR=vim
+
+# some convenient alias
+alias pyhttp="python -m SimpleHTTPServer"
