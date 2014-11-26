@@ -10,4 +10,5 @@
     # - java
     # - clojure
     # - javascript
+    - ruby
     - vcs
