@@ -1,0 +1,109 @@
+#+TITLE: Oh My Laptop
+
+* Introduction
+
+Tired of spending a whole day configuring your Mac/Linux? Then you've come to
+the right place.
+
+Oh-my-laptop try to provide a simple, easy and flexible way to turn your laptop
+into awesome working friends.
+
+This project starts out as my personal script, days when I have to initialize
+my laptop, my vagrant box, my newly-got Mac. I'm tired and I want some
+robots.
+
+Actually, Github has a similar project called [[https://boxen.github.com/][boxen]]. However, boxen only works
+for Mac and it adopt [[http://puppetlabs.com/][Puppet]] and *I dislike Puppet*.
+
+I prefer [[http://www.ansible.com/][ansible]], for its simplity. Ansible requires no agent in client. The
+only thing ansible needs is ssh, which lives on almost every *nix based
+machine. Second, unlike Puppet/Chef, which create a huge and complex DSL,
+ansible adopt [[http://www.yaml.org/][YAML]], which makes it quite easy to learn, read and write.
+
+Currently, oh-my-laptop has been tested on Mac OS X 10.10 and [[http://blog.linuxmint.com/?p=2653][Linux Mint 17
+KDE]], and it should works on some Ubuntu-derived Linux distributions.
+
+* Features
+
+- Modular, only install and configure necessary packages as you need.
+- Literate, every package has full documentation to desmontrate why we choose
+  it and why we configure it this way.
+- Simple, all modules are written in ansible playbook, plain YAML format, quite
+  easy to read, write and contribute.
+
+* Quick Start
+
+** Mac OS X 10.10
+
+To start, you need to install the following things.
+
+*** XCode
+
+Please download and install Xcode from the Mac App Store and the necessary
+Command Line Tools, refer this [[http://railsapps.github.io/xcode-command-line-tools.html][post]] for simple tutorial.
+
+*** Homebrew
+
+There're various package managers for Mac, among which [[http://brew.sh/][homebrew]] is the best and
+most popular. It's quite easy to install:
+
+#+BEGIN_SRC sh
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+#+END_SRC
+
+Then you also get [[http://caskroom.io/][homebrew cask]] via:
+
+#+BEGIN_SRC sh
+brew install caskroom/cask/brew-cask
+#+END_SRC
+
+Homebrew cask is really great if you want to install some huge binary packages
+such as Emacs, [[https://www.jetbrains.com/pycharm/][pycharm]], etc.
+
+
+** Ansible
+
+The only thing oh-my-laptop depends is ansible, please do [[http://docs.ansible.com/intro_installation.html][install]] it before you
+join the journey.
+
+* What's inside?
+
+| Module     | Package        | Description |
+|------------+----------------+-------------|
+| base       | ack            |             |
+|            | ag             |             |
+|            | cscope         |             |
+|            | htop           |             |
+|            | md5sha1sum     |             |
+|            | nmap           |             |
+|            | proxychains-ng |             |
+|            | ranger         |             |
+|            | rlwrap         |             |
+|            | tmux           |             |
+|            | texinfo        |             |
+|            | wget           |             |
+|            | zsh            |             |
+|            | oh-my-zsh      |             |
+| cc         | clang          |             |
+| clojure    | leiningen      |             |
+| java       | jdk            |             |
+| javascript | nodejs         |             |
+|            | npm            |             |
+| ruby       | rbenv          |             |
+|            | ruby-build     |             |
+| vcs        | mercurial      |             |
+|            | cvs            |             |
+|            | git            |             |
+|            | git-extras     |             |
+|            | tig            |             |
+
+
+* Let's go
+
+#+BEGIN_SRC sh
+git clone https://github.com/xiaohanyu/oh-my-laptop
+cd oh-my-laptop
+# please view oh-my-laptop.yml and enable or disable some modules
+$EDITOR oh-my-laptop.yml
+ansible-playbook -i localhost -K oh-my-laptop.yml
+#+END_SRC
