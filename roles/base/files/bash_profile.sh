@@ -7,3 +7,8 @@ export EDITOR=vim
 
 # some convenient alias
 alias pyhttp="python -m SimpleHTTPServer"
+
+if `which bundle`; then
+    alias b="bundle "
+    alias be="bundle exec "
+fi
