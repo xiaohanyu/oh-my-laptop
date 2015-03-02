@@ -1,3 +1,27 @@
-* How to run it.
+#+TITLE: Oh My Laptop cc
+#+OPTIONS: toc:nil num:nil ^:nil
 
-=ansible-playbook -i localhost oh-my-laptop.yml -K=
+This is part of [[https://github.com/xiaohanyu/oh-my-laptop][oh-my-laptop]].
+
+* Packages
+
+#+NAME: cc-packages
+#+CAPTION: cc module packages
+| Package             | Status   | Apt | Homebrew |
+|---------------------+----------+-----+----------|
+| [[http://clang.llvm.org/][clang]]               | Required | OK  | OK       |
+
+* clang
+
+Clang is a new competitor for the pervasive, conventional gcc compiler. It
+provides some awesome features such as [[http://clang.llvm.org/diagnostics.html][expressive diagnostics]].
+
+I highly recommend trying clang when you has some questions or problems with
+your C/Object-C/C++ code.
+
+To get clang on Debian/Ubuntu, just =sudo apt-get install clang=, however, if
+you want clang on Mac OS X, you'd better to install [[https://developer.apple.com/xcode/][xcode]]. By the way, many
+homebrew packages requires xcode(or its command line tools) as a dependency, so
+I recommend you install xcode as soon as possible. Generally, you can get
+stable xcode from App Store, and beta version xcode from apple's official
+site.
