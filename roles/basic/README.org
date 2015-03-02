@@ -19,8 +19,9 @@ This is part of [[https://github.com/xiaohanyu/oh-my-laptop][oh-my-laptop]].
 | [[https://www.gnu.org/software/wget/][wget]]                | Required    | OK  | OK       |
 | [[https://developer.apple.com/xcode/][tmux]]                | Required    | OK  | OK       |
 | [[http://www.zsh.org/][zsh]]                 | Required    | OK  | OK       |
+| [[https://github.com/robbyrussell/oh-my-zsh][oh-my-zsh]]           | Required    | OK  | OK       |
 
-* OK_silver_searcher
+* the_silver_searcher
 
 #+BEGIN_QUOTE
 A lot of my time spent “writing” code is actually spent reading code. And a
@@ -169,3 +170,20 @@ There's a wonderful book, <[[https://pragprog.com/book/bhtmux/tmux][tmux: Produc
 P.Hogan]]. oh-my-laptop steals some code snippets from this book and replace the
 prefix key =C-b= with =C-l=. Note that tmux's key bindings is case sensitive,
 so when weird things happened, check your CAPSLOCK first.
+
+* zsh and oh-my-zsh
+
+[[http://www.zsh.org/][zsh]] is a shell designed for interactive use. Many of the useful features of
+bash, ksh, and tcsh were incorporated into zsh; many original features were
+added. Check the following posts to get some knowledge about why zsh is a much
+more cooler option than bash:
+
+- [[http://code.joejag.com/2014/why-zsh.html][My favourite Zsh features]]
+- [[http://mikebuss.com/2014/02/02/a-beautiful-productive-terminal-experience/][A Beautifully Productive Terminal Experience]]
+- [[http://mikegrouchy.com/blog/2012/01/zsh-is-your-friend.html][Zsh is your friend]]
+
+[[http://ohmyz.sh][oh-my-zsh]] is a community-driven framework for managing your zsh
+configuration. Includes 180+ optional [[https://github.com/robbyrussell/oh-my-zsh/wiki/Plugins][plugins]] (rails, git, OSX, hub,
+capistrano, brew, ant, php, python, etc), over 120 [[https://github.com/robbyrussell/oh-my-zsh/wiki/Themes][themes]] to spice up your
+morning, and an auto-update tool so that makes it easy to keep up with the
+latest updates from the community.
