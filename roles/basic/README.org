@@ -4,12 +4,9 @@
 This is part of [[https://github.com/xiaohanyu/oh-my-laptop][oh-my-laptop]].
 
 * Packages
-  :PROPERTIES:
-  :CUSTOM_ID: basic-packages
-  :END:
 
 #+NAME: basic-packages
-#+CAPTION: basic packages
+#+CAPTION: basic module packages
 | Package             | Status      | Apt | Homebrew |
 |---------------------+-------------+-----+----------|
 | [[https://github.com/ggreer/the_silver_searcher][the_silver_searcher]] | Required    | OK  | OK       |
@@ -20,9 +17,10 @@ This is part of [[https://github.com/xiaohanyu/oh-my-laptop][oh-my-laptop]].
 | [[http://ranger.nongnu.org/][ranger]]              | Required    | OK  | OK       |
 | [[https://github.com/hanslub42/rlwrap][rlwrap]]              | Required    | OK  | OK       |
 | [[https://www.gnu.org/software/wget/][wget]]                | Required    | OK  | OK       |
+| [[https://developer.apple.com/xcode/][tmux]]                | Required    | OK  | OK       |
+| [[http://www.zsh.org/][zsh]]                 | Required    | OK  | OK       |
 
-
-* the_silver_searcher
+* OK_silver_searcher
 
 #+BEGIN_QUOTE
 A lot of my time spent “writing” code is actually spent reading code. And a
@@ -157,3 +155,17 @@ GNU Wget is a free software package for retrieving files using HTTP, HTTPS and
 FTP, the most widely-used Internet protocols.
 
 Mac OS X didn't has it by default, so we add it here.
+* tmux
+
+tmux is a terminal multiplexer.
+
+By multiplexer, it means you can create windows, panels in a single terminal
+windows. No need for traditional vertical or horizontal splitting features from
+terminal emulators. You can switch between windows, panels without touching the
+mouse, and you can create, attach, detach sessions at any time. IMHO, tmux is a
+killer app for CLI gurus.
+
+There's a wonderful book, <[[https://pragprog.com/book/bhtmux/tmux][tmux: Productive Mouse-Free Development]]> by [[http://bphogan.com/][Brian
+P.Hogan]]. oh-my-laptop steals some code snippets from this book and replace the
+prefix key =C-b= with =C-l=. Note that tmux's key bindings is case sensitive,
+so when weird things happened, check your CAPSLOCK first.
