@@ -1,3 +1,5 @@
+---
+
 - hosts: localhost
   connection: local
   sudo: yes
@@ -5,7 +7,7 @@
     whoami: "{{ lookup('env', 'USER') }}"
     user_home: "{{ lookup('env', 'HOME') }}"
   roles:
-    - base
+    - basic
     - cc
     # - java
     # - clojure

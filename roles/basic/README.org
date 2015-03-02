@@ -1,0 +1,159 @@
+#+TITLE: Oh My Laptop Basic
+#+OPTIONS: toc:nil num:nil ^:nil
+
+This is part of [[https://github.com/xiaohanyu/oh-my-laptop][oh-my-laptop]].
+
+* Packages
+  :PROPERTIES:
+  :CUSTOM_ID: basic-packages
+  :END:
+
+#+NAME: basic-packages
+#+CAPTION: basic packages
+| Package             | Status      | Apt | Homebrew |
+|---------------------+-------------+-----+----------|
+| [[https://github.com/ggreer/the_silver_searcher][the_silver_searcher]] | Required    | OK  | OK       |
+| [[http://cloc.sourceforge.net/][cloc]]                | Required    | OK  | OK       |
+| [[http://hisham.hm/htop/index.php][htop]]                | Required    | OK  | OK       |
+| [[http://www.microbrew.org/tools/md5sha1sum/][md5sha1sum]]          | Required    | NaN | OK       |
+| [[http://sourceforge.net/projects/proxychains-ng/][proxychains-ng]]      | Recommended | OK  | OK       |
+| [[http://ranger.nongnu.org/][ranger]]              | Required    | OK  | OK       |
+| [[https://github.com/hanslub42/rlwrap][rlwrap]]              | Required    | OK  | OK       |
+| [[https://www.gnu.org/software/wget/][wget]]                | Required    | OK  | OK       |
+
+
+* the_silver_searcher
+
+#+BEGIN_QUOTE
+A lot of my time spent “writing” code is actually spent reading code. And a
+decent chunk of my time spent reading code is actually spent searching
+code. Lately I’ve started working with a larger codebase. Both grep and ack
+take a non-negligible amount of time to search it. Both are slow, but for
+different reasons. Grep is fast, but doesn’t ignore files. Ack is very good
+at ignoring files, but it’s written in Perl instead of C. What I really want is
+something that’s fast and ignores files.
+
+-- [[http://geoff.greer.fm/2011/12/27/the-silver-searcher-better-than-ack/][The Silver Searcher: Better than Ack]]
+#+END_QUOTE
+
+You can not go back to [[http://beyondgrep.com][ack]] after the first you try ag. There're lots of
+third-party ag integration for various editors, check [[http://betterthanack.com/][betterthanack]].
+
+* cloc
+
+[[http://cloc.sourceforge.net/][cloc]] is a line-of-code counter tool to get an overview and generate a loc
+report for your project. It's simple, portable, and it just works as expected.
+
+* htop
+
+[[http://hisham.hm/htop/index.php][htop]] is an interactive process viewer for Linux(and ported to Mac OS X). It is
+a text-mode application and requires [[http://en.wikipedia.org/wiki/Ncurses][ncurses]] library.
+
+It's a better replacement for the traditional builtin [[http://en.wikipedia.org/wiki/Top_(software)][top]] program.
+
+Type =h= from within =htop= to get instant help.
+
+* md5sha1sum
+
+[[http://www.microbrew.org/tools/md5sha1sum/][md5sha1sum]] package provides the missing =md5sum=, =sha1sum= command for Mac OS
+X.
+
+* proxychains-ng
+
+[[http://sourceforge.net/projects/proxychains-ng/][proxychains]] is a proxifier dedicated for Linux and other Unix system, it allows
+TCP and DNS tunneling through proxies and it support HTTP, SOCKS4 and SOCKS5
+proxy servers. Different proxy types can be mixed in the same chain.
+
+If you live in china, then you know why you need a proxy. If you're a CLI guru,
+then proxychains is a pratically excellent proxy solution for most of your CLI
+programs.
+
+Generally, you need an existing proxy(Socks or HTTP). Then prefix
+=proxychais-ng= to any command you want to execute, then your command should
+get data from Internet via your proxy.
+
+* ranger
+
+[[http://ranger.nongnu.org/][ranger]] is a CLI file manager with VI key bindings. Just as htop, ranger depends
+[[http://en.wikipedia.org/wiki/Ncurses][ncurses]] library. It provides a minimalistic and nice CLI interface with VI key
+bindings for fast file and directory navigation. It can also guess which
+program you want to use when open particular files.
+
+Try it and I'm sure you will fall in love with it. Check its [[http://ranger.nongnu.org/screenshots.html][screenshots]] for
+some intuition.
+
+* rlwrap
+
+[[https://github.com/hanslub42/rlwrap][rlwrap]] is a 'readline wrapper', a small utility that uses the GNU readline
+library to allow the editing of keyboard input for any command. You have
+rlwrap, then you have the great, pervasive readline's history, search,
+shortcuts at your fingertips for any CLI programs.
+
+Here's some tutorials from its home page:
+
+** HOW TO USE IT:
+
+If
+
+#+BEGIN_SRC
+$ <command> <args>
+#+END_SRC
+
+doesn't let you use arrow keys to edit input, or if you just want decent input
+history and completion, try:
+
+#+BEGIN_SRC
+$ rlwrap [-options] <command> <args>
+#+END_SRC
+
+You then can edit =<command>='s input and recall the input history using the
+arrow keys.  Input history is remembered accross invocations, separately for
+different =<command>=. Typing =!<prefix><TAB>= will recall the last input line
+starting with =<prefix>=, =CTRL-R= will search the input history.  With the
+=-r= and =-f= options you can specify the list of words which rlwrap will use
+as possible completions, taking them from a file (=-f= option) or from
+=<command>='s standard in/output.  rlwrap monitors =<command>='s terminal settings,
+so that it can do the right thing when command asks for single keypresses or
+for a password.  Commands that already use readline will always ask for (and
+get) single keypresses, which makes rlwrapping them rather pointless. However,
+if one uses the =-a= option, rlwrap will use its own line editing and
+history. Unforunately, in this case, rlwrap cannot detect whether =<command>=
+asks for a password. This can be remedied by giving the password prompt
+(excluding trailing space and possibly the first few letters) as an argument to
+the =-a= option.
+
+** EXAMPLES:
+Run netcat with command-line editing:
+
+#+BEGIN_SRC
+rlwrap nc localhost 80
+#+END_SRC
+
+Run lprolog and use library1 and library2 to build a completion word
+list:
+
+#+BEGIN_SRC
+rlwrap -f library1 -f library2 lprolog
+#+END_SRC
+
+Run smbclient (which already uses readline), add all input and output
+to completion list, complete local filenames, avoid showing (and
+storing) passwords:
+
+#+BEGIN_SRC
+rlwrap -cr -aPassword: smbclient '\\PEANUT\C'
+#+END_SRC
+* texinfo
+
+Besides [[http://en.wikipedia.org/wiki/Man_page][man pages]], GNU [[http://www.gnu.org/software/texinfo/][texinfo]] is another popular documentation system, and it
+is the official documentation format for the GNU project.
+
+Some packages may need texinfo to faciliate the build process. So we add it
+here.
+
+* wget
+
+GNU Wget is a free software package for retrieving files using HTTP, HTTPS and
+FTP, the most widely-used Internet protocols.
+
+Mac OS X didn't has it by default, so we add it here.

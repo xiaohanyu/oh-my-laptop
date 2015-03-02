@@ -3,21 +3,19 @@
 - name: install some small, awesome packages to boost your life
   homebrew: pkg={{item}} state=present
   with_items:
-    - ack
     - ag
-    - byobu
     - cloc
-    - cscope
     - htop-osx
     - md5sha1sum
-    - nmap
-    # - nmon   # not found in homebrew
-    # - pinfo  # not found in homebrew
     - proxychains-ng
     - ranger
     - rlwrap
     - texinfo
     - wget
+    # - cscope
+    # - nmap
+    # - nmon   # not found in homebrew
+    # - pinfo  # not found in homebrew
 
 # shell
 - name: ensure $HOME/.bashrc is present
