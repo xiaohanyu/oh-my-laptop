@@ -1,4 +1,4 @@
-#+TITLE: Oh My Laptop cc
+#+TITLE: Oh My Laptop CC
 #+OPTIONS: toc:nil num:nil ^:nil
 
 This is part of [[https://github.com/xiaohanyu/oh-my-laptop][oh-my-laptop]].

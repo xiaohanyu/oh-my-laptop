@@ -4,8 +4,8 @@
 - name: install subversion and mercurial
   homebrew: pkg={{item}} state=present
   with_items:
-    - mercurial
     - cvs
+    - mercurial
 
 - name: install some enhancements for git
   homebrew: pkg={{item}} state=present

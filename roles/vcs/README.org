@@ -1,6 +1,26 @@
-This module install svn, mercurial and git, and some helper packages for git.
+#+TITLE: Oh My Laptop VCS
+#+OPTIONS: toc:nil num:nil ^:nil
 
-Git helper packages:
-- [[https://github.com/tj/git-extras][git-extras]]: some quite useful and convenient sub command for git
-- [[http://jonas.nitro.dk/tig/][tig]]: text-mode interface for git
-- git-svn: a bridge between svn and git
+This is part of [[https://github.com/xiaohanyu/oh-my-laptop][oh-my-laptop]].
+
+* Packages
+
+#+NAME: vcs-packages
+#+CAPTION: vcs module packages
+| Package    | Status     | Apt | Homebrew |
+|------------+------------+-----+----------|
+| [[http://www.nongnu.org/cvs/][cvs]]        | Deprecated | OK  | OK       |
+| [[https://subversion.apache.org/][svn]]        | Deprecated | OK  | OK       |
+| [[http://mercurial.selenic.com/][mercurial]]  | Deprecated | OK  | OK       |
+| [[http://git-scm.com/][git]]        | Required   | OK  | OK       |
+| [[https://github.com/tj/git-extras][git-extras]] | Required   | OK  | OK       |
+| [[http://jonas.nitro.dk/tig/][tig]]        | Required   | OK  | OK       |
+
+* git
+
+The [[http://en.wikipedia.org/wiki/Revision_control][VCS]] world is dominated by [[http://git-scm.com/][git]], however, we still need cvs/svn/mercurial
+when we have to check out code for some old-fashioned package.
+
+[[https://github.com/tj/git-extras][git-extras]] provides some useful [[https://github.com/tj/git-extras/wiki/Commands][commands]] for daily use, type =git summary= for
+a tiny demo. [[http://jonas.nitro.dk/tig/][tig]] is a ncurses-based text-mode interface for git, for CLI
+gurus, check [[http://jonas.nitro.dk/tig/screenshots/][screenshots]] for demo.
