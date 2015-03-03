@@ -11,3 +11,15 @@
 
 - name: init rbenv in zsh
   lineinfile: dest={{user_home}}/.zprofile line="eval \"$(rbenv init -)\""
+
+- name: install some rbenv plugins
+  homebrew: name={{item}} state=present
+  with_items:
+    - rbenv-gem-rehash
+    - rbenv-default-gems
+
+- name: copy gemrc
+  copy: src=gemrc dest={{user_home}}/.gemrc
+
+- name: update bash profile
+  copy: src=default-gems dest={{user_home}}/.rbenv/default-gems
