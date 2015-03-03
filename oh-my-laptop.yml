@@ -6,10 +6,12 @@
   vars:
     whoami: "{{ lookup('env', 'USER') }}"
     user_home: "{{ lookup('env', 'HOME') }}"
+    git_user_name: "Xiao Hanyu"
+    git_user_email: "xiaohanyu1988@gmail.com"
   roles:
     - basic
     - cc
-    # - java
+    - java
     # - clojure
     # - javascript
     - ruby
