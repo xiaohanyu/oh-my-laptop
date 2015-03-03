@@ -13,6 +13,6 @@
     - cc
     - java
     - clojure
-    # - javascript
+    - javascript
     - ruby
     - vcs

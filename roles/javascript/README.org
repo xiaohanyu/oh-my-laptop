@@ -1,0 +1,16 @@
+#+TITLE: Oh My Laptop JavaScript
+#+OPTIONS: toc:nil num:nil ^:nil
+
+This is part of [[https://github.com/xiaohanyu/oh-my-laptop][oh-my-laptop]].
+
+* Packages
+
+#+NAME: javascript-packages
+#+CAPTION: javascript module packages
+| Package | Status   | Apt | Homebrew |
+|---------+----------+-----+----------|
+| [[https://nodejs.org/][nodejs]]  | Required | OK  | OK       |
+
+* nodejs
+
+It is quite easy to get nodejs on both Ubuntu and Mac OS X.
