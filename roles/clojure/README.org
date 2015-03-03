@@ -1,2 +1,20 @@
+#+TITLE: Oh My Laptop Clojure
+#+OPTIONS: toc:nil num:nil ^:nil
+
+This is part of [[https://github.com/xiaohanyu/oh-my-laptop][oh-my-laptop]].
+
+* Packages
+
+#+NAME: clojure-packages
+#+CAPTION: clojure module packages
+| Package   | Status   | Apt | Homebrew |
+|-----------+----------+-----+----------|
+| [[https://github.com/technomancy/leiningen/][leiningen]] | Required | OK  | OK       |
+
+* leiningen
+
 Just install [[https://github.com/technomancy/leiningen/][leiningen]] and you will get most of your need for developing
 clojure programs.
+
+We will install leiningen by homebrew on Mac OS X, and by direct download on
+Ubuntu. Check leiningen's [[https://github.com/technomancy/leiningen/wiki/Packaging][wiki]] for reasons.

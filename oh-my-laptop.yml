@@ -12,7 +12,7 @@
     - basic
     - cc
     - java
-    # - clojure
+    - clojure
     # - javascript
     - ruby
     - vcs
