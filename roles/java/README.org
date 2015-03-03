@@ -1,8 +1,45 @@
-This module comes from [[https://github.com/ANXS/oracle-jdk][oracle-jdk]].
+#+TITLE: Oh My Laptop Java
+#+OPTIONS: toc:nil num:nil ^:nil
 
-There're some small minor annoying [[http://stackoverflow.com/questions/22358071/differences-between-oracle-jdk-and-open-jdk-and-garbage-collection][difference]] between [[http://openjdk.java.net/][openjdk]] and
-[[http://www.oracle.com/technetwork/java/javase/downloads/index.html][oracle-jdk]]. However, if you wanna to write production programs, I recommend
-that you should have oracle jdk at your fingertips.
+This is part of [[https://github.com/xiaohanyu/oh-my-laptop][oh-my-laptop]].
 
-Due to some license limitations of Oracle, to install Oracle JDK on ubuntu, you
-need to add a [[https://launchpad.net/~webupd8team/+archive/ubuntu/java][ppa]], accept some oracle license, etc.
+* Packages
+
+#+NAME: java-packages
+#+CAPTION: java module packages
+| Package | Status   | Apt | Homebrew |
+|---------+----------+-----+----------|
+| [[http://www.oracle.com/technetwork/java/javase/overview/java8-2100321.html][Java 8]]  | Required | OK  | OK       |
+| [[http://maven.apache.org/][maven]]   | Required | OK  | OK       |
+| [[https://gradle.org/][gradle]]  | Required | OK  | OK       |
+
+* Java
+
+** Mac OS X
+
+The vanilla OS X contains a fake =java= command which will lead you to Oracle's
+[[https://www.java.com/en/download/][site]]. Then you download a package, you click on it, you get Java
+installed. Fortunately, we have [[https://github.com/caskroom/homebrew-cask][homebrew-cask]], and we can get Java by =brew
+cask install java=. And ansible has builtin [[http://docs.ansible.com/homebrew_cask_module.html][module]] support for homebrwe-cask.
+
+** Ubuntu
+
+It is a little complicated to install Java via CLI on Ubuntu, generally, you
+need to:
+
+1. add a java [[https://launchpad.net/~webupd8team/+archive/ubuntu/java][ppa]] for apt
+2. add some *WEIRD* keys
+3. accept Oracle's license
+4. finally you can =sudo apt-get install=
+
+Most of us have little time to touch the internals of =apt-get=, so I just
+figure out an ansible playbook and it works, that's enough.
+
+* Maven
+
+[[http://maven.apache.org/][Maven]] is the defacto build tool in Java world. It's easy to install it.
+
+* Gradle
+
+[[http://gradle.org/][Gradle]] is rising build tool in Java world, it is based on [[http://groovy.codehaus.org/][Groovy]], so the syntax
+of gradle is much more simpler than maven's old-fashioned XML.

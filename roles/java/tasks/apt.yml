@@ -1,4 +1,5 @@
 ---
+
 - name: Oracle-jdk | Make sure the ansible required dependencies are installed
   apt:
     pkg: "{{item}}"
@@ -23,8 +24,6 @@
 - name: Oracle JDK | Accept the oracle license
   shell: "echo {{item}} shared/accepted-oracle-license-v1-1 select true | sudo debconf-set-selections"
   with_items:
-    - oracle-java6-installer
-    - oracle-java7-installer
     - oracle-java8-installer
 
 # Only for ansible 1.6 and higher...
@@ -52,8 +51,9 @@
     state: present
     update_cache: no
 
-# install apache maven
+# install apache maven and gradle
 - name: Java packages
   apt: pkg={{item}} state=present
   with_items:
     - maven
+    - gradle
