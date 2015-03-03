@@ -1,9 +1,7 @@
 ---
 
 - name: Oracle-jdk | Make sure the ansible required dependencies are installed
-  apt:
-    pkg: "{{item}}"
-    state: present
+  apt: name: {{item}} state: present
   with_items: ["python-pycurl", "debconf"]
 
 - name: Oracle JDK | Add webupd8 repository apt-key
@@ -53,7 +51,7 @@
 
 # install apache maven and gradle
 - name: Java packages
-  apt: pkg={{item}} state=present
+  apt: name={{item}} state=present
   with_items:
     - maven
     - gradle
