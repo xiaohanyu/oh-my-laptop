@@ -39,9 +39,16 @@
     - zsh
     - zsh-lovers
 
+- name: test whether or not oh-my-zsh has been cloned before
+  shell: if [ -f {{user_home}}/.oh-my-zsh/oh-my-zsh.sh ]; then true; else false; fi
+  register: result
+  ignore_errors: True
+
 - name: clone oh-my-zsh repo
   git: repo=https://github.com/robbyrussell/oh-my-zsh.git
        dest={{user_home}}/.oh-my-zsh
+       depth=1
+  when: result|failed
 
 - name: backup original zshrc
   copy: src={{user_home}}/.zshrc dest={{user_home}}/.zshrc.orig
