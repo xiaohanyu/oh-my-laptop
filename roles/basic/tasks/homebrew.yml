@@ -12,25 +12,13 @@
     - rlwrap
     - texinfo
     - wget
+    - tig
+    - tmux
     - editorconfig
     # - cscope
     # - nmap
     # - nmon   # not found in homebrew
     # - pinfo  # not found in homebrew
-
-# shell
-- name: ensure $HOME/.bashrc is present
-  command: touch {{user_home}}/.bashrc
-
-- name: ensure $HOME/.zshrc is present
-  command: touch {{user_home}}/.zshrc
-
-- name: update bash profile
-  copy: src=bash_profile.sh dest={{user_home}}/.profile
-
-# zsh is not totally compatible with bash
-- name: update zsh profile
-  copy: src=zsh_profile.sh dest={{user_home}}/.zprofile
 
 # zsh and oh-my-zsh
 - name: install zsh
@@ -39,27 +27,4 @@
     - zsh
     - zsh-lovers
 
-- name: test whether or not oh-my-zsh has been cloned before
-  shell: if [ -f {{user_home}}/.oh-my-zsh/oh-my-zsh.sh ]; then true; else false; fi
-  register: result
-  ignore_errors: True
-
-- name: clone oh-my-zsh repo
-  git: repo=https://github.com/robbyrussell/oh-my-zsh.git
-       dest={{user_home}}/.oh-my-zsh
-       depth=1
-  when: result|failed
-
-- name: backup original zshrc
-  copy: src={{user_home}}/.zshrc dest={{user_home}}/.zshrc.orig
-
-- name: deploy .zshrc
-  template: src=zshrc.sh dest={{user_home}}/.zshrc owner={{whoami}}
-
-- name: set zsh as default user shell
-  sudo: yes
-  command: chsh -s /bin/zsh {{whoami}}
-
-# add a tmux.conf
-- name: settings tmux.conf
-  copy: src=tmux.conf dest={{user_home}}/.tmux.conf
+- include: base.yml

@@ -5,14 +5,10 @@
   with_items:
     - autoconf
     - aptitude
-    - ack-grep
     - cloc
-    - cscope
     - curl
     - htop
     - make
-    - nmap
-    - nmon
     - pinfo
     - proxychains
     - ranger
@@ -22,20 +18,6 @@
     - tmux
     - editorconfig
 
-# (HACK): Some linux distributions didn't provide a default .bashrc.
-- name: ensure $HOME/.bashrc is present
-  command: touch {{user_home}}/.bashrc
-
-- name: ensure $HOME/.zshrc is present
-  command: touch {{user_home}}/.zshrc
-
-- name: update bash profile
-  copy: src=bash_profile.sh dest={{user_home}}/.profile
-
-# zsh is not totally compatible with bash
-- name: update zsh profile
-  copy: src=zsh_profile.sh dest={{user_home}}/.zprofile
-
 # zsh and oh-my-zsh
 - name: install zsh
   apt: name={{item}} state=present
@@ -43,20 +25,4 @@
     - zsh
     - zsh-lovers
 
-- name: clone oh-my-zsh repo
-  git: repo=https://github.com/robbyrussell/oh-my-zsh.git
-       dest={{user_home}}/.oh-my-zsh
-
-- name: backup original zshrc
-  copy: src={{user_home}}/.zshrc dest={{user_home}}/.zshrc.orig
-
-- name: deploy .zshrc
-  template: src=zshrc.sh dest={{user_home}}/.zshrc owner={{whoami}}
-
-- name: set zsh as default user shell
-  sudo: yes
-  command: chsh -s /usr/bin/zsh {{whoami}}
-
-# add a tmux.conf
-- name: settings tmux.conf
-  copy: src=tmux.conf dest={{user_home}}/.tmux.conf
+- include: base.yml
