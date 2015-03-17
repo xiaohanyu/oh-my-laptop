@@ -16,7 +16,7 @@
     - tig
 
 - name: git config user.name
-  command: git config --global user.name {{git_user_name}}
+  command: git config --global user.name "{{git_user_name}}"
 
 - name: git config user.email
-  command: git config --global user.email {{git_user_email}}
+  command: git config --global user.email "{{git_user_email}}"
