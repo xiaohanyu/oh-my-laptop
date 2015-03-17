@@ -20,6 +20,7 @@ This is part of [[https://github.com/xiaohanyu/oh-my-laptop][oh-my-laptop]].
 | [[https://developer.apple.com/xcode/][tmux]]                | Required    | OK  | OK       |
 | [[http://www.zsh.org/][zsh]]                 | Required    | OK  | OK       |
 | [[https://github.com/robbyrussell/oh-my-zsh][oh-my-zsh]]           | Required    | OK  | OK       |
+| [[http://editorconfig.org/][editorconfig]]        | Recommended | NaN | OK       |
 
 * the_silver_searcher
 
@@ -187,3 +188,15 @@ configuration. Includes 180+ optional [[https://github.com/robbyrussell/oh-my-zs
 capistrano, brew, ant, php, python, etc), over 120 [[https://github.com/robbyrussell/oh-my-zsh/wiki/Themes][themes]] to spice up your
 morning, and an auto-update tool so that makes it easy to keep up with the
 latest updates from the community.
+
+* editorconfig
+
+We live in a world with multiple editors or IDEs, and often we need
+collaboration with others. [[http://editorconfig.org/][EditorConfig]] helps developers define and maintain
+consistent coding styles between different editors and IDEs. The EditorConfig
+project consists of a file format for defining coding styles and a collection
+of text editor plugins that enable editors to read the file format and adhere
+to defined styles. EditorConfig files are easily readable and they work nicely
+with version control systems.
+
+Check [[https://github.com/editorconfig/editorconfig-core-c/blob/master/INSTALL.md][github]] for detailed installation instructions.

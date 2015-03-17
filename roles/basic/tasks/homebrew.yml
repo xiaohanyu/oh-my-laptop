@@ -12,6 +12,7 @@
     - rlwrap
     - texinfo
     - wget
+    - editorconfig
     # - cscope
     # - nmap
     # - nmon   # not found in homebrew

@@ -20,6 +20,7 @@
     - texinfo
     - tig
     - tmux
+    - editorconfig
 
 # (HACK): Some linux distributions didn't provide a default .bashrc.
 - name: ensure $HOME/.bashrc is present
