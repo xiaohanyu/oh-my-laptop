@@ -1,6 +1,6 @@
 ---
 
-- name: install some small, awesome packages to boost your life
+- name: basic | install some small, awesome packages to boost your life
   homebrew: name={{item}} state=present
   with_items:
     - ag
@@ -21,7 +21,7 @@
     # - pinfo  # not found in homebrew
 
 # zsh and oh-my-zsh
-- name: install zsh
+- name: basic | install zsh
   homebrew: name={{item}} state=present
   with_items:
     - zsh
