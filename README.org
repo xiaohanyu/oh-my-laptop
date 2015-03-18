@@ -5,31 +5,36 @@
 Tired of spending a whole day configuring your Mac/Linux? Then you've come to
 the right place.
 
-Oh-my-laptop try to provide a simple, easy and flexible way to turn your laptop
-into awesome working friends.
+Oh-my-laptop try to provide a simple, modular and flexible way to turn your
+laptop into an awesome working partner.
 
-This project starts out as my personal script, days when I have to initialize
-my laptop, my vagrant box, my newly-got Mac. I'm tired and I want some
-robots.
+This project starts out as a bunch of personal scripts, days when I have to
+initialize my laptop, my vagrant box, my newly-got Mac. I'm tired and I want
+some robots.
 
 Actually, Github has a similar project called [[https://boxen.github.com/][boxen]]. However, boxen only works
 for Mac and it adopt [[http://puppetlabs.com/][Puppet]] and *I dislike Puppet*.
 
 I prefer [[http://www.ansible.com/][ansible]], for its simplity. Ansible requires no agent in client. The
-only thing ansible needs is ssh, which lives on almost every *nix based
+only thing ansible requires is ssh, which lives on almost every *nix based
 machine. Second, unlike Puppet/Chef, which create a huge and complex DSL,
 ansible adopt [[http://www.yaml.org/][YAML]], which makes it quite easy to learn, read and write.
 
 Currently, oh-my-laptop has been tested on Mac OS X 10.10 and [[http://blog.linuxmint.com/?p=2653][Linux Mint 17
-KDE]], and it should works on some Ubuntu-derived Linux distributions.
+KDE]], and it should works on some Ubuntu-derived Linux distributions---which
+means, I don't have too much time to test all Ubuntu(apt-get)-derived Linux
+distributions.
 
 * Features
 
 - Modular, only install and configure necessary packages as you need.
-- Literate, every package has full documentation to desmontrate why we choose
-  it and why we configure it this way.
+- Literate, every package has full documentation or links to desmontrate why we
+  choose it and why we configure it this way.
 - Simple, all modules are written in ansible playbook, plain YAML format, quite
   easy to read, write and contribute.
+- Fast, all ansible roles in oh-my-laptop are idempotent, and roles always has
+  proper dependency relations, and it is guaranteed that each role will be
+  played once and only once, no matter in what order you specify it.
 
 * Quick Start
 
@@ -66,37 +71,59 @@ such as Emacs, [[https://www.jetbrains.com/pycharm/][pycharm]], etc.
 The only thing oh-my-laptop depends is ansible, please do [[http://docs.ansible.com/intro_installation.html][install]] it before you
 join the journey.
 
+** Will you trust me?
+
+I've write a bootstrap script to get homebrew(on Mac) and ansible for you:
+
+#+BEGIN_SRC sh
+curl -L https://raw.githubusercontent.com/xiaohanyu/oh-my-laptop/master/bootstrap.sh | bash
+#+END_SRC
+
 * What's inside?
 
-| Module     | Package        | Description |
-|------------+----------------+-------------|
-| base       | ack            |             |
-|            | ag             |             |
-|            | cscope         |             |
-|            | htop           |             |
-|            | md5sha1sum     |             |
-|            | nmap           |             |
-|            | proxychains-ng |             |
-|            | ranger         |             |
-|            | rlwrap         |             |
-|            | tmux           |             |
-|            | texinfo        |             |
-|            | wget           |             |
-|            | zsh            |             |
-|            | oh-my-zsh      |             |
-| cc         | clang          |             |
-| clojure    | leiningen      |             |
-| java       | jdk            |             |
-| javascript | nodejs         |             |
-|            | npm            |             |
-| ruby       | rbenv          |             |
-|            | ruby-build     |             |
-| vcs        | mercurial      |             |
-|            | cvs            |             |
-|            | git            |             |
-|            | git-extras     |             |
-|            | tig            |             |
+One line code to get all packages configured by oh-my-laptop:
 
+#+BEGIN_SRC sh
+find . -name README.org | xargs grep "|" | grep -v Package | grep -v '\-\-\-\-' | sed 's/^.*org://g'
+#+END_SRC
+
+| Package             | Status      | Apt | Homebrew |
+|---------------------+-------------+-----+----------|
+| [[https://github.com/ggreer/the_silver_searcher][the_silver_searcher]] | Required    | OK  | OK       |
+| [[http://cloc.sourceforge.net/][cloc]]                | Required    | OK  | OK       |
+| [[http://hisham.hm/htop/index.php][htop]]                | Required    | OK  | OK       |
+| [[http://www.microbrew.org/tools/md5sha1sum/][md5sha1sum]]          | Required    | NaN | OK       |
+| [[http://sourceforge.net/projects/proxychains-ng/][proxychains-ng]]      | Recommended | OK  | OK       |
+| [[http://ranger.nongnu.org/][ranger]]              | Required    | OK  | OK       |
+| [[https://github.com/hanslub42/rlwrap][rlwrap]]              | Required    | OK  | OK       |
+| [[https://www.gnu.org/software/wget/][wget]]                | Required    | OK  | OK       |
+| [[https://developer.apple.com/xcode/][tmux]]                | Required    | OK  | OK       |
+| [[http://www.zsh.org/][zsh]]                 | Required    | OK  | OK       |
+| [[https://github.com/robbyrussell/oh-my-zsh][oh-my-zsh]]           | Required    | OK  | OK       |
+| [[http://editorconfig.org/][editorconfig]]        | Recommended | NaN | OK       |
+| [[http://clang.llvm.org/][clang]]               | Required    | OK  | OK       |
+| [[http://www.cmake.org/][cmake]]               | Recommended | OK  | OK       |
+| [[https://github.com/technomancy/leiningen/][leiningen]]           | Required    | OK  | OK       |
+| [[http://www.oracle.com/technetwork/java/javase/overview/java8-2100321.html][Java 8]]              | Required    | OK  | OK       |
+| [[http://maven.apache.org/][maven]]               | Required    | OK  | OK       |
+| [[https://gradle.org/][gradle]]              | Required    | OK  | OK       |
+| [[https://nodejs.org/][nodejs]]              | Required    | OK  | OK       |
+| [[http://bower.io/][bower]]               | Recommended | OK  | OK       |
+| [[http://jshint.com/][jshint]]              | Recommended | OK  | OK       |
+| [[https://github.com/sstephenson/rbenv][rbenv]]               | Required    | OK  | OK       |
+| [[https://github.com/sstephenson/ruby-build][ruby-build]]          | Required    | OK  | OK       |
+| [[https://github.com/sstephenson/rbenv-gem-rehash][rbenv-gem-rehash]]    | Required    | OK  | OK       |
+| [[https://github.com/sstephenson/rbenv-default-gems][rbenv-default-gems]]  | Required    | OK  | OK       |
+| [[https://github.com/rbenv/rbenv-each][rbenv-each]]          | Required    | OK  | OK       |
+| [[http://bundler.io/][bundler]]             | Required    | OK  | OK       |
+| [[http://pryrepl.org/][pry]]                 | Required    | OK  | OK       |
+| [[https://github.com/pry/pry-doc][pry-doc]]             | Required    | OK  | OK       |
+| [[http://www.nongnu.org/cvs/][cvs]]                 | Deprecated  | OK  | OK       |
+| [[https://subversion.apache.org/][svn]]                 | Deprecated  | OK  | OK       |
+| [[http://mercurial.selenic.com/][mercurial]]           | Deprecated  | OK  | OK       |
+| [[http://git-scm.com/][git]]                 | Required    | OK  | OK       |
+| [[https://github.com/tj/git-extras][git-extras]]          | Required    | OK  | OK       |
+| [[http://jonas.nitro.dk/tig/][tig]]                 | Required    | OK  | OK       |
 
 * Let's go
 
@@ -107,3 +134,11 @@ cd oh-my-laptop
 $EDITOR oh-my-laptop.yml
 ansible-playbook -i localhost -K oh-my-laptop.yml
 #+END_SRC
+
+* Reference
+
+- [[http://sourabhbajaj.com/mac-setup/][Mac OS X Setup Guide]]
+- [[http://il.luminat.us/blog/2014/04/19/how-i-fully-automated-os-x-with-ansible/][How I Fully Automated OS X Provisioning With Ansible]]
+- [[http://marvelley.com/blog/2014/04/11/local-provisioning-with-ansible/][Local Provisioning With Ansible]]
+- https://github.com/MWGriffin/ansible-playbooks
+- https://github.com/bennylope/macbook-configuration
