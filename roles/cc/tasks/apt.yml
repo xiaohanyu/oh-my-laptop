@@ -1,6 +1,6 @@
 ---
 
-- name: basic | install C/C++ packages
+- name: install C/C++ packages
   apt: name={{item}} state=present
   with_items:
     - clang

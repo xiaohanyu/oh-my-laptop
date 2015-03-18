@@ -1,6 +1,6 @@
 ---
 
-- name: download leiningen
+- name: clojure | download leiningen
   get_url: url=https://raw.githubusercontent.com/technomancy/leiningen/stable/bin/lein
            dest=/usr/local/bin/lein
            mode=0755

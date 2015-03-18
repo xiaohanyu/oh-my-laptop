@@ -1,4 +1,4 @@
 ---
 
-- name: install leiningen via homebrew
+- name: clojure | install leiningen via homebrew
   homebrew: name=leiningen state=present
