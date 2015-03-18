@@ -1,4 +1,5 @@
 ---
 
 dependencies:
-  - { role: java }
+  - { role: basic, when: not role_basic_done }
+  - { role: java, when: not role_java_done }

@@ -5,3 +5,6 @@
 - include: homebrew.yml
   when: ansible_os_family == 'Darwin'
   sudo: no
+
+- set_fact:
+    role_clojure_done: true

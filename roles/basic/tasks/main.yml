@@ -1,7 +1,10 @@
 ---
-  
+
 - include: apt.yml
   when: ansible_pkg_mgr == 'apt'
 - include: homebrew.yml
   when: ansible_os_family == 'Darwin'
   sudo: no
+
+- set_fact:
+    role_basic_done: true

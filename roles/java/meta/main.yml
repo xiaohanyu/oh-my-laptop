@@ -1,4 +1,4 @@
 ---
 
 dependencies:
-  - { role: basic }
+  - { role: basic, when: not role_basic_done }
