@@ -13,6 +13,7 @@
     - proxychains
     - ranger
     - rlwrap
+    - silversearcher-ag
     - texinfo
     - tig
     - tmux
