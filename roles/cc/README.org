@@ -7,9 +7,10 @@ This is part of [[https://github.com/xiaohanyu/oh-my-laptop][oh-my-laptop]].
 
 #+NAME: cc-packages
 #+CAPTION: cc module packages
-| Package             | Status   | Apt | Homebrew |
-|---------------------+----------+-----+----------|
-| [[http://clang.llvm.org/][clang]]               | Required | OK  | OK       |
+| Package | Status      | Apt | Homebrew |
+|---------+-------------+-----+----------|
+| [[http://clang.llvm.org/][clang]]   | Required    | OK  | OK       |
+| [[http://www.cmake.org/][cmake]]   | Recommended | OK  | OK       |
 
 * clang
 
@@ -25,3 +26,13 @@ homebrew packages requires xcode(or its command line tools) as a dependency, so
 I recommend you install xcode as soon as possible. Generally, you can get
 stable xcode from App Store, and beta version xcode from apple's official
 site.
+
+* cmake
+
+Cmake is a cross-platform, open-source build system mainly for C/C++
+projects. It is used in conjunction with native build environments such as
+make, Apple's Xcode, and Microsoft Visual Studio. It has minimal dependencies,
+requiring only a C++ compiler on its own build system.
+
+IMHO, cmake is the test choice as a build tool for C/C++, much more better than
+traditional =./configure; make; make install=.
