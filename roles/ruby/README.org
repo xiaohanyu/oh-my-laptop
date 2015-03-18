@@ -11,11 +11,12 @@ This is part of [[https://github.com/xiaohanyu/oh-my-laptop][oh-my-laptop]].
 |--------------------+----------+-----+----------|
 | [[https://github.com/sstephenson/rbenv][rbenv]]              | Required | OK  | OK       |
 | [[https://github.com/sstephenson/ruby-build][ruby-build]]         | Required | OK  | OK       |
-| [[https://github.com/sstephenson/rbenv-gem-rehash][rbenv-gem-rehash]]   | Required |     | OK       |
-| [[https://github.com/sstephenson/rbenv-default-gems][rbenv-default-gems]] | Required |     | OK       |
-| [[http://bundler.io/][bundler]]            | Required |     | OK       |
-| [[http://pryrepl.org/][pry]]                | Required |     | OK       |
-| [[https://github.com/pry/pry-doc][pry-doc]]            | Required |     | OK       |
+| [[https://github.com/sstephenson/rbenv-gem-rehash][rbenv-gem-rehash]]   | Required | OK  | OK       |
+| [[https://github.com/sstephenson/rbenv-default-gems][rbenv-default-gems]] | Required | OK  | OK       |
+| [[https://github.com/rbenv/rbenv-each][rbenv-each]]         | Required | OK  | OK       |
+| [[http://bundler.io/][bundler]]            | Required | OK  | OK       |
+| [[http://pryrepl.org/][pry]]                | Required | OK  | OK       |
+| [[https://github.com/pry/pry-doc][pry-doc]]            | Required | OK  | OK       |
 
 * rbenv
 
@@ -77,6 +78,10 @@ pry.
 pry-doc extends two core pry commands: =show-doc= and =show-source= (aliased as
 =?= and =$=, respectively). With the help of pry-doc, you can check the MRI C
 code for ruby core statements, etc.
+
+* rbenv-each
+
+[[https://github.com/rbenv/rbenv-each][rbenv-each]] is a rbenv plugin which can run a command across all installed rubies.
 
 * Reference
 
