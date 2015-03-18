@@ -1,9 +1,9 @@
 ---
 
-- name: install Oracle Java 8 via homebrew cask
+- name: java | install Oracle Java 8 via homebrew cask
   homebrew_cask: name=java state=present
 
-- name: install maven and gradle
+- name: java | install maven and gradle
   homebrew: name={{item}} state=present
   with_items:
     - maven
