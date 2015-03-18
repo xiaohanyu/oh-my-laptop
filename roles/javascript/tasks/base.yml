@@ -2,6 +2,7 @@
 
 - name: install some npm packages
   npm: name={{item}} state=present global=yes
+  sudo: yes
   with_items:
     - bower
     - jshint
