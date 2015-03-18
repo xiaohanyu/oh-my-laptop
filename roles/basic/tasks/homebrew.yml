@@ -15,6 +15,7 @@
     - tig
     - tmux
     - editorconfig
+    - reattach-to-user-namespace
     # - cscope
     # - nmap
     # - nmon   # not found in homebrew
