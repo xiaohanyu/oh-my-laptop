@@ -6,5 +6,7 @@
   when: ansible_os_family == 'Darwin'
   sudo: no
 
+- include: base.yml
+
 - set_fact:
     role_vcs_done: true

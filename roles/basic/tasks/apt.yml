@@ -1,6 +1,6 @@
 ---
 
-- name: basic | install some small, awesome packages to boost your life
+- name: install some small, awesome packages to boost your life
   apt: name={{item}} state=present
   with_items:
     - autoconf
@@ -19,10 +19,8 @@
     - editorconfig
 
 # zsh and oh-my-zsh
-- name: basic | install zsh
+- name: install zsh
   apt: name={{item}} state=present
   with_items:
     - zsh
     - zsh-lovers
-
-- include: base.yml

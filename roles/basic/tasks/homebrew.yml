@@ -26,5 +26,3 @@
   with_items:
     - zsh
     - zsh-lovers
-
-- include: base.yml
