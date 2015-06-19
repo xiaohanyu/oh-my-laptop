@@ -9,7 +9,7 @@ if [[ $unamestr == "Darwin" ]]; then
     brew cask || brew install caskroom/cask/brew-cask
 # debian, ubuntu, mint etc.
 elif [[ $unamestr == "Linux"  && -f $(which apt-get) ]]; then
-    pip || sudo apt-get install python-pip
+    pip || sudo apt-get install python-pip python2.7-dev
 fi
 
 ansible -h || pip install ansible
