@@ -5,8 +5,8 @@ This is part of [[https://github.com/xiaohanyu/oh-my-laptop][oh-my-laptop]].
 
 * Packages
 
-#+NAME: vcs-packages
-#+CAPTION: vcs module packages
+#+NAME: ruby-packages
+#+CAPTION: ruby module packages
 | Package            | Status   | Apt | Homebrew |
 |--------------------+----------+-----+----------|
 | [[https://github.com/sstephenson/rbenv][rbenv]]              | Required | OK  | OK       |
@@ -14,6 +14,7 @@ This is part of [[https://github.com/xiaohanyu/oh-my-laptop][oh-my-laptop]].
 | [[https://github.com/sstephenson/rbenv-gem-rehash][rbenv-gem-rehash]]   | Required | OK  | OK       |
 | [[https://github.com/sstephenson/rbenv-default-gems][rbenv-default-gems]] | Required | OK  | OK       |
 | [[https://github.com/rbenv/rbenv-each][rbenv-each]]         | Required | OK  | OK       |
+| [[https://github.com/rkh/rbenv-update][rbenv-update]]       | Required | OK  | OK       |
 | [[http://bundler.io/][bundler]]            | Required | OK  | OK       |
 | [[http://pryrepl.org/][pry]]                | Required | OK  | OK       |
 | [[https://github.com/pry/pry-doc][pry-doc]]            | Required | OK  | OK       |
@@ -82,6 +83,11 @@ code for ruby core statements, etc.
 * rbenv-each
 
 [[https://github.com/rbenv/rbenv-each][rbenv-each]] is a rbenv plugin which can run a command across all installed rubies.
+
+* rbenv-update
+
+This [[https://github.com/sstephenson/rbenv][rbenv]] plugin adds the rbenv update command that updated rbenv and all
+installed plugins.
 
 * Reference
 

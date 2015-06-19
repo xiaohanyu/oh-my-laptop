@@ -38,6 +38,12 @@
        depth=1
   when: result|failed
 
+- name: install rbenv-update plugin for rbenv
+  git: repo=https://github.com/rkh/rbenv-update.git
+       dest={{user_home}}/.rbenv/plugins/rbenv-update
+       depth=1
+  when: result|failed
+
 - name: init rbenv in bash
   lineinfile: dest={{user_home}}/.profile line="export PATH=\"$HOME/.rbenv/bin:$PATH\""
 
