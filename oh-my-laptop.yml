@@ -13,6 +13,7 @@
     role_java_done: false
     role_clojurec_done: false
     role_javascript_done: false
+    role_python_done: false
     role_ruby_done: false
     role_vcs_done: false
   roles:
@@ -21,5 +22,6 @@
     - java
     - clojure
     - javascript
+    - python
     - ruby
     - vcs
