@@ -1,0 +1,45 @@
+---
+
+## oh-my-zsh
+# clone oh-my-zsh when initialize
+- name: test whether or not pyenv has been cloned before
+  shell: if [ -f {{user_home}}/.pyenv/bin/pyenv ]; then true; else false; fi
+  register: result
+  ignore_errors: True
+
+# `git clone --depth=1` to improve speed
+- name: git clone pyenv repo
+  git: repo=https://github.com/yyuu/pyenv.git
+       dest={{user_home}}/.pyenv
+       depth=1
+  when: result|failed
+
+- name: install multiple plugins from yyuu for pyenv
+  git: repo=https://github.com/yyuu/{{item}}.git
+       dest={{user_home}}/.pyenv/plugins/{{item}}
+       depth=1
+  with_items:
+    - pyenv-doctor
+    - pyenv-pip-rehash
+    - pyenv-update
+    - pyenv-virtualenv
+    - pyenv-which-ext
+  when: result|failed
+
+- name: init pyenv in bash
+  lineinfile: dest={{user_home}}/.profile line="export PATH=\"$HOME/.pyenv/bin:$PATH\""
+
+- name: init pyenv in zsh
+  lineinfile: dest={{user_home}}/.zprofile line="export PATH=\"$HOME/.pyenv/bin:$PATH\""
+
+- name: init pyenv in bash
+  lineinfile: dest={{user_home}}/.profile line="eval \"$(pyenv init -)\""
+
+- name: init pyenv in zsh
+  lineinfile: dest={{user_home}}/.zprofile line="eval \"$(pyenv init -)\""
+
+# - name: init pyenv-virtualenv in bash
+#   lineinfile: dest={{user_home}}/.profile line="eval \"$(pyenv virtualenv init -)\""
+
+# - name: init pyenv-virtualenv in zsh
+#   lineinfile: dest={{user_home}}/.zprofile line="eval \"$(pyenv virtualenv init -)\""
