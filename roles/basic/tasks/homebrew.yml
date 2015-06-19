@@ -27,3 +27,11 @@
   with_items:
     - zsh
     - zsh-lovers
+
+- name: replace /etc/profile
+  copy: src=profile.etc dest=/etc/profile
+  sudo: yes
+
+- name: replace /etc/zshenv
+  copy: src=zshenv.etc dest=/etc/zshenv
+  sudo: yes
