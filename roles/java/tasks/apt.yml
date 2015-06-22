@@ -1,45 +1,45 @@
 ---
 
-- name: java | make sure the ansible required dependencies are installed
+- name: make sure the ansible required dependencies are installed
   apt: name={{item}} state=present
   with_items:
     - debconf
 
-- name: java | add webupd8 repository apt-key
+- name: add webupd8 repository apt-key
   apt_key:
     url: "http://keyserver.ubuntu.com:11371/pks/lookup?op=get&search=0xC2518248EEA14886"
     state: present
 
-- name: java | add webupd8 repository
+- name: add webupd8 repository
   apt_repository:
     repo: 'deb http://ppa.launchpad.net/webupd8team/java/ubuntu precise main'
     state: present
 
-- name: java | add webupd8 repository (src)
+- name: add webupd8 repository (src)
   apt_repository:
     repo: 'deb-src http://ppa.launchpad.net/webupd8team/java/ubuntu precise main'
     state: present
 
-- name: java | accept the oracle license
+- name: accept the oracle license
   shell: "echo {{item}} shared/accepted-oracle-license-v1-1 select true | sudo debconf-set-selections"
   with_items:
     - oracle-java8-installer
 
-- name: java | install JDK package(s)
+- name: install JDK package(s)
   apt:
     name: "oracle-java{{item}}-installer"
     state: present
     update_cache: no
   with_items: oracle_jdk_java_versions
 
-- name: java | set the default Java version
+- name: set the default Java version
   apt:
     name: "oracle-java{{oracle_jdk_java_version_default}}-set-default"
     state: present
     update_cache: no
 
 # install apache maven and gradle
-- name: java | install some java packages
+- name: install some java packages
   apt: name={{item}} state=present
   with_items:
     - maven
