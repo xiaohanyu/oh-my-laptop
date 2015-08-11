@@ -28,7 +28,7 @@ distributions.
 * Features
 
 - Modular, only install and configure necessary packages as you need.
-- Literate, every package has full documentation or links to desmontrate why we
+- Literate, every package has full documentation or links to demonstrate why we
   choose it and why we configure it this way.
 - Simple, all modules are written in ansible playbook, plain YAML format, quite
   easy to read, write and contribute.
