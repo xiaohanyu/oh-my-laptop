@@ -13,7 +13,7 @@
   register: bash_profile_stat
 
 - name: back up bash ".profile"
-  shell: mv {{user_home}}/.profile {{user_home}}/.profile-backup-by-oh-my-laptop.$(date +%F_%T)
+  shell: cat {{user_home}}/.profile > {{user_home}}/.profile-backup-by-oh-my-laptop.$(date +%F_%T) && rm {{user_home}}/.profile
   when: bash_profile_stat.stat.exists
 
 - name: get stat of zsh ".zprofile"
@@ -21,7 +21,7 @@
   register: zsh_zprofile_stat
 
 - name: back up zsh ".zprofile"
-  shell: mv {{user_home}}/.zprofile {{user_home}}/.zprofile-backup-by-oh-my-laptop.$(date +%F_%T)
+  shell: cat {{user_home}}/.zprofile > {{user_home}}/.zprofile-backup-by-oh-my-laptop.$(date +%F_%T) && rm {{user_home}}/.zprofile
   when: zsh_zprofile_stat.stat.exists
 
 ## zsh is not totally compatible with bash
