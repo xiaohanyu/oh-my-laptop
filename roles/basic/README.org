@@ -204,6 +204,9 @@ P.Hogan]]. oh-my-laptop steals some code snippets from this book and replace the
 prefix key =C-b= with =C-l=. Note that tmux's key bindings is case sensitive,
 so when weird things happened, check your CAPSLOCK first.
 
+Last but now least, you'd better install latest version tmux to avoid some
+weird bugs. On ubuntu, you can do like [[http://stackoverflow.com/questions/25940944/ugrade-tmux-from-1-8-to-1-9-on-ubuntu-14-04][this]].
+
 * zsh and oh-my-zsh
 
 [[http://www.zsh.org/][zsh]] is a shell designed for interactive use. Many of the useful features of
