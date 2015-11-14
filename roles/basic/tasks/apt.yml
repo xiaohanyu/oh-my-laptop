@@ -17,6 +17,7 @@
     - texinfo
     - tig
     - tmux
+    - vim
     - editorconfig
 
 # zsh and oh-my-zsh
