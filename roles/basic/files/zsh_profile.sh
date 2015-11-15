@@ -9,7 +9,5 @@ export EDITOR=vim
 alias pyhttp="python -m SimpleHTTPServer"
 
 # ruby bundler
-if [[ -f $(which bundle) ]]; then
-    alias b="bundle "
-    alias be="bundle exec "
-fi
+alias b="bundle "
+alias be="bundle exec "
