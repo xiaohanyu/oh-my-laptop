@@ -10,16 +10,11 @@ This is part of [[https://github.com/xiaohanyu/oh-my-laptop][oh-my-laptop]].
 | Package | Status      | Apt | Homebrew |
 |---------+-------------+-----+----------|
 | [[https://nodejs.org/][nodejs]]  | Required    | OK  | OK       |
-| [[http://bower.io/][bower]]   | Recommended | OK  | OK       |
 | [[http://jshint.com/][jshint]]  | Recommended | OK  | OK       |
 
 * nodejs
 
 It is quite easy to get nodejs on both Ubuntu and Mac OS X.
-
-* bower
-
-[[http://bower.io/][Bower]] is a package manager for the web.
 
 * jshint
 

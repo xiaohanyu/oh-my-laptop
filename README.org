@@ -108,7 +108,6 @@ find . -name README.org | xargs grep "|" | grep -v Package | grep -v '\-\-\-\-' 
 | [[http://maven.apache.org/][maven]]               | Required    | OK  | OK       |
 | [[https://gradle.org/][gradle]]              | Required    | OK  | OK       |
 | [[https://nodejs.org/][nodejs]]              | Required    | OK  | OK       |
-| [[http://bower.io/][bower]]               | Recommended | OK  | OK       |
 | [[http://jshint.com/][jshint]]              | Recommended | OK  | OK       |
 | [[https://github.com/yyuu/pyenv][pyenv]]               | Required    | OK  | OK       |
 | [[https://github.com/yyuu/pyenv-doctor][pyenv-doctor]]        | Required    | OK  | OK       |
