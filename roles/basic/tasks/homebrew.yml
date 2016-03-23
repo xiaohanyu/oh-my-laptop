@@ -16,8 +16,8 @@
     - tmux
     - editorconfig
     - reattach-to-user-namespace
+    - ssh-copy-id
     # - cscope
-    # - nmap
     # - nmon   # not found in homebrew
     # - pinfo  # not found in homebrew
 
