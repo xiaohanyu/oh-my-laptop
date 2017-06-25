@@ -4,7 +4,7 @@
 bash -x bootstrap.sh
 
 # initialize machine
-ansible-playbook -i localhost -K oh-my-laptop.yml
+ansible-playbook -i localhost oh-my-laptop.yml --extra-vars="ansible_become_pass="
 
 # run test
 ruby tests/test-linux.rb
