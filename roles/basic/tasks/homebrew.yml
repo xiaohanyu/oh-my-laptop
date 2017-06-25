@@ -29,8 +29,8 @@
 
 - name: replace /etc/profile
   copy: src=profile.etc dest=/etc/profile
-  sudo: yes
+  become: true
 
 - name: replace /etc/zshenv
   copy: src=zshenv.etc dest=/etc/zshenv
-  sudo: yes
+  become: true

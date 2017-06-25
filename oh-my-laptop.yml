@@ -2,11 +2,11 @@
 
 - hosts: localhost
   connection: local
+  become: true
+  become_method: sudo
   vars:
     whoami: "{{ lookup('env', 'USER') }}"
     user_home: "{{ lookup('env', 'HOME') }}"
-    become: true
-    become_method: sudo
     git_user_name: "Xiao Hanyu"
     git_user_email: "xiaohanyu1988@gmail.com"
     role_basic_done: false

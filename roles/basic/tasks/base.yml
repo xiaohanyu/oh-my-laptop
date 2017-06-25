@@ -53,7 +53,7 @@
   template: src=zshrc.sh dest={{user_home}}/.zshrc owner={{whoami}}
 
 - name: set zsh as default user shell
-  sudo: yes
+  become: true
   shell: chsh -s $(which zsh) {{whoami}}
 
 # add a tmux.conf

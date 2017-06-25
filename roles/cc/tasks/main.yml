@@ -4,7 +4,7 @@
   when: ansible_pkg_mgr == 'apt'
 - include: homebrew.yml
   when: ansible_os_family == 'Darwin'
-  sudo: no
+  become: false
 
 - set_fact:
     role_cc_done: true
