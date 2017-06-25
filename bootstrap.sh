@@ -12,5 +12,4 @@ if [[ $unamestr == "Darwin" ]]; then
 elif [[ $unamestr == "Linux"  && -f $(which apt-get) ]]; then
     sudo apt-get update --yes
     sudo apt-get install --yes python-pip python-dev git ansible
-    sudo apt-get install --yes
 fi
