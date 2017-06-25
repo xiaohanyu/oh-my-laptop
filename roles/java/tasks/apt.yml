@@ -12,12 +12,12 @@
 
 - name: add webupd8 repository
   apt_repository:
-    repo: 'deb http://ppa.launchpad.net/webupd8team/java/ubuntu precise main'
+    repo: "deb http://ppa.launchpad.net/webupd8team/java/ubuntu {{ansible_distribution_release}} main"
     state: present
 
 - name: add webupd8 repository (src)
   apt_repository:
-    repo: 'deb-src http://ppa.launchpad.net/webupd8team/java/ubuntu precise main'
+    repo: 'deb-src http://ppa.launchpad.net/webupd8team/java/ubuntu {{ansible_distribution_release}} main'
     state: present
 
 - name: accept the oracle license
