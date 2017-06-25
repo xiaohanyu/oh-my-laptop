@@ -3,6 +3,7 @@
 
 This is part of [[https://github.com/xiaohanyu/oh-my-laptop][oh-my-laptop]].
 
+
 * Packages
 
 #+NAME: python-packages
@@ -15,16 +16,19 @@ This is part of [[https://github.com/xiaohanyu/oh-my-laptop][oh-my-laptop]].
 | [[https://github.com/yyuu/pyenv-virtualenv][pyenv-virtualenv]] | Required | OK  | OK       |
 | [[https://github.com/yyuu/pyenv-which-ext][pyenv-which-ext]]  | Required | OK  | OK       |
 
+
 * pyenv
 
 Just like Ruby, Python is an actively evolving language. Sometimes, you want to
 try different features from different versions of Python. [[https://github.com/yyuu/pyenv][pyenv]] is originally
 forked of [[https://github.com/sstephenson/rbenv][rbenv]] and [[https://github.com/sstephenson/ruby-build][ruby-build]], and modified for Python.
 
+
 * pyenv-doctor
 
 [[https://github.com/yyuu/pyenv-doctor][pyenv-doctor]] is a [[https://github.com/yyuu/pyenv][pyenv]] plugin that provides a ~pyenv doctor~ command to verify
 pyenv installation and development tools to build pythons.
+
 
 * pyenv-update
 
@@ -33,15 +37,18 @@ pyenv and its plugins.
 
 This plugin was inspired from [[https://github.com/rkh/rbenv-update][rbenv-update]].
 
+
 * pyenv-virtualenv
 
 [[https://github.com/yyuu/pyenv-virtualenv][pyenv-virtualenv]] is a [[https://github.com/yyuu/pyenv][pyenv]] plugin that provides a ~pyenv virtualenv~ command
 to create virtualenvs for Python on UNIX-like systems.
 
+
 * pyenv-which-ext
 
 Integrate [[https://github.com/yyuu/pyenv-which-ext][pyenv]] and system commands. This pyenv plugin automatically lookup
 system command if the specified command has not been installed in pyenv.
+
 
 * Reference
 

@@ -3,6 +3,7 @@
 
 This is part of [[https://github.com/xiaohanyu/oh-my-laptop][oh-my-laptop]].
 
+
 * Packages
 
 #+NAME: vcs-packages
@@ -15,6 +16,7 @@ This is part of [[https://github.com/xiaohanyu/oh-my-laptop][oh-my-laptop]].
 | [[http://git-scm.com/][git]]        | Required   | OK  | OK       |
 | [[https://github.com/tj/git-extras][git-extras]] | Required   | OK  | OK       |
 | [[http://jonas.nitro.dk/tig/][tig]]        | Required   | OK  | OK       |
+
 
 * git
 

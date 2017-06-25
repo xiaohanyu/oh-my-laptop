@@ -3,6 +3,7 @@
 
 This is part of [[https://github.com/xiaohanyu/oh-my-laptop][oh-my-laptop]].
 
+
 * Packages
 
 #+NAME: cc-packages
@@ -11,6 +12,7 @@ This is part of [[https://github.com/xiaohanyu/oh-my-laptop][oh-my-laptop]].
 |---------+-------------+-----+----------|
 | [[http://clang.llvm.org/][clang]]   | Required    | OK  | OK       |
 | [[http://www.cmake.org/][cmake]]   | Recommended | OK  | OK       |
+
 
 * clang
 
@@ -26,6 +28,7 @@ homebrew packages requires xcode(or its command line tools) as a dependency, so
 I recommend you install xcode as soon as possible. Generally, you can get
 stable xcode from App Store, and beta version xcode from apple's official
 site.
+
 
 * cmake
 

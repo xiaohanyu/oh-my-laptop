@@ -3,6 +3,7 @@
 
 This is part of [[https://github.com/xiaohanyu/oh-my-laptop][oh-my-laptop]].
 
+
 * Packages
 
 #+NAME: ruby-packages
@@ -19,6 +20,7 @@ This is part of [[https://github.com/xiaohanyu/oh-my-laptop][oh-my-laptop]].
 | [[http://pryrepl.org/][pry]]                | Required | OK  | OK       |
 | [[https://github.com/pry/pry-doc][pry-doc]]            | Required | OK  | OK       |
 
+
 * rbenv
 
 Ruby is an actively evolving language. Often you need to support multiple
@@ -28,6 +30,7 @@ manager tools, however, IMHO, it's just too bloated. I prefer [[https://github.c
 course there're other [[https://github.com/postmodern/chruby#alternatives][choices]], however, rbenv has various [[https://github.com/sstephenson/rbenv/wiki/Plugins][plugins]], which will
 make your life much more easier.
 
+
 * ruby-build
 
 [[https://github.com/sstephenson/ruby-build][ruby-build]] is one of the most important plugins of rbenv, actually, you can
@@ -35,16 +38,19 @@ consider it as a sister project of rbenv. Just as its name, it helps to install
 ruby. Please do read its [[https://github.com/sstephenson/ruby-build/wiki][wiki]] to ensure your have necessary packages installed
 before you do your ruby-build.
 
+
 * rbenv-gem-rehash
 
 [[https://github.com/sstephenson/rbenv-gem-rehash][rbenv-gem-rehash]] automatically run =rbenv rehash= everytime you install or
 uninstall a gem.
+
 
 * rbenv-default-gems
 
 [[https://github.com/sstephenson/rbenv-default-gems][rbenv-default-gems]] hooks into the =rbenv install= command to automatically
 install gems listed in the =~/.rbenv/default-gems= file every time you install
 a new version of Ruby.
+
 
 ** bundler
 
@@ -66,10 +72,12 @@ alias b="bundle "
 alias be="bundle exec "
 #+END_SRC
 
+
 ** pry
 
 [[http://pryrepl.org/][Pry]] is a powerful alternative to the standard IRB shell for Ruby. Just consider
 it as [[http://ipython.org/][ipython]] in Ruby world.
+
 
 ** pry-doc
 
@@ -80,14 +88,18 @@ pry-doc extends two core pry commands: =show-doc= and =show-source= (aliased as
 =?= and =$=, respectively). With the help of pry-doc, you can check the MRI C
 code for ruby core statements, etc.
 
+
 * rbenv-each
 
-[[https://github.com/rbenv/rbenv-each][rbenv-each]] is a rbenv plugin which can run a command across all installed rubies.
+[[https://github.com/rbenv/rbenv-each][rbenv-each]] is a rbenv plugin which can run a command across all installed
+rubies.
+
 
 * rbenv-update
 
 This [[https://github.com/sstephenson/rbenv][rbenv]] plugin adds the rbenv update command that updated rbenv and all
 installed plugins.
+
 
 * Reference
 

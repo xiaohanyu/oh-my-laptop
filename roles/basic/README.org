@@ -22,6 +22,7 @@ This is part of [[https://github.com/xiaohanyu/oh-my-laptop][oh-my-laptop]].
 | [[https://github.com/robbyrussell/oh-my-zsh][oh-my-zsh]]           | Required    | OK  | OK       |
 | [[http://editorconfig.org/][editorconfig]]        | Recommended | NaN | OK       |
 
+
 * path_helper in OS X
 
 When you install packages(such as mactex) via homebrew, you may see the
@@ -54,6 +55,7 @@ Refs:
 - [[http://unix.stackexchange.com/questions/22979/path-helper-and-zsh][path_helper and zsh]]
 - [[http://stackoverflow.com/questions/12409270/os-x-mountain-lion-how-does-path-helper-work][OS X Mountain Lion: how does path_helper work?]]
 
+
 * the_silver_searcher
 
 #+BEGIN_QUOTE
@@ -71,10 +73,12 @@ something that’s fast and ignores files.
 You can not go back to [[http://beyondgrep.com][ack]] after the first you try ag. There're lots of
 third-party ag integration for various editors, check [[http://betterthanack.com/][betterthanack]].
 
+
 * cloc
 
 [[http://cloc.sourceforge.net/][cloc]] is a line-of-code counter tool to get an overview and generate a loc
 report for your project. It's simple, portable, and it just works as expected.
+
 
 * htop
 
@@ -85,10 +89,12 @@ It's a better replacement for the traditional builtin [[http://en.wikipedia.org/
 
 Type =h= from within =htop= to get instant help.
 
+
 * md5sha1sum
 
 [[http://www.microbrew.org/tools/md5sha1sum/][md5sha1sum]] package provides the missing =md5sum=, =sha1sum= command for Mac OS
 X.
+
 
 * proxychains-ng
 
@@ -104,6 +110,7 @@ Generally, you need an existing proxy(Socks or HTTP). Then prefix
 =proxychais-ng= to any command you want to execute, then your command should
 get data from Internet via your proxy.
 
+
 * ranger
 
 [[http://ranger.nongnu.org/][ranger]] is a CLI file manager with VI key bindings. Just as htop, ranger depends
@@ -113,6 +120,7 @@ program you want to use when open particular files.
 
 Try it and I'm sure you will fall in love with it. Check its [[http://ranger.nongnu.org/screenshots.html][screenshots]] for
 some intuition.
+
 
 * rlwrap
 
@@ -175,6 +183,8 @@ storing) passwords:
 #+BEGIN_SRC
 rlwrap -cr -aPassword: smbclient '\\PEANUT\C'
 #+END_SRC
+
+
 * texinfo
 
 Besides [[http://en.wikipedia.org/wiki/Man_page][man pages]], GNU [[http://www.gnu.org/software/texinfo/][texinfo]] is another popular documentation system, and it
@@ -183,12 +193,15 @@ is the official documentation format for the GNU project.
 Some packages may need texinfo to faciliate the build process. So we add it
 here.
 
+
 * wget
 
 GNU Wget is a free software package for retrieving files using HTTP, HTTPS and
 FTP, the most widely-used Internet protocols.
 
 Mac OS X didn't has it by default, so we add it here.
+
+
 * tmux
 
 tmux is a terminal multiplexer.
@@ -207,6 +220,7 @@ so when weird things happened, check your CAPSLOCK first.
 Last but now least, you'd better install latest version tmux to avoid some
 weird bugs. On ubuntu, you can do like [[http://stackoverflow.com/questions/25940944/ugrade-tmux-from-1-8-to-1-9-on-ubuntu-14-04][this]].
 
+
 * zsh and oh-my-zsh
 
 [[http://www.zsh.org/][zsh]] is a shell designed for interactive use. Many of the useful features of
@@ -223,6 +237,7 @@ configuration. Includes 180+ optional [[https://github.com/robbyrussell/oh-my-zs
 capistrano, brew, ant, php, python, etc), over 120 [[https://github.com/robbyrussell/oh-my-zsh/wiki/Themes][themes]] to spice up your
 morning, and an auto-update tool so that makes it easy to keep up with the
 latest updates from the community.
+
 
 * editorconfig
 

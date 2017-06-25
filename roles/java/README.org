@@ -3,6 +3,7 @@
 
 This is part of [[https://github.com/xiaohanyu/oh-my-laptop][oh-my-laptop]].
 
+
 * Packages
 
 #+NAME: java-packages
@@ -13,6 +14,7 @@ This is part of [[https://github.com/xiaohanyu/oh-my-laptop][oh-my-laptop]].
 | [[http://maven.apache.org/][maven]]   | Required | OK  | OK       |
 | [[https://gradle.org/][gradle]]  | Required | OK  | OK       |
 
+
 * Java
 
 ** Mac OS X
@@ -21,6 +23,7 @@ The vanilla OS X contains a fake =java= command which will lead you to Oracle's
 [[https://www.java.com/en/download/][site]]. Then you download a package, you click on it, you get Java
 installed. Fortunately, we have [[https://github.com/caskroom/homebrew-cask][homebrew-cask]], and we can get Java by =brew
 cask install java=. And ansible has builtin [[http://docs.ansible.com/homebrew_cask_module.html][module]] support for homebrwe-cask.
+
 
 ** Ubuntu
 
@@ -35,9 +38,11 @@ need to:
 Most of us have little time to touch the internals of =apt-get=, so I just
 figure out an ansible playbook and it works, that's enough.
 
+
 * Maven
 
 [[http://maven.apache.org/][Maven]] is the defacto build tool in Java world. It's easy to install it.
+
 
 * Gradle
 
