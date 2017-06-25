@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # get pip and ansible
-curl -L https://raw.githubusercontent.com/xiaohanyu/oh-my-laptop/master/bootstrap.sh | bash
+bash -x bootstrap.sh
 
 # initialize machine
 ansible-playbook -i localhost -K oh-my-laptop.yml
