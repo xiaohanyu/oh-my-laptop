@@ -27,14 +27,13 @@
 
 - name: install JDK package(s)
   apt:
-    name: "oracle-java{{item}}-installer"
+    name: "oracle-java8-installer"
     state: present
     update_cache: no
-  with_items: oracle_jdk_java_versions
 
 - name: set the default Java version
   apt:
-    name: "oracle-java{{oracle_jdk_java_version_default}}-set-default"
+    name: "oracle-java8-set-default"
     state: present
     update_cache: no
 
