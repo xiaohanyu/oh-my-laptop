@@ -24,8 +24,8 @@ end
 
 class BasicRoleTest < BaseTest
   def setup
-    @command_list = ['ag', 'cloc', 'htop', 'md5sum', 'proxychains4', 'ranger',
-                     'rlwrap', 'wget', 'tmux', 'zsh', 'editorconfig']
+    @command_list = ['ag', 'cloc', 'htop', 'md5sum', 'ranger', 'rlwrap', 'wget',
+                     'tmux', 'zsh', 'editorconfig']
   end
 end
 

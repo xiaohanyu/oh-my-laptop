@@ -93,7 +93,6 @@ find . -name README.org | xargs grep "|" | grep -v Package | grep -v '\-\-\-\-' 
 | [[http://cloc.sourceforge.net/][cloc]]                | Required    | OK  | OK       |
 | [[http://hisham.hm/htop/index.php][htop]]                | Required    | OK  | OK       |
 | [[http://www.microbrew.org/tools/md5sha1sum/][md5sha1sum]]          | Required    | NaN | OK       |
-| [[http://sourceforge.net/projects/proxychains-ng/][proxychains-ng]]      | Recommended | OK  | OK       |
 | [[http://ranger.nongnu.org/][ranger]]              | Required    | OK  | OK       |
 | [[https://github.com/hanslub42/rlwrap][rlwrap]]              | Required    | OK  | OK       |
 | [[https://www.gnu.org/software/wget/][wget]]                | Required    | OK  | OK       |

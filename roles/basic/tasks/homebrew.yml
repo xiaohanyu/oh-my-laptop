@@ -7,7 +7,6 @@
     - cloc
     - htop-osx
     - md5sha1sum
-    - proxychains-ng
     - ranger
     - rlwrap
     - texinfo
