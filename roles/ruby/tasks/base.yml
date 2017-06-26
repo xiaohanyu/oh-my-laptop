@@ -6,18 +6,13 @@
     dest: "{{user_home}}/.rbenv"
     update: yes
 
-- name: install ruby-build plugin for rbenv
-  git:
-    repo: https://github.com/rbenv/ruby-build.git
-    dest: "{{user_home}}/.rbenv/plugins/ruby-build"
-    depth: 1
-
 - name: install multiple plugins for rbenv
   git:
     repo: "https://github.com/rbenv/{{item}}.git"
     dest: "{{user_home}}/.rbenv/plugins/{{item}}"
     update: yes
   with_items:
+    - ruby-build
     - rbenv-gem-rehash
     - rbenv-default-gems
     - rbenv-each
