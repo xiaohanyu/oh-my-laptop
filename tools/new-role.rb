@@ -106,10 +106,10 @@ end
 
 def create_readme(role)
   content =<<EOF
-  #+TITLE: Oh My Laptop #{role.capitalize}
-  #+OPTIONS: toc:nil num:nil ^:nil
+#+TITLE: Oh My Laptop #{role.capitalize}
+#+OPTIONS: toc:nil num:nil ^:nil
 
-  This is part of [[https://github.com/xiaohanyu/oh-my-laptop][oh-my-laptop]].
+This is part of [[https://github.com/xiaohanyu/oh-my-laptop][oh-my-laptop]].
 EOF
 
   FileUtils.mkdir_p(role)
