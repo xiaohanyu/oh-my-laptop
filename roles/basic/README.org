@@ -19,7 +19,7 @@ This is part of [[https://github.com/xiaohanyu/oh-my-laptop][oh-my-laptop]].
 | [[https://developer.apple.com/xcode/][tmux]]                | Required    | OK  | OK       |
 | [[http://www.zsh.org/][zsh]]                 | Required    | OK  | OK       |
 | [[https://github.com/robbyrussell/oh-my-zsh][oh-my-zsh]]           | Required    | OK  | OK       |
-| [[http://editorconfig.org/][editorconfig]]        | Recommended | NaN | OK       |
+| [[http://editorconfig.org/][editorconfig]]        | Recommended | OK  | OK       |
 | [[https://mosh.org/][mosh]]                | Recommended | OK  | OK       |
 | [[https://www.gnu.org/software/global/][global]]              | Recommended | OK  | OK       |
 

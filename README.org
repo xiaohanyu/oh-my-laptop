@@ -101,7 +101,7 @@ find . -name README.org | xargs grep "|" | grep -v Package | grep -v '\-\-\-\-' 
 | [[https://developer.apple.com/xcode/][tmux]]                | Required    | OK  | OK       |
 | [[http://www.zsh.org/][zsh]]                 | Required    | OK  | OK       |
 | [[https://github.com/robbyrussell/oh-my-zsh][oh-my-zsh]]           | Required    | OK  | OK       |
-| [[http://editorconfig.org/][editorconfig]]        | Recommended | NaN | OK       |
+| [[http://editorconfig.org/][editorconfig]]        | Recommended | OK  | OK       |
 | [[http://clang.llvm.org/][clang]]               | Required    | OK  | OK       |
 | [[http://www.cmake.org/][cmake]]               | Recommended | OK  | OK       |
 | [[https://github.com/technomancy/leiningen/][leiningen]]           | Required    | OK  | OK       |
