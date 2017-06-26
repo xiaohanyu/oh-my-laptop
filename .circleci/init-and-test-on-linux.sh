@@ -8,4 +8,4 @@ ansible-playbook -i localhost oh-my-laptop.yml --extra-vars="ansible_become_pass
 
 # run test
 gem install minitest
-ruby tests/test-linux.rb
+ruby -Itests tests/run-tests.rb
