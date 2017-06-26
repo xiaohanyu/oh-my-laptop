@@ -18,9 +18,6 @@
     - tig
     - tmux
     - wget
-    # - cscope
-    # - nmon   # not found in homebrew
-    # - pinfo  # not found in homebrew
 
 # zsh and oh-my-zsh
 - name: install zsh
