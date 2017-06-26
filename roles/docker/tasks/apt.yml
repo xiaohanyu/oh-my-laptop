@@ -36,3 +36,8 @@
 
 - name: grant user access to run docker
   command: usermod -aG docker {{whoami}}
+
+- name: install docker-compose
+  pip:
+    name: docker-compose
+    state: present
