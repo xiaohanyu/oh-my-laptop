@@ -11,3 +11,15 @@ alias pyhttp="python -m SimpleHTTPServer"
 # ruby bundler
 alias b="bundle "
 alias be="bundle exec "
+
+if [ -f $HOME/.pyenv-init.sh ]; then
+    source $HOME/.pyenv-init.sh
+fi
+
+if [ -f $HOME/.rbenv-init.sh ]; then
+    source $HOME/.rbenv-init.sh
+fi
+
+if [ -f $HOME/.nodenv-init.sh ]; then
+    source $HOME/.nodenv-init.sh
+fi
