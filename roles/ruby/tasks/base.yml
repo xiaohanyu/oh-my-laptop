@@ -1,60 +1,43 @@
 ---
 
-## oh-my-zsh
-# clone oh-my-zsh when initialize
-- name: test whether or not rbenv has been cloned before
-  shell: if [ -f {{user_home}}/.rbenv/bin/rbenv ]; then true; else false; fi
-  register: result
-  ignore_errors: True
-
-# `git clone --depth=1` to improve speed
 - name: git clone rbenv repo
-  git: repo=https://github.com/sstephenson/rbenv
-       dest={{user_home}}/.rbenv
-       depth=1
-  when: result|failed
+  git:
+    repo: https://github.com/sstephenson/rbenv
+    dest: "{{user_home}}/.rbenv"
+    update: yes
 
 - name: install ruby-build plugin for rbenv
-  git: repo=https://github.com/sstephenson/ruby-build.git
-       dest={{user_home}}/.rbenv/plugins/ruby-build
-       depth=1
-  when: result|failed
+  git:
+    repo: https://github.com/sstephenson/ruby-build.git
+    dest: "{{user_home}}/.rbenv/plugins/ruby-build"
+    depth: 1
 
 - name: install ruby-gem-rehash plugin for rbenv
-  git: repo=https://github.com/sstephenson/rbenv-gem-rehash.git
-       dest={{user_home}}/.rbenv/plugins/rbenv-gem-rehash
-       depth=1
-  when: result|failed
+  git:
+    repo: https://github.com/sstephenson/rbenv-gem-rehash.git
+    dest: "{{user_home}}/.rbenv/plugins/rbenv-gem-rehash"
+    update: yes
 
 - name: install rbenv-default-gems plugin for rbenv
-  git: repo=https://github.com/sstephenson/rbenv-default-gems.git
-       dest={{user_home}}/.rbenv/plugins/rbenv-default-gems
-       depth=1
-  when: result|failed
+  git:
+    repo: https://github.com/sstephenson/rbenv-default-gems.git
+    dest: "{{user_home}}/.rbenv/plugins/rbenv-default-gems"
+    update: yes
 
 - name: install rbenv-each plugin for rbenv
-  git: repo=https://github.com/chriseppstein/rbenv-each.git
-       dest={{user_home}}/.rbenv/plugins/rbenv-each
-       depth=1
-  when: result|failed
+  git:
+    repo: https://github.com/chriseppstein/rbenv-each.git
+    dest: "{{user_home}}/.rbenv/plugins/rbenv-each"
+    update: yes
 
 - name: install rbenv-update plugin for rbenv
-  git: repo=https://github.com/rkh/rbenv-update.git
-       dest={{user_home}}/.rbenv/plugins/rbenv-update
-       depth=1
-  when: result|failed
+  git:
+    repo: https://github.com/rkh/rbenv-update.git
+    dest: "{{user_home}}/.rbenv/plugins/rbenv-update"
+    update: yes
 
-- name: init rbenv in bash
-  lineinfile: dest={{user_home}}/.profile line="export PATH=\"$HOME/.rbenv/bin:$PATH\""
-
-- name: init rbenv in zsh
-  lineinfile: dest={{user_home}}/.zprofile line="export PATH=\"$HOME/.rbenv/bin:$PATH\""
-
-- name: init rbenv in bash
-  lineinfile: dest={{user_home}}/.profile line="eval \"$(rbenv init -)\""
-
-- name: init rbenv in zsh
-  lineinfile: dest={{user_home}}/.zprofile line="eval \"$(rbenv init -)\""
+- name: set-up rbenv init file
+  copy: src=rbenv-init.sh dest={{user_home}}/.rbenv-init.sh
 
 - name: copy gemrc
   copy: src=gemrc dest={{user_home}}/.gemrc
