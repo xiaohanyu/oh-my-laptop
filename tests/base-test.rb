@@ -7,6 +7,14 @@ class BaseTest < Minitest::Test
     @command_list = []
   end
 
+  def apt_get_available?
+    return system('which apt-get > /dev/null')
+  end
+
+  def homebrew_available?
+    return system('which brew > /dev/null')
+  end
+
   def assert_command_exist(command)
     # system returns true if the command gives zero exit status, false for non
     # zero exit status. Returns nil if command execution fails. An error status
