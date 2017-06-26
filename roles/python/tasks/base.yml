@@ -2,13 +2,13 @@
 
 - name: git clone|pull pyenv repo
   git:
-    repo: https://github.com/yyuu/pyenv.git
+    repo: https://github.com/pyenv/pyenv.git
     dest: "{{user_home}}/.pyenv"
     update: yes
 
-- name: install multiple plugins from yyuu for pyenv
+- name: install multiple plugins for pyenv
   git:
-    repo: "https://github.com/yyuu/{{item}}.git"
+    repo: "https://github.com/pyenv/{{item}}.git"
     dest: "{{user_home}}/.pyenv/plugins/{{item}}"
     update: yes
   with_items:

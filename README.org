@@ -110,11 +110,11 @@ find . -name README.org | xargs grep "|" | grep -v Package | grep -v '\-\-\-\-' 
 | [[https://gradle.org/][gradle]]             | Required    | OK  | OK       |
 | [[https://nodejs.org/][nodejs]]             | Required    | OK  | OK       |
 | [[http://jshint.com/][jshint]]             | Recommended | OK  | OK       |
-| [[https://github.com/yyuu/pyenv][pyenv]]              | Required    | OK  | OK       |
-| [[https://github.com/yyuu/pyenv-doctor][pyenv-doctor]]       | Required    | OK  | OK       |
-| [[https://github.com/yyuu/pyenv-update][pyenv-update]]       | Required    | OK  | OK       |
-| [[https://github.com/yyuu/pyenv-virtualenv][pyenv-virtualenv]]   | Required    | OK  | OK       |
-| [[https://github.com/yyuu/pyenv-which-ext][pyenv-which-ext]]    | Required    | OK  | OK       |
+| [[https://github.com/pyenv/pyenv][pyenv]]              | Required    | OK  | OK       |
+| [[https://github.com/pyenv/pyenv-doctor][pyenv-doctor]]       | Required    | OK  | OK       |
+| [[https://github.com/pyenv/pyenv-update][pyenv-update]]       | Required    | OK  | OK       |
+| [[https://github.com/pyenv/pyenv-virtualenv][pyenv-virtualenv]]   | Required    | OK  | OK       |
+| [[https://github.com/pyenv/pyenv-which-ext][pyenv-which-ext]]    | Required    | OK  | OK       |
 | [[https://github.com/sstephenson/rbenv][rbenv]]              | Required    | OK  | OK       |
 | [[https://github.com/sstephenson/ruby-build][ruby-build]]         | Required    | OK  | OK       |
 | [[https://github.com/sstephenson/rbenv-gem-rehash][rbenv-gem-rehash]]   | Required    | OK  | OK       |
