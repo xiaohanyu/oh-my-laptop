@@ -20,6 +20,7 @@ This is part of [[https://github.com/xiaohanyu/oh-my-laptop][oh-my-laptop]].
 | [[http://www.zsh.org/][zsh]]                 | Required    | OK  | OK       |
 | [[https://github.com/robbyrussell/oh-my-zsh][oh-my-zsh]]           | Required    | OK  | OK       |
 | [[http://editorconfig.org/][editorconfig]]        | Recommended | NaN | OK       |
+| [[https://mosh.org/][mosh]]                | Recommended | OK  | OK       |
 
 
 * path_helper in OS X
@@ -234,3 +235,13 @@ to defined styles. EditorConfig files are easily readable and they work nicely
 with version control systems.
 
 Check [[https://github.com/editorconfig/editorconfig-core-c/blob/master/INSTALL.md][github]] for detailed installation instructions.
+
+
+* mosh
+
+[[https://mosh.org/][Mosh]] is a remote terminal application that allows roaming, supports intermittent
+connectivity, and provides intelligent local echo and line editing of user
+keystrokes.
+
+Mosh is a replacement for SSH. It's more robust and responsive, especially over
+Wi-Fi, cellular, and long-distance links.

@@ -7,8 +7,10 @@
     - aptitude
     - cloc
     - curl
+    - editorconfig
     - htop
     - make
+    - mosh
     - pinfo
     - ranger
     - rlwrap
@@ -17,7 +19,6 @@
     - tig
     - tmux
     - vim
-    - editorconfig
 
 # zsh and oh-my-zsh
 - name: install zsh

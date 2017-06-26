@@ -5,17 +5,18 @@
   with_items:
     - ag
     - cloc
+    - editorconfig
     - htop-osx
     - md5sha1sum
+    - mosh
     - ranger
+    - reattach-to-user-namespace
     - rlwrap
+    - ssh-copy-id
     - texinfo
-    - wget
     - tig
     - tmux
-    - editorconfig
-    - reattach-to-user-namespace
-    - ssh-copy-id
+    - wget
     # - cscope
     # - nmon   # not found in homebrew
     # - pinfo  # not found in homebrew
