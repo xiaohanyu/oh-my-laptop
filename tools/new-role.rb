@@ -6,7 +6,9 @@ def create_defaults(role)
   content = "---\n"
 
   FileUtils.mkdir_p("#{role}/defaults")
-  File.open("#{role}/defaults/main.yml", 'w') do |f|
+  file = "#{role}/defaults/main.yml"
+  puts "creating #{file}..."
+  File.open(file, 'w') do |f|
     f.write(content)
   end
 end
@@ -15,7 +17,9 @@ def create_files(role)
   content = "---\n"
 
   FileUtils.mkdir_p("#{role}/files")
-  File.open("#{role}/files/main.yml", 'w') do |f|
+  file = "#{role}/files/main.yml"
+  puts "creating #{file}..."
+  File.open(file, 'w') do |f|
     f.write(content)
   end
 end
@@ -24,7 +28,9 @@ def create_handlers(role)
   content = "---\n"
 
   FileUtils.mkdir_p("#{role}/handlers")
-  File.open("#{role}/handlers/main.yml", 'w') do |f|
+  file = "#{role}/handlers/main.yml"
+  puts "creating #{file}..."
+  File.open(file, 'w') do |f|
     f.write(content)
   end
 end
@@ -33,7 +39,9 @@ def create_meta(role)
   content = "---\n"
 
   FileUtils.mkdir_p("#{role}/meta")
-  File.open("#{role}/meta/main.yml", 'w') do |f|
+  file = "#{role}/meta/main.yml"
+  puts "creating #{file}..."
+  File.open(file, 'w') do |f|
     f.write(content)
   end
 end
@@ -60,17 +68,17 @@ EOF
 ---
 EOF
 
+  file_contents = [["#{role}/tasks/apt.yml", apt_content],
+                   ["#{role}/tasks/homebrew.yml", homebrew_content],
+                   ["#{role}/tasks/main.yml", main_content]]
+
   FileUtils.mkdir_p("#{role}/tasks")
-  File.open("#{role}/tasks/apt.yml", 'w') do |f|
-    f.write(apt_content)
-  end
 
-  File.open("#{role}/tasks/homebrew.yml", 'w') do |f|
-    f.write(homebrew_content)
-  end
-
-  File.open("#{role}/tasks/main.yml", 'w') do |f|
-    f.write(main_content)
+  file_contents.each do |file, content|
+    puts "creating #{file}..."
+    File.open(file, 'w') do |f|
+      f.write(content)
+    end
   end
 end
 
@@ -78,7 +86,9 @@ def create_templates(role)
   content = "---\n"
 
   FileUtils.mkdir_p("#{role}/templates")
-  File.open("#{role}/templates/main.yml", 'w') do |f|
+  file = "#{role}/templates/main.yml"
+  puts "creating #{file}..."
+  File.open(file, 'w') do |f|
     f.write(content)
   end
 end
@@ -87,7 +97,9 @@ def create_vars(role)
   content = "---\n"
 
   FileUtils.mkdir_p("#{role}/vars")
-  File.open("#{role}/vars/main.yml", 'w') do |f|
+  file = "#{role}/vars/main.yml"
+  puts "creating #{file}..."
+  File.open(file, 'w') do |f|
     f.write(content)
   end
 end
@@ -109,6 +121,13 @@ end
 
 def create_role(role)
   FileUtils.cd('roles', :verbose=>true)
+
+  if Dir.exist?(role)
+    puts "role #{role} seems already exist, can't override it."
+    puts "exiting...."
+    return
+  end
+
   create_defaults(role)
   create_files(role)
   create_handlers(role)
