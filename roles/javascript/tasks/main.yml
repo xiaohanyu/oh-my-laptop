@@ -4,10 +4,10 @@
   when: ansible_pkg_mgr == 'apt'
 - include: homebrew.yml
   when: ansible_os_family == 'Darwin'
-  become: true
+  become: false
 
 - include: base.yml
-  become: true
+  become: false
 
 - set_fact:
     role_javascript_done: true

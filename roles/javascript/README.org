@@ -6,20 +6,20 @@ This is part of [[https://github.com/xiaohanyu/oh-my-laptop][oh-my-laptop]].
 
 * Packages
 
-#+NAME: javascript-packages
-#+CAPTION: javascript module packages
-| Package | Status      | Apt | Homebrew |
-|---------+-------------+-----+----------|
-| [[https://nodejs.org/][nodejs]]  | Required    | OK  | OK       |
-| [[http://jshint.com/][jshint]]  | Recommended | OK  | OK       |
+#+NAME: node-packages
+#+CAPTION: node module packages
+| Package                 | Status   | Apt | Homebrew |
+|-------------------------+----------+-----+----------|
+| [[https://github.com/nodenv/nodenv][nodenv]]                  | Required | OK  | OK       |
+| [[https://github.com/nodenv/node-build][node-build]]              | Required | OK  | OK       |
+| [[https://github.com/nodenv/nodenv-default-packages][nodenv-default-packages]] | Required | OK  | OK       |
+| [[https://github.com/nodenv/nodenv-each][nodenv-each]]             | Required | OK  | OK       |
+| [[https://github.com/nodenv/nodenv-env][nodenv-env]]              | Required | OK  | OK       |
+| [[https://github.com/nodenv/nodenv-vars][nodenv-vars]]             | Required | OK  | OK       |
+| [[https://github.com/nodenv/nodenv-package-rehash][nodenv-package-rehash]]   | Required | OK  | OK       |
 
 
-* nodejs
+* nodenv
 
-It is quite easy to get nodejs on both Ubuntu and Mac OS X.
-
-
-* jshint
-
-[[http://jshint.com/][JSHint]] is a JavaScript developer's best friend to detect errors and potential
-problems in JavaScript code and to enforce your team's coding conventions.
+Just because I get used to [[https://github.com/rbenv/rbenv][rbenv]], so I choose [[https://github.com/nodenv/nodenv][nodenv]], try to get same workflow
+for nodejs. Together, with some official plugins.

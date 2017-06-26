@@ -1,7 +1,23 @@
 ---
 
-- name: install some npm packages
-  npm: name={{item}} state=present global=yes
-  become: true
+- name: git clone|pull nodenv repo
+  git:
+    repo: https://github.com/nodenv/nodenv.git
+    dest: "{{user_home}}/.nodenv"
+    update: yes
+
+- name: install multiple plugins for nodenv
+  git:
+    repo: "https://github.com/nodenv/{{item}}.git"
+    dest: "{{user_home}}/.nodenv/plugins/{{item}}"
+    update: yes
   with_items:
-    - jshint
+    - node-build
+    - nodenv-default-packages
+    - nodenv-each
+    - nodenv-env
+    - nodenv-package-rehash
+    - nodenv-vars
+
+- name: set-up nodenv init file
+  copy: src=nodenv-init.sh dest={{user_home}}/.nodenv-init.sh

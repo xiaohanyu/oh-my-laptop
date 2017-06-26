@@ -8,5 +8,7 @@ class JavaScriptRoleTest < BaseTest
     elsif self.homebrew_available?
       @command_list = ['node', 'npm']
     end
+
+    @command_list += ['nodenv']
   end
 end
