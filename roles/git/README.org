@@ -1,4 +1,4 @@
-#+TITLE: Oh My Laptop VCS
+#+TITLE: Oh My Laptop Git
 #+OPTIONS: toc:nil num:nil ^:nil
 
 This is part of [[https://github.com/xiaohanyu/oh-my-laptop][oh-my-laptop]].
@@ -6,13 +6,10 @@ This is part of [[https://github.com/xiaohanyu/oh-my-laptop][oh-my-laptop]].
 
 * Packages
 
-#+NAME: vcs-packages
-#+CAPTION: vcs module packages
+#+NAME: git-packages
+#+CAPTION: git module packages
 | Package    | Status     | Apt | Homebrew |
 |------------+------------+-----+----------|
-| [[http://www.nongnu.org/cvs/][cvs]]        | Deprecated | OK  | OK       |
-| [[https://subversion.apache.org/][svn]]        | Deprecated | OK  | OK       |
-| [[http://mercurial.selenic.com/][mercurial]]  | Deprecated | OK  | OK       |
 | [[http://git-scm.com/][git]]        | Required   | OK  | OK       |
 | [[https://github.com/tj/git-extras][git-extras]] | Required   | OK  | OK       |
 | [[http://jonas.nitro.dk/tig/][tig]]        | Required   | OK  | OK       |

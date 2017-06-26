@@ -1,0 +1,7 @@
+---
+
+- name: install virtualbox and vagrant
+  homebrew_cask: name={{item}} state=present
+  with_items:
+    - virtualbox
+    - vagrant

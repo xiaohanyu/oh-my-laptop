@@ -1,12 +1,5 @@
 ---
 
-- name: install subversion and mercurial
-  apt: name={{item}} state=present
-  with_items:
-    - subversion
-    - mercurial
-    - cvs
-
 - name: install git and some helper packages
   apt: name={{item}} state=present
   with_items:

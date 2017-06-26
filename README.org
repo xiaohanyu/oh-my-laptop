@@ -126,9 +126,6 @@ find . -name README.org | xargs grep "|" | grep -v Package | grep -v '\-\-\-\-' 
 | [[https://github.com/pry/pry-doc][pry-doc]]            | Required    | OK  | OK       |
 | [[http://www.virtualbox.org][virtualbox]]         | Required    | OK  | OK       |
 | [[http://www.vagrantup.com][vagrant]]            | Required    | OK  | OK       |
-| [[http://www.nongnu.org/cvs/][cvs]]                | Deprecated  | OK  | OK       |
-| [[https://subversion.apache.org/][svn]]                | Deprecated  | OK  | OK       |
-| [[http://mercurial.selenic.com/][mercurial]]          | Deprecated  | OK  | OK       |
 | [[http://git-scm.com/][git]]                | Required    | OK  | OK       |
 | [[https://github.com/tj/git-extras][git-extras]]         | Required    | OK  | OK       |
 | [[http://jonas.nitro.dk/tig/][tig]]                | Required    | OK  | OK       |

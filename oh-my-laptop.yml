@@ -11,20 +11,20 @@
     git_user_email: "xiaohanyu1988@gmail.com"
     role_basic_done: false
     role_cc_done: false
+    role_git_done: false
     role_java_done: false
     role_clojurec_done: false
     role_javascript_done: false
     role_python_done: false
     role_ruby_done: false
-    role_vcs_done: false
     role_zsh_done: false
   roles:
     - basic
     - cc
+    - git
     - java
     - clojure
     - javascript
     - python
     - ruby
-    - vcs
     - zsh

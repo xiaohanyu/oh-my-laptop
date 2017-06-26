@@ -1,0 +1,20 @@
+#+TITLE: Oh My Laptop Vagrant
+#+OPTIONS: toc:nil num:nil ^:nil
+
+This is part of [[https://github.com/xiaohanyu/oh-my-laptop][oh-my-laptop]].
+
+
+* Packages
+
+#+NAME: vagrant-packages
+#+CAPTION: vagrant module packages
+| Package    | Status   | Apt | Homebrew |
+|------------+----------+-----+----------|
+| [[http://www.virtualbox.org][virtualbox]] | Required | OK  | OK       |
+| [[http://www.vagrantup.com][vagrant]]    | Required | OK  | OK       |
+
+
+* virtualbox
+
+
+* vagrant

@@ -5,9 +5,3 @@
 - include: homebrew.yml
   when: ansible_os_family == 'Darwin'
   become: false
-
-- include: base.yml
-  become: false
-
-- set_fact:
-    role_vcs_done: true
