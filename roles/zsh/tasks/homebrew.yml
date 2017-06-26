@@ -1,0 +1,16 @@
+---
+
+# zsh and oh-my-zsh
+- name: install zsh
+  homebrew: name={{item}} state=present
+  with_items:
+    - zsh
+    - zsh-lovers
+
+- name: replace /etc/profile
+  copy: src=profile.etc dest=/etc/profile
+  become: true
+
+- name: replace /etc/zshenv
+  copy: src=zshenv.etc dest=/etc/zshenv
+  become: true

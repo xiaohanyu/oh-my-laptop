@@ -24,39 +24,6 @@ This is part of [[https://github.com/xiaohanyu/oh-my-laptop][oh-my-laptop]].
 | [[https://www.gnu.org/software/global/][global]]       | Recommended | OK  | OK       |
 
 
-* path_helper in OS X
-
-When you install packages(such as mactex) via homebrew, you may see the
-following text:
-
-#+BEGIN_SRC sh
-# $ brew cask install mactex
-# ==> Caveats
-# To use mactex, zsh users may need to add the following line to their
-# ~/.zprofile.  (Among other effects, /usr/texbin will be added to the
-# PATH environment variable):
-
-#   eval `/usr/libexec/path_helper -s`
-if [[ -f /usr/libexec/path_helper ]]; then
-    eval `/usr/libexec/path_helper -s`
-fi
-#+END_SRC
-
-Seems strange, ha? [[https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man8/path_helper.8.html][path_helper]] is a binary executable which helps you to
-construct proper ~$PATH~ variable through ~/etc/paths/~ and files in
-~/etc/path.d/~. However, when ~/usr/libexec/path_helper -s~, it depends on the
-current ~$PATH~ variable, which is not sure in different moment, that's all
-trouble begins. I prefer to provide an empty ~PATH=""~ variable when
-~/usr/libexec/path_helper -s~. So I replace ~/etc/profile~ and ~/etc/zshenv~
-when oh-my-laptop runs, so I can get more precise control over ~$PATH~.
-
-Refs:
-
-- [[http://www.softec.lu/site/DevelopersCorner/MasteringThePathHelper][Mastering the path_helper utility of Mac OS X]]
-- [[http://unix.stackexchange.com/questions/22979/path-helper-and-zsh][path_helper and zsh]]
-- [[http://stackoverflow.com/questions/12409270/os-x-mountain-lion-how-does-path-helper-work][OS X Mountain Lion: how does path_helper work?]]
-
-
 * the_silver_searcher
 
 #+BEGIN_QUOTE
@@ -205,24 +172,6 @@ so when weird things happened, check your CAPSLOCK first.
 
 Last but now least, you'd better install latest version tmux to avoid some
 weird bugs. On ubuntu, you can do like [[http://stackoverflow.com/questions/25940944/ugrade-tmux-from-1-8-to-1-9-on-ubuntu-14-04][this]].
-
-
-* zsh and oh-my-zsh
-
-[[http://www.zsh.org/][zsh]] is a shell designed for interactive use. Many of the useful features of
-bash, ksh, and tcsh were incorporated into zsh; many original features were
-added. Check the following posts to get some knowledge about why zsh is a much
-more cooler option than bash:
-
-- [[http://code.joejag.com/2014/why-zsh.html][My favourite Zsh features]]
-- [[http://mikebuss.com/2014/02/02/a-beautiful-productive-terminal-experience/][A Beautifully Productive Terminal Experience]]
-- [[http://mikegrouchy.com/blog/2012/01/zsh-is-your-friend.html][Zsh is your friend]]
-
-[[http://ohmyz.sh][oh-my-zsh]] is a community-driven framework for managing your zsh
-configuration. Includes 180+ optional [[https://github.com/robbyrussell/oh-my-zsh/wiki/Plugins][plugins]] (rails, git, OS X, hub,
-capistrano, brew, ant, php, python, etc), over 120 [[https://github.com/robbyrussell/oh-my-zsh/wiki/Themes][themes]] to spice up your
-morning, and an auto-update tool so that makes it easy to keep up with the
-latest updates from the community.
 
 
 * editorconfig

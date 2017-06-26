@@ -17,6 +17,7 @@
     role_python_done: false
     role_ruby_done: false
     role_vcs_done: false
+    role_zsh_done: false
   roles:
     - basic
     - cc
@@ -26,3 +27,4 @@
     - python
     - ruby
     - vcs
+    - zsh
