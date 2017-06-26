@@ -115,12 +115,12 @@ find . -name README.org | xargs grep "|" | grep -v Package | grep -v '\-\-\-\-' 
 | [[https://github.com/pyenv/pyenv-update][pyenv-update]]       | Required    | OK  | OK       |
 | [[https://github.com/pyenv/pyenv-virtualenv][pyenv-virtualenv]]   | Required    | OK  | OK       |
 | [[https://github.com/pyenv/pyenv-which-ext][pyenv-which-ext]]    | Required    | OK  | OK       |
-| [[https://github.com/sstephenson/rbenv][rbenv]]              | Required    | OK  | OK       |
-| [[https://github.com/sstephenson/ruby-build][ruby-build]]         | Required    | OK  | OK       |
-| [[https://github.com/sstephenson/rbenv-gem-rehash][rbenv-gem-rehash]]   | Required    | OK  | OK       |
-| [[https://github.com/sstephenson/rbenv-default-gems][rbenv-default-gems]] | Required    | OK  | OK       |
+| [[https://github.com/rbenv/rbenv][rbenv]]              | Required    | OK  | OK       |
+| [[https://github.com/rbenv/ruby-build][ruby-build]]         | Required    | OK  | OK       |
+| [[https://github.com/rbenv/rbenv-gem-rehash][rbenv-gem-rehash]]   | Required    | OK  | OK       |
+| [[https://github.com/rbenv/rbenv-default-gems][rbenv-default-gems]] | Required    | OK  | OK       |
 | [[https://github.com/rbenv/rbenv-each][rbenv-each]]         | Required    | OK  | OK       |
-| [[https://github.com/rkh/rbenv-update][rbenv-update]]       | Required    | OK  | OK       |
+| [[https://github.com/rbenv/rbenv-vars][rbenv-vars]]         | Required    | OK  | OK       |
 | [[http://bundler.io/][bundler]]            | Required    | OK  | OK       |
 | [[http://pryrepl.org/][pry]]                | Required    | OK  | OK       |
 | [[https://github.com/pry/pry-doc][pry-doc]]            | Required    | OK  | OK       |

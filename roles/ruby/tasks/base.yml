@@ -2,39 +2,26 @@
 
 - name: git clone rbenv repo
   git:
-    repo: https://github.com/sstephenson/rbenv
+    repo: https://github.com/rbenv/rbenv
     dest: "{{user_home}}/.rbenv"
     update: yes
 
 - name: install ruby-build plugin for rbenv
   git:
-    repo: https://github.com/sstephenson/ruby-build.git
+    repo: https://github.com/rbenv/ruby-build.git
     dest: "{{user_home}}/.rbenv/plugins/ruby-build"
     depth: 1
 
-- name: install ruby-gem-rehash plugin for rbenv
+- name: install multiple plugins for rbenv
   git:
-    repo: https://github.com/sstephenson/rbenv-gem-rehash.git
-    dest: "{{user_home}}/.rbenv/plugins/rbenv-gem-rehash"
+    repo: "https://github.com/rbenv/{{item}}.git"
+    dest: "{{user_home}}/.rbenv/plugins/{{item}}"
     update: yes
-
-- name: install rbenv-default-gems plugin for rbenv
-  git:
-    repo: https://github.com/sstephenson/rbenv-default-gems.git
-    dest: "{{user_home}}/.rbenv/plugins/rbenv-default-gems"
-    update: yes
-
-- name: install rbenv-each plugin for rbenv
-  git:
-    repo: https://github.com/chriseppstein/rbenv-each.git
-    dest: "{{user_home}}/.rbenv/plugins/rbenv-each"
-    update: yes
-
-- name: install rbenv-update plugin for rbenv
-  git:
-    repo: https://github.com/rkh/rbenv-update.git
-    dest: "{{user_home}}/.rbenv/plugins/rbenv-update"
-    update: yes
+  with_items:
+    - rbenv-gem-rehash
+    - rbenv-default-gems
+    - rbenv-each
+    - rbenv-vars
 
 - name: set-up rbenv init file
   copy: src=rbenv-init.sh dest={{user_home}}/.rbenv-init.sh
