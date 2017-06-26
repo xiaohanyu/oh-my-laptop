@@ -8,6 +8,7 @@
     - cloc
     - curl
     - editorconfig
+    - global
     - htop
     - make
     - mosh

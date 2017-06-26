@@ -21,6 +21,7 @@ This is part of [[https://github.com/xiaohanyu/oh-my-laptop][oh-my-laptop]].
 | [[https://github.com/robbyrussell/oh-my-zsh][oh-my-zsh]]           | Required    | OK  | OK       |
 | [[http://editorconfig.org/][editorconfig]]        | Recommended | NaN | OK       |
 | [[https://mosh.org/][mosh]]                | Recommended | OK  | OK       |
+| [[https://www.gnu.org/software/global/][global]]              | Recommended | OK  | OK       |
 
 
 * path_helper in OS X
@@ -245,3 +246,18 @@ keystrokes.
 
 Mosh is a replacement for SSH. It's more robust and responsive, especially over
 Wi-Fi, cellular, and long-distance links.
+
+
+* global
+
+GNU [[https://www.gnu.org/software/global/][GLOBAL]] is a source code tagging system that works the same way across
+diverse environments, such as Emacs editor, Vi editor, Less viewer, Bash shell,
+various web browsers, etc.
+
+You can locate various objects, such as functions, macros, structs, classes, in
+your source files and move there easily. It is useful for hacking a large
+projects which contain many sub-directories, many #ifdef and many main()
+functions. It is similar to ctags or etags, but is different from them in the
+following two points:
+- independence of any editor
+- capability to treat definition and reference

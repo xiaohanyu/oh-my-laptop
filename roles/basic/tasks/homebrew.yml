@@ -6,6 +6,7 @@
     - ag
     - cloc
     - editorconfig
+    - global
     - htop-osx
     - md5sha1sum
     - mosh
