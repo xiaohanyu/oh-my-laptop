@@ -1,0 +1,18 @@
+#+TITLE: Oh My Laptop Docker
+#+OPTIONS: toc:nil num:nil ^:nil
+
+This is part of [[https://github.com/xiaohanyu/oh-my-laptop][oh-my-laptop]].
+
+* Packages
+
+#+NAME: docker-packages
+#+CAPTION: docker module packages
+| Package | Status   | Apt | Homebrew |
+|---------+----------+-----+----------|
+| [[https://www.docker.com/][docker]]  | Required | OK  | OK       |
+
+
+* docker
+
+Ala, after almost three years of development, docker finally can run on macOS
+smoothly.
