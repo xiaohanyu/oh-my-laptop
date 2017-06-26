@@ -91,6 +91,7 @@ find . -name README.org | xargs grep "|" | grep -v Package | grep -v '\-\-\-\-' 
 
 | Package            | Status      | Apt | Homebrew |
 |--------------------+-------------+-----+----------|
+| [[https://github.com/wting/autojump][autojump]]           | Required    | OK  | OK       |
 | [[https://github.com/ggreer/the_silver_searcher][ag]]                 | Required    | OK  | OK       |
 | [[http://cloc.sourceforge.net/][cloc]]               | Required    | OK  | OK       |
 | [[http://hisham.hm/htop/index.php][htop]]               | Required    | OK  | OK       |

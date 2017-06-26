@@ -9,6 +9,7 @@ This is part of [[https://github.com/xiaohanyu/oh-my-laptop][oh-my-laptop]].
 #+CAPTION: basic module packages
 | Package      | Status      | Apt | Homebrew |
 |--------------+-------------+-----+----------|
+| [[https://github.com/wting/autojump][autojump]]     | Required    | OK  | OK       |
 | [[https://github.com/ggreer/the_silver_searcher][ag]]           | Required    | OK  | OK       |
 | [[http://cloc.sourceforge.net/][cloc]]         | Required    | OK  | OK       |
 | [[http://hisham.hm/htop/index.php][htop]]         | Required    | OK  | OK       |
@@ -22,6 +23,20 @@ This is part of [[https://github.com/xiaohanyu/oh-my-laptop][oh-my-laptop]].
 | [[http://editorconfig.org/][editorconfig]] | Recommended | OK  | OK       |
 | [[https://mosh.org/][mosh]]         | Recommended | OK  | OK       |
 | [[https://www.gnu.org/software/global/][global]]       | Recommended | OK  | OK       |
+
+
+* autojump
+
+[[https://github.com/wting/autojump][autojump]] is a ~cd~ replacement command that learns, it provides an easy and
+faster way to navigate your filesystem from the command line. It works by
+maintaining a database of the directories you use the most from the command
+line.
+
+Brief usage:
+- ~j foo~: jump to a directory that contains ~foo~
+- ~jc bar~: jump to a child directory
+- ~jc music~ or ~jco music~: open file manager to directories (instead of
+  jumping)
 
 
 * the_silver_searcher

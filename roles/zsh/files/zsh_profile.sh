@@ -23,3 +23,7 @@ fi
 if [ -f $HOME/.nodenv-init.sh ]; then
     source $HOME/.nodenv-init.sh
 fi
+
+if [ -f $HOME/.autojump-init.sh ]; then
+    source $HOME/.autojump-init.sh
+fi
