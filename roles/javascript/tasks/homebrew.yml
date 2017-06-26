@@ -2,3 +2,4 @@
 
 - name: Install nodejs via homebrew
   homebrew: name=node state=present
+  become: false
