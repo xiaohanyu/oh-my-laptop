@@ -23,3 +23,15 @@ This is part of [[https://github.com/xiaohanyu/oh-my-laptop][oh-my-laptop]].
 
 Just because I get used to [[https://github.com/rbenv/rbenv][rbenv]], so I choose [[https://github.com/nodenv/nodenv][nodenv]], try to get same workflow
 for nodejs. Together, with some official plugins.
+
+
+* Custom Settings
+
+When you want to run a package from ~npm install~, generally, npm will recommend
+you install it by ~npm install -g~, which is globally installation. However,
+this may results to a conflict cause npm do not have a similar isolating package
+management system like Python's virtualenv or Ruby's bundler.
+
+One trick we can do here is to install all packages locally into ~node_modules~,
+and made a shell [[https://stackoverflow.com/questions/9679932/how-to-use-package-installed-locally-in-node-module][strick]] by alias ~npm-exec='PATH=$(npm bin):$PATH'~, thus, we can
+run local npm executables via ~npm-exec something~.
