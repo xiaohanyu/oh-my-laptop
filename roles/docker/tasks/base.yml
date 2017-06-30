@@ -1,0 +1,2 @@
+- name: set-up docker init file
+  copy: src=docker-init.sh dest={{user_home}}/.docker-init.sh

@@ -27,3 +27,7 @@ fi
 if [ -f $HOME/.autojump-init.sh ]; then
     source $HOME/.autojump-init.sh
 fi
+
+if [ -f $HOME/.docker-init.sh ]; then
+    source $HOME/.docker-init.sh
+fi
