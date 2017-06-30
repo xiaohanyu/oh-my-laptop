@@ -5,6 +5,7 @@ require 'minitest/autorun'
 class BaseTest < Minitest::Test
   def setup
     @command_list = []
+    @alias_list = []
   end
 
   def apt_get_available?
@@ -22,9 +23,23 @@ class BaseTest < Minitest::Test
     assert_equal system("which #{command} > /dev/null"), true
   end
 
+  def assert_alias_exist(command)
+    assert_equal system("which #{command} > /dev/null"), true
+  end
+
   def test_command
-    @command_list.each do |command|
-      assert_command_exist(command)
+    unless @command_list.nil?
+      @command_list.each do |command|
+        assert_command_exist(command)
+      end
+    end
+  end
+
+  def test_alias
+    unless @alias_list.nil?
+      @alias_list.each do |als|
+        assert_alias_exist(als)
+      end
     end
   end
 end

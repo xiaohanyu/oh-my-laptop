@@ -10,5 +10,6 @@ class JavaScriptRoleTest < BaseTest
     end
 
     @command_list += ['nodenv']
+    @alias_list = ['npm-exec', 'ne']
   end
 end
