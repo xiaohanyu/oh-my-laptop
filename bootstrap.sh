@@ -6,7 +6,7 @@ unamestr=$(uname)
 if [[ $unamestr == "Darwin" ]]; then
     pip || easy_install pip
     brew || ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-    brew cask || brew install caskroom/cask/brew-cask
+    brew cask || brew tap caskroom/cask
     brew install ansible
 # debian, ubuntu, mint etc.
 elif [[ $unamestr == "Linux"  && -f $(which apt-get) ]]; then

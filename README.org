@@ -61,7 +61,7 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 Then you also get [[http://caskroom.io/][homebrew cask]] via:
 
 #+BEGIN_SRC sh
-brew install caskroom/cask/brew-cask
+brew tap caskroom/cask
 #+END_SRC
 
 Homebrew cask is really great if you want to install some huge binary packages
