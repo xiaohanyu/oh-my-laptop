@@ -1,14 +1,5 @@
 ---
 
-- name: install linux-image-extra-* packages to enable AuFS driver
-  apt:
-    pkg: "{{item}}"
-    state: present
-    update_cache: yes
-  with_items:
-    - linux-image-extra-{{ansible_kernel}}
-    - linux-image-extra-virtual
-
 - name: install packages to allow apt to use a repository over HTTPS
   apt:
     pkg: "{{item}}"
