@@ -3,6 +3,9 @@
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
+# some homebrew package (like mtr) need to add `/usr/local/sbin` to `$PATH`
+export PATH=$PATH:/usr/local/sbin
+
 export EDITOR=vim
 
 # some convenient alias
@@ -11,6 +14,7 @@ alias pyhttp="python -m SimpleHTTPServer"
 # ruby bundler
 alias b="bundle "
 alias be="bundle exec "
+
 
 if [ -f $HOME/.pyenv-init.sh ]; then
     source $HOME/.pyenv-init.sh
