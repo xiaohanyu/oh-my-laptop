@@ -50,8 +50,6 @@ def create_tasks(role)
   main_content = <<EOF
 ---
 
-- include: apt.yml
-  when: ansible_pkg_mgr == 'apt'
 - include: homebrew.yml
   when: ansible_os_family == 'Darwin'
   become: false
@@ -60,16 +58,11 @@ def create_tasks(role)
     role_#{role}_done: true
 EOF
 
-  apt_content = <<EOF
----
-EOF
-
   homebrew_content = <<EOF
 ---
 EOF
 
-  file_contents = [["#{role}/tasks/apt.yml", apt_content],
-                   ["#{role}/tasks/homebrew.yml", homebrew_content],
+  file_contents = [["#{role}/tasks/homebrew.yml", homebrew_content],
                    ["#{role}/tasks/main.yml", main_content]]
 
   FileUtils.mkdir_p("#{role}/tasks")

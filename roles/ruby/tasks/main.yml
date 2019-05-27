@@ -1,7 +1,5 @@
 ---
 
-- include: apt.yml
-  when: ansible_pkg_mgr == 'apt'
 - include: homebrew.yml
   when: ansible_os_family == 'Darwin'
   become: false
