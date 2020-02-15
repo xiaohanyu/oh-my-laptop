@@ -9,6 +9,5 @@
       - cmake
     state: present
 
-
 - set_fact:
     role_cc_done: true

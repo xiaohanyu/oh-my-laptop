@@ -1,11 +1,14 @@
 ---
 
-- include: homebrew.yml
-  when: ansible_os_family == 'Darwin'
+- name: install docker via homebrew cask
   become: false
+  homebrew_cask:
+    name: docker
+    state: present
 
-- include: base.yml
+- name: set-up docker init file
   become: false
+  copy: src=docker-init.sh dest={{user_home}}/.docker-init.sh
 
 - set_fact:
     role_docker_done: true
