@@ -1,11 +1,34 @@
 ---
 
-- include: homebrew.yml
-  when: ansible_os_family == 'Darwin'
-  become: false
+- name: git clone rbenv repo
+  git:
+    repo: https://github.com/rbenv/rbenv
+    dest: "{{user_home}}/.rbenv"
+    update: yes
 
-- include: base.yml
-  become: false
+- name: install multiple plugins for rbenv
+  git:
+    repo: "https://github.com/rbenv/{{item}}.git"
+    dest: "{{user_home}}/.rbenv/plugins/{{item}}"
+    update: yes
+  with_items:
+    - ruby-build
+    - rbenv-gem-rehash
+    - rbenv-default-gems
+    - rbenv-each
+    - rbenv-vars
+
+- name: set-up rbenv init file
+  copy: src=rbenv-init.sh dest={{user_home}}/.rbenv-init.sh
+
+- name: copy gemrc
+  copy: src=gemrc dest={{user_home}}/.gemrc
+
+- name: copy irbrc
+  copy: src=irbrc dest={{user_home}}/.irbrc
+
+- name: copy default-gems for rbenv-default-gems plugin
+  copy: src=default-gems dest={{user_home}}/.rbenv/default-gems
 
 - set_fact:
     role_ruby_done: true
