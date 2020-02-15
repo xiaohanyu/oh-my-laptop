@@ -1,5 +1,9 @@
 ---
 
-- include: homebrew.yml
-  when: ansible_os_family == 'Darwin'
+- name: install virtualbox and vagrant
   become: false
+  homebrew_cask:
+    name:
+      - virtualbox
+      - vagrant
+    state: present
