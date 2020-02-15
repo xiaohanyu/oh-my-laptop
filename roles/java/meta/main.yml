@@ -1,4 +1,4 @@
 ---
 
 dependencies:
-  - { role: basic, when: not role_basic_done }
+  - { role: zsh, when: not role_zsh_done }

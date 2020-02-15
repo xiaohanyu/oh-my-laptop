@@ -1,8 +1,22 @@
 ---
 
-- include: homebrew.yml
-  when: ansible_os_family == 'Darwin'
+- name: install jenv for java environment management
   become: false
+  homebrew:
+    name:
+      - jenv
+    state: present
+
+- name: set up jenv init file
+  copy: src=jenv-init.sh dest={{user_home}}/.jenv-init.sh
+
+- name: install maven and gradle
+  become: false
+  homebrew:
+    name:
+      - maven
+      - gradle
+    state: present
 
 - set_fact:
     role_java_done: true

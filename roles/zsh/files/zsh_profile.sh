@@ -35,3 +35,7 @@ fi
 if [ -f $HOME/.docker-init.sh ]; then
     source $HOME/.docker-init.sh
 fi
+
+if [ -f $HOME/.jenv-init.sh ]; then
+    source $HOME/.jenv-init.sh
+fi
