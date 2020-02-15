@@ -1,8 +1,11 @@
 ---
 
-- include: homebrew.yml
-  when: ansible_os_family == 'Darwin'
+- name: clojure | install leiningen via homebrew
   become: false
+  homebrew:
+    name:
+      - leiningen
+    state: present
 
 - set_fact:
     role_clojure_done: true
