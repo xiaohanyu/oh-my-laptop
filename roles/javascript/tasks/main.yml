@@ -1,11 +1,33 @@
 ---
 
-- include: homebrew.yml
-  when: ansible_os_family == 'Darwin'
+- name: Install nodejs via homebrew
   become: false
+  homebrew:
+    name:
+      - node
+    state: present
 
-- include: base.yml
-  become: false
+- name: git clone|pull nodenv repo
+  git:
+    repo: https://github.com/nodenv/nodenv.git
+    dest: "{{user_home}}/.nodenv"
+    update: yes
+
+- name: install multiple plugins for nodenv
+  git:
+    repo: "https://github.com/nodenv/{{item}}.git"
+    dest: "{{user_home}}/.nodenv/plugins/{{item}}"
+    update: yes
+  with_items:
+    - node-build
+    - nodenv-default-packages
+    - nodenv-each
+    - nodenv-env
+    - nodenv-package-rehash
+    - nodenv-vars
+
+- name: set-up nodenv init file
+  copy: src=nodenv-init.sh dest={{user_home}}/.nodenv-init.sh
 
 - set_fact:
     role_javascript_done: true
