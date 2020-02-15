@@ -1,11 +1,34 @@
 ---
 
-- include: homebrew.yml
-  when: ansible_os_family == 'Darwin'
+# install some fancy tools
+- name: install some small, awesome packages to boost your life
   become: false
+  homebrew:
+    name:
+      - ag
+      - autojump
+      - cloc
+      - editorconfig
+      - global
+      - htop-osx
+      - md5sha1sum
+      - mosh
+      - ranger
+      - reattach-to-user-namespace
+      - rlwrap
+      - ssh-copy-id
+      - texinfo
+      - tig
+      - tmux
+      - wget
+    state: present
 
-- include: base.yml
-  become: false
+# add a tmux.conf
+- name: settings tmux.conf
+  copy: src=tmux.conf dest={{user_home}}/.tmux.conf
+
+- name: set-up autojump init file
+  copy: src=autojump-init.sh dest={{user_home}}/.autojump-init.sh
 
 - set_fact:
     role_basic_done: true
