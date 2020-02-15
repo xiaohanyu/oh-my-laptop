@@ -1,11 +1,22 @@
 ---
 
-- include: homebrew.yml
-  when: ansible_os_family == 'Darwin'
+- name: install some enhancements for git
   become: false
+  homebrew:
+    name:
+      - git
+      - git-extras
+      - git-lfs
+      - tig
+    state: present
 
-- include: base.yml
+- name: git config user.name
   become: false
+  command: git config --global user.name "{{git_user_name}}"
+
+- name: git config user.email
+  become: false
+  command: git config --global user.email "{{git_user_email}}"
 
 - set_fact:
     role_git_done: true
