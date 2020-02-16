@@ -1,0 +1,8 @@
+---
+
+- name: install qingg input method for Chinese
+  become: false
+  homebrew_cask:
+    name:
+      - qingg
+    state: present

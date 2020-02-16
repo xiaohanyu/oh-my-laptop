@@ -1,0 +1,18 @@
+#+TITLE: Oh My Laptop Chinese
+#+OPTIONS: toc:nil num:nil ^:nil
+
+This is part of [[https://github.com/xiaohanyu/oh-my-laptop][oh-my-laptop]].
+
+
+* Packages
+
+#+NAME: git-packages
+#+CAPTION: git module packages
+| Package | Status   | Homebrew |
+|---------+----------+----------|
+| [[https://qingg.im/mac/][qingg]]   | Required | OK       |
+
+
+* qingg
+
+[[https://qingg.im/][Qingg]] is an input method for Chinese, specifically for wubi input method.
