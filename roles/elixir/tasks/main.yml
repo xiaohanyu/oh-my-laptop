@@ -1,0 +1,11 @@
+---
+
+- name: install elixir
+  become: false
+  homebrew:
+    name:
+      - elixir
+    state: present
+
+- set_fact:
+    role_elixir_done: true

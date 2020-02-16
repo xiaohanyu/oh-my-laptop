@@ -1,0 +1,19 @@
+#+TITLE: Oh My Laptop Elixir
+#+OPTIONS: toc:nil num:nil ^:nil
+
+This is part of [[https://github.com/xiaohanyu/oh-my-laptop][oh-my-laptop]].
+
+
+* Packages
+
+#+NAME: git-packages
+#+CAPTION: git module packages
+| Package | Status   | Homebrew |
+|---------+----------+----------|
+| [[https://elixir-lang.org/][elixir]]  | Required | OK       |
+
+
+* Elixir
+
+[[https://elixir-lang.org/][Elixir]] is a dynamic, functional language designed for building scalable and
+maintainable applications.
