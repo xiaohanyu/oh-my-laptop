@@ -8,15 +8,15 @@ This is part of [[https://github.com/xiaohanyu/oh-my-laptop][oh-my-laptop]].
 
 #+NAME: node-packages
 #+CAPTION: node module packages
-| Package                 | Status   | Apt | Homebrew |
-|-------------------------+----------+-----+----------|
-| [[https://github.com/nodenv/nodenv][nodenv]]                  | Required | OK  | OK       |
-| [[https://github.com/nodenv/node-build][node-build]]              | Required | OK  | OK       |
-| [[https://github.com/nodenv/nodenv-default-packages][nodenv-default-packages]] | Required | OK  | OK       |
-| [[https://github.com/nodenv/nodenv-each][nodenv-each]]             | Required | OK  | OK       |
-| [[https://github.com/nodenv/nodenv-env][nodenv-env]]              | Required | OK  | OK       |
-| [[https://github.com/nodenv/nodenv-vars][nodenv-vars]]             | Required | OK  | OK       |
-| [[https://github.com/nodenv/nodenv-package-rehash][nodenv-package-rehash]]   | Required | OK  | OK       |
+| Package                 | Status   | Homebrew |
+|-------------------------+----------+----------|
+| [[https://github.com/nodenv/nodenv][nodenv]]                  | Required | OK       |
+| [[https://github.com/nodenv/node-build][node-build]]              | Required | OK       |
+| [[https://github.com/nodenv/nodenv-default-packages][nodenv-default-packages]] | Required | OK       |
+| [[https://github.com/nodenv/nodenv-each][nodenv-each]]             | Required | OK       |
+| [[https://github.com/nodenv/nodenv-env][nodenv-env]]              | Required | OK       |
+| [[https://github.com/nodenv/nodenv-vars][nodenv-vars]]             | Required | OK       |
+| [[https://github.com/nodenv/nodenv-package-rehash][nodenv-package-rehash]]   | Required | OK       |
 
 
 * nodenv

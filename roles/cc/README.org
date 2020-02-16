@@ -8,9 +8,9 @@ This is part of [[https://github.com/xiaohanyu/oh-my-laptop][oh-my-laptop]].
 
 #+NAME: cc-packages
 #+CAPTION: cc module packages
-| Package | Status      | Apt | Homebrew |
-|---------+-------------+-----+----------|
-| [[http://www.cmake.org/][cmake]]   | Recommended | OK  | OK       |
+| Package | Status      | Homebrew |
+|---------+-------------+----------|
+| [[http://www.cmake.org/][cmake]]   | Recommended | OK       |
 
 
 * cmake

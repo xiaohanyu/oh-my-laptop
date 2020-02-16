@@ -8,10 +8,10 @@ This is part of [[https://github.com/xiaohanyu/oh-my-laptop][oh-my-laptop]].
 
 #+NAME: vagrant-packages
 #+CAPTION: vagrant module packages
-| Package    | Status   | Apt | Homebrew |
-|------------+----------+-----+----------|
-| [[http://www.virtualbox.org][virtualbox]] | Required | OK  | OK       |
-| [[http://www.vagrantup.com][vagrant]]    | Required | OK  | OK       |
+| Package    | Status   | Homebrew |
+|------------+----------+----------|
+| [[http://www.virtualbox.org][virtualbox]] | Required | OK       |
+| [[http://www.vagrantup.com][vagrant]]    | Required | OK       |
 
 
 * virtualbox

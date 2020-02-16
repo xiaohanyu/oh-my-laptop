@@ -7,10 +7,10 @@ This is part of [[https://github.com/xiaohanyu/oh-my-laptop][oh-my-laptop]].
 
 #+NAME: zsh-packages
 #+CAPTION: zsh module packages
-| Package      | Status      | Apt | Homebrew |
-|--------------+-------------+-----+----------|
-| [[http://www.zsh.org/][zsh]]          | Required    | OK  | OK       |
-| [[https://github.com/robbyrussell/oh-my-zsh][oh-my-zsh]]    | Required    | OK  | OK       |
+| Package   | Status   | Homebrew |
+|-----------+----------+----------|
+| [[http://www.zsh.org/][zsh]]       | Required | OK       |
+| [[https://github.com/robbyrussell/oh-my-zsh][oh-my-zsh]] | Required | OK       |
 
 
 * path_helper in OS X

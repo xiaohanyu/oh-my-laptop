@@ -7,9 +7,9 @@ This is part of [[https://github.com/xiaohanyu/oh-my-laptop][oh-my-laptop]].
 
 #+NAME: clojure-packages
 #+CAPTION: clojure module packages
-| Package   | Status   | Apt | Homebrew |
-|-----------+----------+-----+----------|
-| [[https://github.com/technomancy/leiningen/][leiningen]] | Required | OK  | OK       |
+| Package   | Status   | Homebrew |
+|-----------+----------+----------|
+| [[https://github.com/technomancy/leiningen/][leiningen]] | Required | OK       |
 
 
 * leiningen

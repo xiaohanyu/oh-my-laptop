@@ -8,17 +8,17 @@ This is part of [[https://github.com/xiaohanyu/oh-my-laptop][oh-my-laptop]].
 
 #+NAME: ruby-packages
 #+CAPTION: ruby module packages
-| Package            | Status   | Apt | Homebrew |
-|--------------------+----------+-----+----------|
-| [[https://github.com/rbenv/rbenv][rbenv]]              | Required | OK  | OK       |
-| [[https://github.com/rbenv/ruby-build][ruby-build]]         | Required | OK  | OK       |
-| [[https://github.com/rbenv/rbenv-gem-rehash][rbenv-gem-rehash]]   | Required | OK  | OK       |
-| [[https://github.com/rbenv/rbenv-default-gems][rbenv-default-gems]] | Required | OK  | OK       |
-| [[https://github.com/rbenv/rbenv-each][rbenv-each]]         | Required | OK  | OK       |
-| [[https://github.com/rbenv/rbenv-vars][rbenv-vars]]         | Required | OK  | OK       |
-| [[http://bundler.io/][bundler]]            | Required | OK  | OK       |
-| [[http://pryrepl.org/][pry]]                | Required | OK  | OK       |
-| [[https://github.com/pry/pry-doc][pry-doc]]            | Required | OK  | OK       |
+| Package            | Status   | Homebrew |
+|--------------------+----------+----------|
+| [[https://github.com/rbenv/rbenv][rbenv]]              | Required | OK       |
+| [[https://github.com/rbenv/ruby-build][ruby-build]]         | Required | OK       |
+| [[https://github.com/rbenv/rbenv-gem-rehash][rbenv-gem-rehash]]   | Required | OK       |
+| [[https://github.com/rbenv/rbenv-default-gems][rbenv-default-gems]] | Required | OK       |
+| [[https://github.com/rbenv/rbenv-each][rbenv-each]]         | Required | OK       |
+| [[https://github.com/rbenv/rbenv-vars][rbenv-vars]]         | Required | OK       |
+| [[http://bundler.io/][bundler]]            | Required | OK       |
+| [[http://pryrepl.org/][pry]]                | Required | OK       |
+| [[https://github.com/pry/pry-doc][pry-doc]]            | Required | OK       |
 
 
 * rbenv

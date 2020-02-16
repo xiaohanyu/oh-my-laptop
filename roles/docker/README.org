@@ -7,9 +7,9 @@ This is part of [[https://github.com/xiaohanyu/oh-my-laptop][oh-my-laptop]].
 
 #+NAME: docker-packages
 #+CAPTION: docker module packages
-| Package | Status   | Apt | Homebrew |
-|---------+----------+-----+----------|
-| [[https://www.docker.com/][docker]]  | Required | OK  | OK       |
+| Package | Status   | Homebrew |
+|---------+----------+----------|
+| [[https://www.docker.com/][docker]]  | Required | OK       |
 
 
 * docker

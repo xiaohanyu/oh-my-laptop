@@ -8,13 +8,13 @@ This is part of [[https://github.com/xiaohanyu/oh-my-laptop][oh-my-laptop]].
 
 #+NAME: python-packages
 #+CAPTION: python module packages
-| Package          | Status   | Apt | Homebrew |
-|------------------+----------+-----+----------|
-| [[https://github.com/pyenv/pyenv][pyenv]]            | Required | OK  | OK       |
-| [[https://github.com/pyenv/pyenv-doctor][pyenv-doctor]]     | Required | OK  | OK       |
-| [[https://github.com/pyenv/pyenv-update][pyenv-update]]     | Required | OK  | OK       |
-| [[https://github.com/pyenv/pyenv-virtualenv][pyenv-virtualenv]] | Required | OK  | OK       |
-| [[https://github.com/pyenv/pyenv-which-ext][pyenv-which-ext]]  | Required | OK  | OK       |
+| Package          | Status   | Homebrew |
+|------------------+----------+----------|
+| [[https://github.com/pyenv/pyenv][pyenv]]            | Required | OK       |
+| [[https://github.com/pyenv/pyenv-doctor][pyenv-doctor]]     | Required | OK       |
+| [[https://github.com/pyenv/pyenv-update][pyenv-update]]     | Required | OK       |
+| [[https://github.com/pyenv/pyenv-virtualenv][pyenv-virtualenv]] | Required | OK       |
+| [[https://github.com/pyenv/pyenv-which-ext][pyenv-which-ext]]  | Required | OK       |
 
 
 * pyenv

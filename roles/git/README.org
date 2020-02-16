@@ -8,11 +8,11 @@ This is part of [[https://github.com/xiaohanyu/oh-my-laptop][oh-my-laptop]].
 
 #+NAME: git-packages
 #+CAPTION: git module packages
-| Package    | Status     | Apt | Homebrew |
-|------------+------------+-----+----------|
-| [[http://git-scm.com/][git]]        | Required   | OK  | OK       |
-| [[https://github.com/tj/git-extras][git-extras]] | Required   | OK  | OK       |
-| [[http://jonas.nitro.dk/tig/][tig]]        | Required   | OK  | OK       |
+| Package    | Status   | Homebrew |
+|------------+----------+----------|
+| [[http://git-scm.com/][git]]        | Required | OK       |
+| [[https://github.com/tj/git-extras][git-extras]] | Required | OK       |
+| [[http://jonas.nitro.dk/tig/][tig]]        | Required | OK       |
 
 
 * git
