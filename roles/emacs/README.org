@@ -1,0 +1,23 @@
+#+TITLE: Oh My Laptop Emacs
+#+OPTIONS: toc:nil num:nil ^:nil
+
+This is part of [[https://github.com/xiaohanyu/oh-my-laptop][oh-my-laptop]].
+
+
+* Packages
+
+#+NAME: git-packages
+#+CAPTION: git module packages
+| Package   | Status   | Homebrew |
+|-----------+----------+----------|
+| [[https://emacsformacosx.com/][emacs]]     | Optional | OK       |
+| [[https://github.com/syl20bnr/spacemacs][spacemacs]] | Optional | OK       |
+
+
+* emacs
+
+[[https://emacsformacosx.com/][emacs]] is an OS with a not so bad editors.
+
+* spacemacs
+
+[[https://github.com/syl20bnr/spacemacs][spacemacs]] is a community-driven Emacs distribution.
