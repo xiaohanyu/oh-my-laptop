@@ -6,13 +6,9 @@ This is part of [[https://github.com/xiaohanyu/oh-my-laptop][oh-my-laptop]].
 
 * Packages
 
-#+NAME: git-packages
-#+CAPTION: git module packages
-| Package    | Status   | Homebrew |
-|------------+----------+----------|
-| [[http://git-scm.com/][git]]        | Required | OK       |
-| [[https://github.com/tj/git-extras][git-extras]] | Required | OK       |
-| [[http://jonas.nitro.dk/tig/][tig]]        | Required | OK       |
+- [[http://git-scm.com/][git]]
+- [[https://github.com/tj/git-extras][git-extras]]
+- [[http://jonas.nitro.dk/tig/][tig]]
 
 
 * git

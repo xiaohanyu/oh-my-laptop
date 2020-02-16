@@ -6,11 +6,7 @@ This is part of [[https://github.com/xiaohanyu/oh-my-laptop][oh-my-laptop]].
 
 * Packages
 
-#+NAME: cc-packages
-#+CAPTION: cc module packages
-| Package | Status      | Homebrew |
-|---------+-------------+----------|
-| [[http://www.cmake.org/][cmake]]   | Recommended | OK       |
+- [[http://www.cmake.org/][cmake]]
 
 
 * cmake

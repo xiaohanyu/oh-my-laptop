@@ -5,24 +5,20 @@ This is part of [[https://github.com/xiaohanyu/oh-my-laptop][oh-my-laptop]].
 
 * Packages
 
-#+NAME: basic-packages
-#+CAPTION: basic module packages
-| Package      | Status      | Homebrew |
-|--------------+-------------+----------|
-| [[https://github.com/wting/autojump][autojump]]     | Required    | OK       |
-| [[https://github.com/ggreer/the_silver_searcher][ag]]           | Required    | OK       |
-| [[http://cloc.sourceforge.net/][cloc]]         | Required    | OK       |
-| [[http://hisham.hm/htop/index.php][htop]]         | Required    | OK       |
-| [[http://www.microbrew.org/tools/md5sha1sum/][md5sha1sum]]   | Required    | OK       |
-| [[http://ranger.nongnu.org/][ranger]]       | Required    | OK       |
-| [[https://github.com/hanslub42/rlwrap][rlwrap]]       | Required    | OK       |
-| [[https://www.gnu.org/software/wget/][wget]]         | Required    | OK       |
-| [[https://developer.apple.com/xcode/][tmux]]         | Required    | OK       |
-| [[http://www.zsh.org/][zsh]]          | Required    | OK       |
-| [[https://github.com/robbyrussell/oh-my-zsh][oh-my-zsh]]    | Required    | OK       |
-| [[http://editorconfig.org/][editorconfig]] | Recommended | OK       |
-| [[https://mosh.org/][mosh]]         | Recommended | OK       |
-| [[https://www.gnu.org/software/global/][global]]       | Recommended | OK       |
+- [[https://github.com/wting/autojump][autojump]]
+- [[https://github.com/ggreer/the_silver_searcher][ag]]
+- [[http://cloc.sourceforge.net/][cloc]]
+- [[http://hisham.hm/htop/index.php][htop]]
+- [[http://www.microbrew.org/tools/md5sha1sum/][md5sha1sum]]
+- [[http://ranger.nongnu.org/][ranger]]
+- [[https://github.com/hanslub42/rlwrap][rlwrap]]
+- [[https://www.gnu.org/software/wget/][wget]]
+- [[https://developer.apple.com/xcode/][tmux]]
+- [[http://www.zsh.org/][zsh]]
+- [[https://github.com/robbyrussell/oh-my-zsh][oh-my-zsh]]
+- [[http://editorconfig.org/][editorconfig]]
+- [[https://mosh.org/][mosh]]
+- [[https://www.gnu.org/software/global/][global]]
 
 
 * autojump

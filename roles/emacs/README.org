@@ -6,12 +6,8 @@ This is part of [[https://github.com/xiaohanyu/oh-my-laptop][oh-my-laptop]].
 
 * Packages
 
-#+NAME: git-packages
-#+CAPTION: git module packages
-| Package   | Status   | Homebrew |
-|-----------+----------+----------|
-| [[https://emacsformacosx.com/][emacs]]     | Optional | OK       |
-| [[https://github.com/syl20bnr/spacemacs][spacemacs]] | Optional | OK       |
+- [[https://emacsformacosx.com/][emacs]]
+- [[https://github.com/syl20bnr/spacemacs][spacemacs]]
 
 
 * emacs

@@ -5,11 +5,7 @@ This is part of [[https://github.com/xiaohanyu/oh-my-laptop][oh-my-laptop]].
 
 * Packages
 
-#+NAME: clojure-packages
-#+CAPTION: clojure module packages
-| Package   | Status   | Homebrew |
-|-----------+----------+----------|
-| [[https://github.com/technomancy/leiningen/][leiningen]] | Required | OK       |
+- [[https://github.com/technomancy/leiningen/][leiningen]]
 
 
 * leiningen

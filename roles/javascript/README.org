@@ -6,17 +6,13 @@ This is part of [[https://github.com/xiaohanyu/oh-my-laptop][oh-my-laptop]].
 
 * Packages
 
-#+NAME: node-packages
-#+CAPTION: node module packages
-| Package                 | Status   | Homebrew |
-|-------------------------+----------+----------|
-| [[https://github.com/nodenv/nodenv][nodenv]]                  | Required | OK       |
-| [[https://github.com/nodenv/node-build][node-build]]              | Required | OK       |
-| [[https://github.com/nodenv/nodenv-default-packages][nodenv-default-packages]] | Required | OK       |
-| [[https://github.com/nodenv/nodenv-each][nodenv-each]]             | Required | OK       |
-| [[https://github.com/nodenv/nodenv-env][nodenv-env]]              | Required | OK       |
-| [[https://github.com/nodenv/nodenv-vars][nodenv-vars]]             | Required | OK       |
-| [[https://github.com/nodenv/nodenv-package-rehash][nodenv-package-rehash]]   | Required | OK       |
+- [[https://github.com/nodenv/nodenv][nodenv]]
+- [[https://github.com/nodenv/node-build][node-build]]
+- [[https://github.com/nodenv/nodenv-default-packages][nodenv-default-packages]]
+- [[https://github.com/nodenv/nodenv-each][nodenv-each]]
+- [[https://github.com/nodenv/nodenv-env][nodenv-env]]
+- [[https://github.com/nodenv/nodenv-vars][nodenv-vars]]
+- [[https://github.com/nodenv/nodenv-package-rehash][nodenv-package-rehash]]
 
 
 * nodenv

@@ -6,13 +6,9 @@ This is part of [[https://github.com/xiaohanyu/oh-my-laptop][oh-my-laptop]].
 
 * Packages
 
-#+NAME: java-packages
-#+CAPTION: java module packages
-| Package | Status   | Homebrew |
-|---------+----------+----------|
-| [[http://www.oracle.com/technetwork/java/javase/overview/java8-2100321.html][Java 8]]  | Required | OK       |
-| [[http://maven.apache.org/][maven]]   | Required | OK       |
-| [[https://gradle.org/][gradle]]  | Required | OK       |
+- [[http://www.oracle.com/technetwork/java/javase/overview/java8-2100321.html][Java 8]]
+- [[http://maven.apache.org/][maven]]
+- [[https://gradle.org/][gradle]]
 
 
 * Java

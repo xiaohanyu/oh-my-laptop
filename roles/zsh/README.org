@@ -5,12 +5,8 @@ This is part of [[https://github.com/xiaohanyu/oh-my-laptop][oh-my-laptop]].
 
 * Packages
 
-#+NAME: zsh-packages
-#+CAPTION: zsh module packages
-| Package   | Status   | Homebrew |
-|-----------+----------+----------|
-| [[http://www.zsh.org/][zsh]]       | Required | OK       |
-| [[https://github.com/robbyrussell/oh-my-zsh][oh-my-zsh]] | Required | OK       |
+- [[http://www.zsh.org/][zsh]]
+- [[https://github.com/robbyrussell/oh-my-zsh][oh-my-zsh]]
 
 
 * path_helper in OS X

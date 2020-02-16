@@ -5,11 +5,7 @@ This is part of [[https://github.com/xiaohanyu/oh-my-laptop][oh-my-laptop]].
 
 * Packages
 
-#+NAME: docker-packages
-#+CAPTION: docker module packages
-| Package | Status   | Homebrew |
-|---------+----------+----------|
-| [[https://www.docker.com/][docker]]  | Required | OK       |
+- [[https://www.docker.com/][docker]]
 
 
 * docker

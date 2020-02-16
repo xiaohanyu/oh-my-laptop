@@ -6,11 +6,7 @@ This is part of [[https://github.com/xiaohanyu/oh-my-laptop][oh-my-laptop]].
 
 * Packages
 
-#+NAME: git-packages
-#+CAPTION: git module packages
-| Package | Status   | Homebrew |
-|---------+----------+----------|
-| [[https://golang.org/][go]]      | Required | OK       |
+- [[https://golang.org/][go]]
 
 
 * go
