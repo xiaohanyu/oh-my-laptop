@@ -6,7 +6,7 @@ class BasicRoleTest < BaseTest
     autojump_list = ['j', 'jc', 'jo', 'jco']
 
     @command_list = ['ag', 'cloc', 'editorconfig', 'global', 'gtags', 'globash',
-                     'htop', 'md5sum', 'mosh', 'ranger', 'rlwrap', 'wget',
+                     'htop', 'md5sum', 'ranger', 'rlwrap', 'wget',
                      'tmux', 'zsh'] + autojump_list
   end
 end

@@ -7,18 +7,19 @@
     name:
       - ag
       - autojump
-      - cloc
       - editorconfig
       - global
       - htop-osx
+      - httpie
+      - jq
       - md5sha1sum
-      - mosh
+      - pstree
       - ranger
-      - reattach-to-user-namespace
       - rlwrap
-      - ssh-copy-id
       - texinfo
+      - tokei
       - tig
+      - tldr
       - tmux
       - wget
     state: present

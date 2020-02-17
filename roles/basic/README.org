@@ -5,37 +5,26 @@ This is part of [[https://github.com/xiaohanyu/oh-my-laptop][oh-my-laptop]].
 
 * Packages
 
-- [[https://github.com/wting/autojump][autojump]]
 - [[https://github.com/ggreer/the_silver_searcher][ag]]
-- [[http://cloc.sourceforge.net/][cloc]]
+- [[https://github.com/wting/autojump][autojump]]
+- [[https://editorconfig.org/][editorconfig]]
+- [[https://www.gnu.org/software/global/][global]]
 - [[http://hisham.hm/htop/index.php][htop]]
+- [[https://httpie.org/][httpie]]
+- [[https://stedolan.github.io/jq/][jq]]
 - [[http://www.microbrew.org/tools/md5sha1sum/][md5sha1sum]]
+- [[http://www.thp.uni-duisburg.de/pstree/][pstree]]
 - [[http://ranger.nongnu.org/][ranger]]
 - [[https://github.com/hanslub42/rlwrap][rlwrap]]
-- [[https://www.gnu.org/software/wget/][wget]]
+- [[https://www.gnu.org/software/texinfo/][texinfo]]
+- [[https://github.com/XAMPPRocky/tokei][tokei]]
+- [[https://github.com/jonas/tig][tig]]
+- [[https://github.com/tldr-pages/tldr][tldr]]
 - [[https://developer.apple.com/xcode/][tmux]]
-- [[http://www.zsh.org/][zsh]]
-- [[https://github.com/robbyrussell/oh-my-zsh][oh-my-zsh]]
-- [[http://editorconfig.org/][editorconfig]]
-- [[https://mosh.org/][mosh]]
-- [[https://www.gnu.org/software/global/][global]]
+- [[https://www.gnu.org/software/wget/][wget]]
 
 
-* autojump
-
-[[https://github.com/wting/autojump][autojump]] is a ~cd~ replacement command that learns, it provides an easy and
-faster way to navigate your filesystem from the command line. It works by
-maintaining a database of the directories you use the most from the command
-line.
-
-Brief usage:
-- ~j foo~: jump to a directory that contains ~foo~
-- ~jc bar~: jump to a child directory
-- ~jc music~ or ~jco music~: open file manager to directories (instead of
-  jumping)
-
-
-* the_silver_searcher
+* ag
 
 #+BEGIN_QUOTE
 A lot of my time spent “writing” code is actually spent reading code. And a
@@ -53,10 +42,46 @@ You can not go back to [[http://beyondgrep.com][ack]] after the first you try ag
 third-party ag integration for various editors, check [[http://betterthanack.com/][betterthanack]].
 
 
-* cloc
+* autojump
 
-[[http://cloc.sourceforge.net/][cloc]] is a line-of-code counter tool to get an overview and generate a loc
-report for your project. It's simple, portable, and it just works as expected.
+[[https://github.com/wting/autojump][autojump]] is a ~cd~ replacement command that learns, it provides an easy and
+faster way to navigate your filesystem from the command line. It works by
+maintaining a database of the directories you use the most from the command
+line.
+
+Brief usage:
+- ~j foo~: jump to a directory that contains ~foo~
+- ~jc bar~: jump to a child directory
+- ~jc music~ or ~jco music~: open file manager to directories (instead of
+  jumping)
+
+
+* editorconfig
+
+We live in a world with multiple editors or IDEs, and often we need
+collaboration with others. [[http://editorconfig.org/][EditorConfig]] helps developers define and maintain
+consistent coding styles between different editors and IDEs. The EditorConfig
+project consists of a file format for defining coding styles and a collection
+of text editor plugins that enable editors to read the file format and adhere
+to defined styles. EditorConfig files are easily readable and they work nicely
+with version control systems.
+
+Check [[https://github.com/editorconfig/editorconfig-core-c/blob/master/INSTALL.md][github]] for detailed installation instructions.
+
+
+* global
+
+GNU [[https://www.gnu.org/software/global/][GLOBAL]] is a source code tagging system that works the same way across
+diverse environments, such as Emacs editor, Vi editor, Less viewer, Bash shell,
+various web browsers, etc.
+
+You can locate various objects, such as functions, macros, structs, classes, in
+your source files and move there easily. It is useful for hacking a large
+projects which contain many sub-directories, many #ifdef and many main()
+functions. It is similar to ctags or etags, but is different from them in the
+following two points:
+- independence of any editor
+- capability to treat definition and reference
 
 
 * htop
@@ -69,10 +94,29 @@ It's a better replacement for the traditional builtin [[http://en.wikipedia.org/
 Type =h= from within =htop= to get instant help.
 
 
+* httpie
+
+[[https://httpie.org/][HTTPie]] a command line HTTP client with an intuitive UI, JSON support, syntax
+highlighting, wget-like downloads, plugins, and more. It has a huge collection
+of [[https://httpie.org/doc][features]] with sensible defaults.
+
+Consider httpie as a modern curl.
+
+
+* jq
+
+[[https://stedolan.github.io/jq/][jq]] is like =sed= for JSON data.
+
+
 * md5sha1sum
 
 [[http://www.microbrew.org/tools/md5sha1sum/][md5sha1sum]] package provides the missing =md5sum=, =sha1sum= command for Mac OS
 X.
+
+
+* pstree
+
+[[http://www.thp.uni-duisburg.de/pstree/][pstree]] is a small program that shows a list of process as a tree.
 
 
 * ranger
@@ -158,12 +202,19 @@ Some packages may need texinfo to faciliate the build process. So we add it
 here.
 
 
-* wget
+* tokei
 
-GNU Wget is a free software package for retrieving files using HTTP, HTTPS and
-FTP, the most widely-used Internet protocols.
+[[https://github.com/XAMPPRocky/tokei][tokei]] is a line of code counter which is written by rust. It runs really fast.
 
-Mac OS X didn't has it by default, so we add it here.
+
+* tig
+
+[[https://github.com/jonas/tig][tig]] is a text-mode interface for git.
+
+
+* tldr
+
+[[https://github.com/tldr-pages/tldr][tldr]] is a collection of simplified and community-driven man pages.
 
 
 * tmux
@@ -185,39 +236,9 @@ Last but now least, you'd better install latest version tmux to avoid some
 weird bugs. On ubuntu, you can do like [[http://stackoverflow.com/questions/25940944/ugrade-tmux-from-1-8-to-1-9-on-ubuntu-14-04][this]].
 
 
-* editorconfig
+* wget
 
-We live in a world with multiple editors or IDEs, and often we need
-collaboration with others. [[http://editorconfig.org/][EditorConfig]] helps developers define and maintain
-consistent coding styles between different editors and IDEs. The EditorConfig
-project consists of a file format for defining coding styles and a collection
-of text editor plugins that enable editors to read the file format and adhere
-to defined styles. EditorConfig files are easily readable and they work nicely
-with version control systems.
+GNU Wget is a free software package for retrieving files using HTTP, HTTPS and
+FTP, the most widely-used Internet protocols.
 
-Check [[https://github.com/editorconfig/editorconfig-core-c/blob/master/INSTALL.md][github]] for detailed installation instructions.
-
-
-* mosh
-
-[[https://mosh.org/][Mosh]] is a remote terminal application that allows roaming, supports intermittent
-connectivity, and provides intelligent local echo and line editing of user
-keystrokes.
-
-Mosh is a replacement for SSH. It's more robust and responsive, especially over
-Wi-Fi, cellular, and long-distance links.
-
-
-* global
-
-GNU [[https://www.gnu.org/software/global/][GLOBAL]] is a source code tagging system that works the same way across
-diverse environments, such as Emacs editor, Vi editor, Less viewer, Bash shell,
-various web browsers, etc.
-
-You can locate various objects, such as functions, macros, structs, classes, in
-your source files and move there easily. It is useful for hacking a large
-projects which contain many sub-directories, many #ifdef and many main()
-functions. It is similar to ctags or etags, but is different from them in the
-following two points:
-- independence of any editor
-- capability to treat definition and reference
+Mac OS X didn't has it by default, so we add it here.
