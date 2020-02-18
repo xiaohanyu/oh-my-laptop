@@ -1,7 +1,6 @@
 ---
 
 - name: clojure | install leiningen via homebrew
-  become: false
   homebrew:
     name:
       - leiningen

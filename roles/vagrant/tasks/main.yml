@@ -1,7 +1,6 @@
 ---
 
 - name: install virtualbox and vagrant
-  become: false
   homebrew_cask:
     name:
       - virtualbox

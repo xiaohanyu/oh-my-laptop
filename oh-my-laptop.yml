@@ -2,8 +2,7 @@
 
 - hosts: localhost
   connection: local
-  become: true
-  become_method: sudo
+  become: false
   vars:
     whoami: "{{ lookup('env', 'USER') }}"
     user_home: "{{ lookup('env', 'HOME') }}"

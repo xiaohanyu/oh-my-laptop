@@ -19,7 +19,6 @@
     - rbenv-vars
 
 - name: set-up rbenv init file
-  become: false
   copy: src=rbenv-init.sh dest={{user_home}}/.oh-my-laptop/rbenv-init.sh
 
 - name: copy gemrc

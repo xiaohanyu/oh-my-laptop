@@ -1,7 +1,6 @@
 ---
 
 - name: install go
-  become: false
   homebrew:
     name:
       - golang

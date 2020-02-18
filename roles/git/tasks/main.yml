@@ -1,7 +1,6 @@
 ---
 
 - name: install some enhancements for git
-  become: false
   homebrew:
     name:
       - git
@@ -11,11 +10,9 @@
     state: present
 
 - name: git config user.name
-  become: false
   command: git config --global user.name "{{git_user_name}}"
 
 - name: git config user.email
-  become: false
   command: git config --global user.email "{{git_user_email}}"
 
 - set_fact:

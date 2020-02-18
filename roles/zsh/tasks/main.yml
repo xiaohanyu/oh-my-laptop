@@ -2,7 +2,6 @@
 
 # zsh and oh-my-zsh
 - name: install zsh
-  become: false
   homebrew:
     name:
       - zsh

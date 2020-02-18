@@ -1,33 +1,27 @@
 ---
 
 - name: install jenv for java environment management
-  become: false
   homebrew:
     name:
       - jenv
     state: present
 
 - name: set up jenv init file
-  become: false
   copy: src=jenv-init.sh dest={{user_home}}/.oh-my-laptop/jenv-init.sh
 
 - name: install an openjdk@12
-  become: false
   homebrew:
     name:
       - openjdk@12
     state: present
 
 - name: add openjdk@12 to jenv
-  become: false
   command: jenv add /usr/local/opt/openjdk@12/
 
 - name: set global java for jenv
-  become: false
   command: jenv global 12.0
 
 - name: install maven and gradle
-  become: false
   homebrew:
     name:
       - maven

@@ -1,14 +1,12 @@
 ---
 
 - name: install emacs
-  become: false
   homebrew_cask:
     name:
       - emacs
     state: present
 
 - name: git clone spacemacs
-  become: false
   git:
     repo: https://github.com/syl20bnr/spacemacs
     dest: "{{user_home}}/.emacs.d"

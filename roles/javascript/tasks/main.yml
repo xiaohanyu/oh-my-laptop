@@ -1,7 +1,6 @@
 ---
 
-- name: Install nodejs via homebrew
-  become: false
+- name: install nodejs via homebrew
   homebrew:
     name:
       - node
@@ -27,7 +26,6 @@
     - nodenv-vars
 
 - name: set-up nodenv init file
-  become: false
   copy: src=nodenv-init.sh dest={{user_home}}/.oh-my-laptop/nodenv-init.sh
 
 - set_fact:

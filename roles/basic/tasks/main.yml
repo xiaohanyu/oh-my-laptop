@@ -2,7 +2,6 @@
 
 # install some fancy tools
 - name: install some small, awesome packages to boost your life
-  become: false
   homebrew:
     name:
       - ag
@@ -26,11 +25,9 @@
 
 # add a tmux.conf
 - name: settings tmux.conf
-  become: false
   copy: src=tmux.conf dest={{user_home}}/.tmux.conf
 
 - name: set-up autojump init file
-  become: false
   copy: src=autojump-init.sh dest={{user_home}}/.oh-my-laptop/autojump-init.sh
 
 - set_fact:
