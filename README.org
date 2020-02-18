@@ -2,6 +2,7 @@
 
 [[https://circleci.com/gh/xiaohanyu/oh-my-laptop][https://circleci.com/gh/xiaohanyu/oh-my-laptop.svg?style=shield&circle-token=8e3f2e95c4217e6db0c4ad3ccc2cb506479d65ec]]
 
+
 * Introduction
 
 Tired of spending a whole day configuring your Mac/Linux? Then you've come to
@@ -22,10 +23,6 @@ only thing ansible requires is ssh, which lives on almost every *nix based
 machine. Second, unlike Puppet/Chef, which create a huge and complex DSL,
 ansible adopt [[http://www.yaml.org/][YAML]], which makes it quite easy to learn, read and write.
 
-Currently, oh-my-laptop has been tested on Mac OS X 10.10 and [[http://blog.linuxmint.com/?p=2653][Linux Mint 17
-KDE]], and it should works on some Ubuntu-derived Linux distributions---which
-means, I don't have too much time to test all Ubuntu(apt-get)-derived Linux
-distributions.
 
 * Features
 
@@ -38,9 +35,10 @@ distributions.
   proper dependency relations, and it is guaranteed that each role will be
   played once and only once, no matter in what order you specify it.
 
+
 * Quick Start
 
-** Mac OS X 10.10
+** Mac OS X
 
 To start, you need to install the following things.
 
@@ -81,55 +79,107 @@ I've write a bootstrap script to get homebrew(on Mac) and ansible for you:
 curl -L https://raw.githubusercontent.com/xiaohanyu/oh-my-laptop/master/bootstrap.sh | bash
 #+END_SRC
 
+
 * What's inside?
 
-One line code to get all packages configured by oh-my-laptop:
+- [[file:./roles/basic][basic]]
+  - [[https://github.com/ggreer/the_silver_searcher][ag]]
+  - [[https://github.com/wting/autojump][autojump]]
+  - [[https://editorconfig.org/][editorconfig]]
+  - [[https://www.gnu.org/software/global/][global]]
+  - [[https://www.graphviz.org/][graphviz]]
+  - [[http://hisham.hm/htop/index.php][htop]]
+  - [[https://httpie.org/][httpie]]
+  - [[https://imagemagick.org/index.php][imagemagick]]
+  - [[https://stedolan.github.io/jq/][jq]]
+  - [[http://www.microbrew.org/tools/md5sha1sum/][md5sha1sum]]
+  - [[http://www.thp.uni-duisburg.de/pstree/][pstree]]
+  - [[http://ranger.nongnu.org/][ranger]]
+  - [[https://github.com/hanslub42/rlwrap][rlwrap]]
+  - [[https://www.gnu.org/software/texinfo/][texinfo]]
+  - [[https://github.com/XAMPPRocky/tokei][tokei]]
+  - [[https://github.com/jonas/tig][tig]]
+  - [[https://github.com/tldr-pages/tldr][tldr]]
+  - [[https://developer.apple.com/xcode/][tmux]]
+  - [[https://www.gnu.org/software/wget/][wget]]
+- [[file:./roles/cask][cask]]
+  - [[https://www.alfredapp.com/][alfred]]
+  - [[https://authy.com/][authy]]
+  - [[https://www.macbartender.com/][bartender]]
+  - [[https://kapeli.com/dash][dash]]
+  - [[https://dbeaver.io/][dbeaver-community]]
+  - [[https://www.enpass.io/][enpass]]
+  - [[https://www.mozilla.org/en-US/firefox/new/][firefox]]
+  - [[https://www.jetbrains.com/idea/][intellij-idea-ce]]
+  - [[https://iterm2.com/][iterm2]]
+  - [[https://manytricks.com/moom/][moom]]
+  - [[https://www.postman.com/][postman]]
+  - [[https://github.com/shadowsocks/ShadowsocksX-NG][shadowsocksx-ng]]
+  - [[https://slack.com/][slack]]
+  - [[https://www.telegram.org/][telegram]]
+  - [[https://www.videolan.org/index.html][vlc]]
+  - [[https://www.wechat.com/en][wechat]]
+  - [[https://www.whatsapp.com/][whatsapp]]
+  - [[https://www.wireshark.org/][wireshark]]
+  - [[https://zoom.us/][zoomus]]
+- [[file:./roles/cc][cc]]
+  - [[http://www.cmake.org/][cmake]]
+- [[file:./roles/chinese][chinese]]
+  - [[https://qingg.im/mac/][qingg]]
+- [[file:./roles/clojure][clojure]]
+  - [[https://github.com/technomancy/leiningen/][leiningen]]
+- [[file:./roles/docker][docker]]
+  - [[https://www.docker.com/][docker]]
+- [[file:./roles/elixir][elixir]]
+  - [[https://elixir-lang.org/][elixir]]
+- [[file:./roles/emacs/][emacs]]
+  - [[https://emacsformacosx.com/][emacs]]
+  - [[https://github.com/syl20bnr/spacemacs][spacemacs]]
+- [[file:./roles/git][git]]
+  - [[http://git-scm.com/][git]]
+  - [[https://github.com/tj/git-extras][git-extras]]
+  - [[http://jonas.nitro.dk/tig/][tig]]
+- [[file:./roles/go][go]]
+  - [[https://golang.org/][go]]
+- [[file:./roles/java][java]]
+  - [[https://www.jenv.be/][jEnv]]
+  - [[https://openjdk.java.net/][OpenJDK]]
+  - [[http://maven.apache.org/][maven]]
+  - [[https://gradle.org/][gradle]]
+- [[file:./roles/javascript][javascript]]
+  - [[https://github.com/nodenv/nodenv][nodenv]]
+  - [[https://github.com/nodenv/node-build][node-build]]
+  - [[https://github.com/nodenv/nodenv-default-packages][nodenv-default-packages]]
+  - [[https://github.com/nodenv/nodenv-each][nodenv-each]]
+  - [[https://github.com/nodenv/nodenv-env][nodenv-env]]
+  - [[https://github.com/nodenv/nodenv-vars][nodenv-vars]]
+  - [[https://github.com/nodenv/nodenv-package-rehash][nodenv-package-rehash]]
+- [[file:./roles/python][python]]
+  - [[https://github.com/pyenv/pyenv][pyenv]]
+  - [[https://github.com/pyenv/pyenv-doctor][pyenv-doctor]]
+  - [[https://github.com/pyenv/pyenv-update][pyenv-update]]
+  - [[https://github.com/pyenv/pyenv-virtualenv][pyenv-virtualenv]]
+  - [[https://github.com/pyenv/pyenv-which-ext][pyenv-which-ext]]
+- [[file:./roles/ruby][ruby]]
+  - [[https://github.com/rbenv/rbenv][rbenv]]
+  - [[https://github.com/rbenv/ruby-build][ruby-build]]
+  - [[https://github.com/rbenv/rbenv-gem-rehash][rbenv-gem-rehash]]
+  - [[https://github.com/rbenv/rbenv-default-gems][rbenv-default-gems]]
+  - [[https://github.com/rbenv/rbenv-each][rbenv-each]]
+  - [[https://github.com/rbenv/rbenv-vars][rbenv-vars]]
+  - [[http://bundler.io/][bundler]]
+  - [[http://pryrepl.org/][pry]]
+  - [[https://github.com/pry/pry-doc][pry-doc]]
+- [[file:./roles/tex][tex]]
+  - [[https://www.tug.org/mactex/][MacTeX]]
+  - [[https://pandoc.org/][pandoc]]
+- [[file:./roles/vagrant][vagrant]]
+  - [[http://www.virtualbox.org][virtualbox]]
+  - [[http://www.vagrantup.com][vagrant]]
+- [[file:./roles/zsh][zsh]]
+  - [[http://www.zsh.org/][zsh]]
+  - [[https://github.com/robbyrussell/oh-my-zsh][oh-my-zsh]]
 
-#+BEGIN_SRC sh
-find . -name README.org | xargs grep "|" | grep -v Package | grep -v '\-\-\-\-' | sed 's/^.*org://g'
-#+END_SRC
-
-| Package            | Status      | Apt | Homebrew |
-|--------------------+-------------+-----+----------|
-| [[https://github.com/wting/autojump][autojump]]           | Required    | OK  | OK       |
-| [[https://github.com/ggreer/the_silver_searcher][ag]]                 | Required    | OK  | OK       |
-| [[http://cloc.sourceforge.net/][cloc]]               | Required    | OK  | OK       |
-| [[http://hisham.hm/htop/index.php][htop]]               | Required    | OK  | OK       |
-| [[http://www.microbrew.org/tools/md5sha1sum/][md5sha1sum]]         | Required    | NaN | OK       |
-| [[http://ranger.nongnu.org/][ranger]]             | Required    | OK  | OK       |
-| [[https://github.com/hanslub42/rlwrap][rlwrap]]             | Required    | OK  | OK       |
-| [[https://www.gnu.org/software/wget/][wget]]               | Required    | OK  | OK       |
-| [[https://developer.apple.com/xcode/][tmux]]               | Required    | OK  | OK       |
-| [[http://www.zsh.org/][zsh]]                | Required    | OK  | OK       |
-| [[https://github.com/robbyrussell/oh-my-zsh][oh-my-zsh]]          | Required    | OK  | OK       |
-| [[http://editorconfig.org/][editorconfig]]       | Recommended | OK  | OK       |
-| [[http://clang.llvm.org/][clang]]              | Required    | OK  | OK       |
-| [[http://www.cmake.org/][cmake]]              | Recommended | OK  | OK       |
-| [[https://github.com/technomancy/leiningen/][leiningen]]          | Required    | OK  | OK       |
-| [[http://www.oracle.com/technetwork/java/javase/overview/java8-2100321.html][Java 8]]             | Required    | OK  | OK       |
-| [[http://maven.apache.org/][maven]]              | Required    | OK  | OK       |
-| [[https://gradle.org/][gradle]]             | Required    | OK  | OK       |
-| [[https://nodejs.org/][nodejs]]             | Required    | OK  | OK       |
-| [[http://jshint.com/][jshint]]             | Recommended | OK  | OK       |
-| [[https://github.com/pyenv/pyenv][pyenv]]              | Required    | OK  | OK       |
-| [[https://github.com/pyenv/pyenv-doctor][pyenv-doctor]]       | Required    | OK  | OK       |
-| [[https://github.com/pyenv/pyenv-update][pyenv-update]]       | Required    | OK  | OK       |
-| [[https://github.com/pyenv/pyenv-virtualenv][pyenv-virtualenv]]   | Required    | OK  | OK       |
-| [[https://github.com/pyenv/pyenv-which-ext][pyenv-which-ext]]    | Required    | OK  | OK       |
-| [[https://github.com/rbenv/rbenv][rbenv]]              | Required    | OK  | OK       |
-| [[https://github.com/rbenv/ruby-build][ruby-build]]         | Required    | OK  | OK       |
-| [[https://github.com/rbenv/rbenv-gem-rehash][rbenv-gem-rehash]]   | Required    | OK  | OK       |
-| [[https://github.com/rbenv/rbenv-default-gems][rbenv-default-gems]] | Required    | OK  | OK       |
-| [[https://github.com/rbenv/rbenv-each][rbenv-each]]         | Required    | OK  | OK       |
-| [[https://github.com/rbenv/rbenv-vars][rbenv-vars]]         | Required    | OK  | OK       |
-| [[http://bundler.io/][bundler]]            | Required    | OK  | OK       |
-| [[http://pryrepl.org/][pry]]                | Required    | OK  | OK       |
-| [[https://github.com/pry/pry-doc][pry-doc]]            | Required    | OK  | OK       |
-| [[http://www.virtualbox.org][virtualbox]]         | Required    | OK  | OK       |
-| [[http://www.vagrantup.com][vagrant]]            | Required    | OK  | OK       |
-| [[http://git-scm.com/][git]]                | Required    | OK  | OK       |
-| [[https://github.com/tj/git-extras][git-extras]]         | Required    | OK  | OK       |
-| [[http://jonas.nitro.dk/tig/][tig]]                | Required    | OK  | OK       |
 
 * Let's go
 
@@ -140,6 +190,7 @@ cd oh-my-laptop
 $EDITOR oh-my-laptop.yml
 ansible-playbook -i localhost -K oh-my-laptop.yml
 #+END_SRC
+
 
 * Reference
 
