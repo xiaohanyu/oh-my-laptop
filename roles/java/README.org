@@ -6,33 +6,21 @@ This is part of [[https://github.com/xiaohanyu/oh-my-laptop][oh-my-laptop]].
 
 * Packages
 
-- [[http://www.oracle.com/technetwork/java/javase/overview/java8-2100321.html][Java 8]]
+- [[https://www.jenv.be/][jEnv]]
+- [[https://openjdk.java.net/][OpenJDK]]
 - [[http://maven.apache.org/][maven]]
 - [[https://gradle.org/][gradle]]
 
 
-* Java
+* jEnv
 
-** Mac OS X
-
-The vanilla OS X contains a fake =java= command which will lead you to Oracle's
-[[https://www.java.com/en/download/][site]]. Then you download a package, you click on it, you get Java
-installed. Fortunately, we have [[https://github.com/caskroom/homebrew-cask][homebrew-cask]], and we can get Java by =brew
-cask install java=. And ansible has builtin [[http://docs.ansible.com/homebrew_cask_module.html][module]] support for homebrwe-cask.
+[[https://www.jenv.be/][jEnv]] is a command line tools to help set the =JAVA_HOME= environment variable.
 
 
-** Ubuntu
+* OpenJDK
 
-It is a little complicated to install Java via CLI on Ubuntu, generally, you
-need to:
-
-1. add a java [[https://launchpad.net/~webupd8team/+archive/ubuntu/java][ppa]] for apt
-2. add some *WEIRD* keys
-3. accept Oracle's license
-4. finally you can =sudo apt-get install=
-
-Most of us have little time to touch the internals of =apt-get=, so I just
-figure out an ansible playbook and it works, that's enough.
+OpenJDK is an open source implementation of java. On mac, you could get one of
+available [[https://openjdk.java.net/][OpenJDK]] with homebrew.
 
 
 * Maven
