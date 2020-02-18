@@ -11,31 +11,26 @@ export EDITOR=vim
 # some convenient alias
 alias pyhttp="python -m SimpleHTTPServer"
 
-# ruby bundler
-alias b="bundle "
-alias be="bundle exec "
-
-
-if [ -f $HOME/.pyenv-init.sh ]; then
-    source $HOME/.pyenv-init.sh
+if [ -f $HOME/.oh-my-laptop/pyenv-init.sh ]; then
+    source $HOME/.oh-my-laptop/pyenv-init.sh
 fi
 
-if [ -f $HOME/.rbenv-init.sh ]; then
-    source $HOME/.rbenv-init.sh
+if [ -f $HOME/.oh-my-laptop/rbenv-init.sh ]; then
+    source $HOME/.oh-my-laptop/rbenv-init.sh
 fi
 
-if [ -f $HOME/.nodenv-init.sh ]; then
-    source $HOME/.nodenv-init.sh
+if [ -f $HOME/.oh-my-laptop/nodenv-init.sh ]; then
+    source $HOME/.oh-my-laptop/nodenv-init.sh
 fi
 
-if [ -f $HOME/.autojump-init.sh ]; then
-    source $HOME/.autojump-init.sh
+if [ -f $HOME/.oh-my-laptop/autojump-init.sh ]; then
+    source $HOME/.oh-my-laptop/autojump-init.sh
 fi
 
-if [ -f $HOME/.docker-init.sh ]; then
-    source $HOME/.docker-init.sh
+if [ -f $HOME/.oh-my-laptop/docker-init.sh ]; then
+    source $HOME/.oh-my-laptop/docker-init.sh
 fi
 
-if [ -f $HOME/.jenv-init.sh ]; then
-    source $HOME/.jenv-init.sh
+if [ -f $HOME/.oh-my-laptop/jenv-init.sh ]; then
+    source $HOME/.oh-my-laptop/jenv-init.sh
 fi

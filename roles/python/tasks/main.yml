@@ -19,7 +19,8 @@
     - pyenv-which-ext
 
 - name: set-up pyenv init file
-  copy: src=pyenv-init.sh dest={{user_home}}/.pyenv-init.sh
+  become: false
+  copy: src=pyenv-init.sh dest={{user_home}}/.oh-my-laptop/pyenv-init.sh
 
 - set_fact:
     role_python_done: true

@@ -27,7 +27,8 @@
     - nodenv-vars
 
 - name: set-up nodenv init file
-  copy: src=nodenv-init.sh dest={{user_home}}/.nodenv-init.sh
+  become: false
+  copy: src=nodenv-init.sh dest={{user_home}}/.oh-my-laptop/nodenv-init.sh
 
 - set_fact:
     role_javascript_done: true

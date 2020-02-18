@@ -1,0 +1,4 @@
+---
+
+dependencies:
+  - { role: zsh, when: not role_zsh_done }

@@ -11,21 +11,32 @@
     git_user_email: "xiaohanyu1988@gmail.com"
     role_basic_done: false
     role_cc_done: false
+    role_chinese_done: false
+    role_clojure_done: false
+    role_docker_done: false
+    role_elixir_done: false
+    role_emacs_done: false
     role_git_done: false
+    role_go_done: false
     role_java_done: false
-    role_clojurec_done: false
     role_javascript_done: false
     role_python_done: false
     role_ruby_done: false
+    role_vagrant_done: false
     role_zsh_done: false
   roles:
     - basic
     - cc
-    - git
-    - java
+    - chinese
     - clojure
+    - docker
+    - elixir
+    - emacs
+    - git
+    - go
+    - java
     - javascript
     - python
     - ruby
+    - vagrant
     - zsh
-    - docker

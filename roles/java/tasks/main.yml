@@ -8,7 +8,8 @@
     state: present
 
 - name: set up jenv init file
-  copy: src=jenv-init.sh dest={{user_home}}/.jenv-init.sh
+  become: false
+  copy: src=jenv-init.sh dest={{user_home}}/.oh-my-laptop/jenv-init.sh
 
 - name: install an openjdk@12
   become: false

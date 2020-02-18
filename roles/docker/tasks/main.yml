@@ -8,7 +8,7 @@
 
 - name: set-up docker init file
   become: false
-  copy: src=docker-init.sh dest={{user_home}}/.docker-init.sh
+  copy: src=docker-init.sh dest={{user_home}}/.oh-my-laptop/docker-init.sh
 
 - set_fact:
     role_docker_done: true

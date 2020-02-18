@@ -75,3 +75,9 @@
 - name: set zsh as default user shell
   become: true
   shell: chsh -s $(which zsh) {{whoami}}
+
+- name: create .oh-my-laptop directory
+  become: false
+  file:
+    path: "{{user_home}}/.oh-my-laptop"
+    state: directory
