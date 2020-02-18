@@ -8,10 +8,6 @@ class BaseTest < Minitest::Test
     @alias_list = []
   end
 
-  def apt_get_available?
-    return system('which apt-get > /dev/null')
-  end
-
   def homebrew_available?
     return system('which brew > /dev/null')
   end
