@@ -8,8 +8,10 @@
       - autojump
       - editorconfig
       - global
+      - graphviz
       - htop-osx
       - httpie
+      - imagemagick
       - jq
       - md5sha1sum
       - pstree
