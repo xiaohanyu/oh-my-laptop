@@ -1,0 +1,25 @@
+---
+
+- name: install many apps on mac by homebrew cask
+  homebrew_cask:
+    name:
+      - alfred
+      - authy
+      - bartender
+      - dash
+      - dbeaver-community
+      - enpass
+      - firefox
+      - intellij-idea-ce
+      - iterm2
+      - moom
+      - postman
+      - shadowsocksx-ng
+      - slack
+      - telegram
+      - vlc
+      - wechat
+      - whatsapp
+      - wireshark
+      - zoomus
+    state: present

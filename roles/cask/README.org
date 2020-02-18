@@ -1,0 +1,43 @@
+#+TITLE: Oh My Laptop Casks
+#+OPTIONS: toc:nil num:nil ^:nil
+
+This is part of [[https://github.com/xiaohanyu/oh-my-laptop][oh-my-laptop]].
+
+
+* Packages
+
+This module install following apps on mac.
+
+- [[https://www.alfredapp.com/][alfred]]
+- [[https://authy.com/][authy]]
+- [[https://www.macbartender.com/][bartender]]
+- [[https://kapeli.com/dash][dash]]
+- [[https://dbeaver.io/][dbeaver-community]]
+- [[https://www.enpass.io/][enpass]]
+- [[https://www.mozilla.org/en-US/firefox/new/][firefox]]
+- [[https://www.jetbrains.com/idea/][intellij-idea-ce]]
+- [[https://iterm2.com/][iterm2]]
+- [[https://manytricks.com/moom/][moom]]
+- [[https://www.postman.com/][postman]]
+- [[https://github.com/shadowsocks/ShadowsocksX-NG][shadowsocksx-ng]]
+- [[https://slack.com/][slack]]
+- [[https://www.telegram.org/][telegram]]
+- [[https://www.videolan.org/index.html][vlc]]
+- [[https://www.wechat.com/en][wechat]]
+- [[https://www.whatsapp.com/][whatsapp]]
+- [[https://www.wireshark.org/][wireshark]]
+- [[https://zoom.us/][zoomus]]
+
+
+* iTerm2
+
+iTerm2 is a replacement for Terminal.app.
+
+I personally customized following key sequences that follows [[https://en.wikipedia.org/wiki/GNU_Readline][readline]] editing
+style.
+
+Go to Preferences -> Profiles -> Default -> Keys, then:
+- command + b -> send escape sequence + b
+- command + d -> send escape sequence + d
+- command + f -> send escape sequence + f
+- command + delete -> send hex codes: 0x1B 0x08
