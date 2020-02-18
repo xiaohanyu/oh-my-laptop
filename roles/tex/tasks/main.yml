@@ -1,0 +1,13 @@
+---
+
+- name: install mactex
+  homebrew_cask:
+    name:
+      - mactex
+    state: present
+
+- name: install pandoc
+  homebrew:
+    name:
+      - pandoc
+    state: present

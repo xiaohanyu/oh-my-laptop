@@ -1,0 +1,22 @@
+#+TITLE: Oh My Laptop Tex
+#+OPTIONS: toc:nil num:nil ^:nil
+
+This is part of [[https://github.com/xiaohanyu/oh-my-laptop][oh-my-laptop]].
+
+
+* Packages
+
+- [[https://www.tug.org/mactex/][MacTeX]]
+- [[https://pandoc.org/][pandoc]]
+
+
+* MacTeX
+
+[[https://www.tug.org/mactex/][MacTeX]] is an install package which installs everything needed to use TeX and
+LaTeX on a Macintosh.
+
+
+* Pandoc
+
+[[https://pandoc.org/][Pandoc]] is your swiss-army knife to convert between the tens of documentation
+formats.
