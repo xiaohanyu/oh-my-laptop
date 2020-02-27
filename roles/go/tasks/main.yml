@@ -6,5 +6,8 @@
       - golang
     state: present
 
+- name: set-up golang init file
+  copy: src=go-init.sh dest={{user_home}}/.oh-my-laptop/go-init.sh
+
 - set_fact:
     role_go_done: true

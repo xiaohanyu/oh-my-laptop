@@ -11,6 +11,10 @@ export EDITOR=vim
 # some convenient alias
 alias pyhttp="python -m SimpleHTTPServer"
 
+if [ -f $HOME/.oh-my-laptop/go-init.sh ]; then
+    source $HOME/.oh-my-laptop/go-init.sh
+fi
+
 if [ -f $HOME/.oh-my-laptop/pyenv-init.sh ]; then
     source $HOME/.oh-my-laptop/pyenv-init.sh
 fi
