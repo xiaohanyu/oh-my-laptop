@@ -191,6 +191,19 @@ $EDITOR oh-my-laptop.yml
 ansible-playbook -i localhost -K oh-my-laptop.yml
 #+end_src
 
+* Quickstart
+
+[[https://github.com/xiaohanyu/oh-my-laptop/blob/master/roles/basic/README.org#tmux][tmux]] and [[https://github.com/xiaohanyu/oh-my-laptop/blob/master/roles/zsh/README.org][zsh]] is at the core of oh-my-laptop. Please read the docs carefully
+before you start the journey. The key point here is, I've rebind tmux prefix key
+to ~ctrl-l~ since ~ctrl-b~ is not easy to type and is conflict with readline key
+bindings.
+
+Here's some screenshots:
+
+[[file:screenshots/tmux-window.png]]
+
+[[file:screenshots/tmux-zsh.png]]
+
 
 * Reference
 
