@@ -12,3 +12,6 @@ This is part of [[https://github.com/xiaohanyu/oh-my-laptop][oh-my-laptop]].
 * go
 
 They say that [[https://golang.org/][go]] is the C language for 21st century.
+
+Oh-my-laptop add golang ~bin~ directory to system ~$PATH~ to make go binaries
+available as shell tools.

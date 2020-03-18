@@ -79,7 +79,7 @@ various web browsers, etc.
 
 You can locate various objects, such as functions, macros, structs, classes, in
 your source files and move there easily. It is useful for hacking a large
-projects which contain many sub-directories, many #ifdef and many main()
+projects which contain many sub-directories, many ~#ifdef~ and many ~main()~
 functions. It is similar to ctags or etags, but is different from them in the
 following two points:
 - independence of any editor
@@ -92,7 +92,6 @@ following two points:
 graphs in a simple text language and make diagrams in useful formats.
 
 
-
 * htop
 
 [[http://hisham.hm/htop/index.php][htop]] is an interactive process viewer for Linux(and ported to Mac OS X). It is
@@ -100,7 +99,7 @@ a text-mode application and requires [[http://en.wikipedia.org/wiki/Ncurses][ncu
 
 It's a better replacement for the traditional builtin [[http://en.wikipedia.org/wiki/Top_(software)][top]] program.
 
-Type =h= from within =htop= to get instant help.
+Type ~h~ from within ~htop~ to get instant help.
 
 
 * httpie
@@ -116,14 +115,17 @@ Consider httpie as a modern curl.
 
 [[https://imagemagick.org/index.php][imagemagick]] provides a collection of command line tools to manipulate images.
 
+
 * jq
 
-[[https://stedolan.github.io/jq/][jq]] is like =sed= for JSON data.
+[[https://stedolan.github.io/jq/][jq]] is like ~sed~ for JSON data - you can use it to slice and filter and map and
+transform structured data with the same ease that ~sed~, ~awk~, ~grep~ and
+friends let you play with text.
 
 
 * md5sha1sum
 
-[[http://www.microbrew.org/tools/md5sha1sum/][md5sha1sum]] package provides the missing =md5sum=, =sha1sum= command for Mac OS
+[[http://www.microbrew.org/tools/md5sha1sum/][md5sha1sum]] package provides the missing ~md5sum~, ~sha1sum~ command for Mac OS
 X.
 
 
@@ -134,7 +136,7 @@ X.
 
 * ranger
 
-[[http://ranger.nongnu.org/][ranger]] is a CLI file manager with VI key bindings. Just as htop, ranger depends
+[[http://ranger.nongnu.org/][ranger]] is a CLI file manager with Vi key bindings. Just as htop, ranger depends
 [[http://en.wikipedia.org/wiki/Ncurses][ncurses]] library. It provides a minimalistic and nice CLI interface with VI key
 bindings for fast file and directory navigation. It can also guess which
 program you want to use when open particular files.
@@ -156,54 +158,54 @@ Here's some tutorials from its home page:
 
 If
 
-#+BEGIN_SRC
+#+begin_src
 $ <command> <args>
-#+END_SRC
+#+end_src
 
 doesn't let you use arrow keys to edit input, or if you just want decent input
 history and completion, try:
 
-#+BEGIN_SRC
+#+begin_src
 $ rlwrap [-options] <command> <args>
-#+END_SRC
+#+end_src
 
-You then can edit =<command>='s input and recall the input history using the
+You then can edit ~<command>~'s input and recall the input history using the
 arrow keys.  Input history is remembered accross invocations, separately for
-different =<command>=. Typing =!<prefix><TAB>= will recall the last input line
-starting with =<prefix>=, =CTRL-R= will search the input history.  With the
-=-r= and =-f= options you can specify the list of words which rlwrap will use
-as possible completions, taking them from a file (=-f= option) or from
-=<command>='s standard in/output.  rlwrap monitors =<command>='s terminal settings,
+different ~<command>~. Typing ~!<prefix><TAB>~ will recall the last input line
+starting with ~<prefix>~, ~CTRL-R~ will search the input history.  With the
+~-r~ and ~-f~ options you can specify the list of words which rlwrap will use
+as possible completions, taking them from a file (~-f~ option) or from
+~<command>~'s standard in/output.  rlwrap monitors ~<command>~'s terminal settings,
 so that it can do the right thing when command asks for single keypresses or
 for a password.  Commands that already use readline will always ask for (and
 get) single keypresses, which makes rlwrapping them rather pointless. However,
-if one uses the =-a= option, rlwrap will use its own line editing and
-history. Unforunately, in this case, rlwrap cannot detect whether =<command>=
+if one uses the ~-a~ option, rlwrap will use its own line editing and
+history. Unforunately, in this case, rlwrap cannot detect whether ~<command>~
 asks for a password. This can be remedied by giving the password prompt
 (excluding trailing space and possibly the first few letters) as an argument to
-the =-a= option.
+the ~-a~ option.
 
 ** EXAMPLES:
 Run netcat with command-line editing:
 
-#+BEGIN_SRC
+#+begin_src
 rlwrap nc localhost 80
-#+END_SRC
+#+end_src
 
 Run lprolog and use library1 and library2 to build a completion word
 list:
 
-#+BEGIN_SRC
+#+begin_src
 rlwrap -f library1 -f library2 lprolog
-#+END_SRC
+#+end_src
 
 Run smbclient (which already uses readline), add all input and output
 to completion list, complete local filenames, avoid showing (and
 storing) passwords:
 
-#+BEGIN_SRC
+#+begin_src
 rlwrap -cr -aPassword: smbclient '\\PEANUT\C'
-#+END_SRC
+#+end_src
 
 
 * texinfo
@@ -232,7 +234,8 @@ here.
 
 * tmux
 
-tmux is a terminal multiplexer.
+
+[[https://developer.apple.com/xcode/][tmux]] is a terminal multiplexer.
 
 By multiplexer, it means you can create windows, panels in a single terminal
 windows. No need for traditional vertical or horizontal splitting features from
@@ -242,7 +245,7 @@ killer app for CLI gurus.
 
 There's a wonderful book, <[[https://pragprog.com/book/bhtmux/tmux][tmux: Productive Mouse-Free Development]]> by [[http://bphogan.com/][Brian
 P.Hogan]]. oh-my-laptop steals some code snippets from this book and replace the
-prefix key =C-b= with =C-l=. Note that tmux's key bindings is case sensitive,
+prefix key ~C-b~ with ~C-l~. Note that tmux's key bindings is case sensitive,
 so when weird things happened, check your CAPSLOCK first.
 
 Last but now least, you'd better install latest version tmux to avoid some

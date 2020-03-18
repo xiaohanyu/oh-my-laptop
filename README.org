@@ -52,15 +52,15 @@ Command Line Tools, refer this [[http://railsapps.github.io/xcode-command-line-t
 There're various package managers for Mac, among which [[http://brew.sh/][homebrew]] is the best and
 most popular. It's quite easy to install:
 
-#+BEGIN_SRC sh
+#+begin_src sh
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-#+END_SRC
+#+end_src
 
 Then you also get [[http://caskroom.io/][homebrew cask]] via:
 
-#+BEGIN_SRC sh
+#+begin_src sh
 brew tap caskroom/cask
-#+END_SRC
+#+end_src
 
 Homebrew cask is really great if you want to install some huge binary packages
 such as Emacs, [[https://www.jetbrains.com/pycharm/][pycharm]], etc.
@@ -75,9 +75,9 @@ join the journey.
 
 I've write a bootstrap script to get homebrew(on Mac) and ansible for you:
 
-#+BEGIN_SRC sh
+#+begin_src sh
 curl -L https://raw.githubusercontent.com/xiaohanyu/oh-my-laptop/master/bootstrap.sh | bash
-#+END_SRC
+#+end_src
 
 
 * What's inside?
@@ -183,13 +183,13 @@ curl -L https://raw.githubusercontent.com/xiaohanyu/oh-my-laptop/master/bootstra
 
 * Let's go
 
-#+BEGIN_SRC sh
+#+begin_src sh
 git clone https://github.com/xiaohanyu/oh-my-laptop
 cd oh-my-laptop
 # please view oh-my-laptop.yml and enable or disable some modules
 $EDITOR oh-my-laptop.yml
 ansible-playbook -i localhost -K oh-my-laptop.yml
-#+END_SRC
+#+end_src
 
 
 * Reference

@@ -12,3 +12,10 @@ This is part of [[https://github.com/xiaohanyu/oh-my-laptop][oh-my-laptop]].
 
 Ala, after almost three years of development, docker finally can run on macOS
 smoothly.
+
+We set two alias for docker-compose:
+
+#+begin_src bash
+alias dcp='docker-compose'
+alias dce='docker-compose exec'
+#+end_src

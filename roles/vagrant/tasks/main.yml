@@ -6,3 +6,6 @@
       - virtualbox
       - vagrant
     state: present
+
+- set_fact:
+    role_vagrant_done: true

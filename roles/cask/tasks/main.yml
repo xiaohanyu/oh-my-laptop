@@ -23,3 +23,6 @@
       - wireshark
       - zoomus
     state: present
+
+- set_fact:
+    role_cask_done: true

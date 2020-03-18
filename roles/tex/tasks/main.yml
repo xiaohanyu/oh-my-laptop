@@ -11,3 +11,6 @@
     name:
       - pandoc
     state: present
+
+- set_fact:
+    role_tex_done: true

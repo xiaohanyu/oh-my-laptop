@@ -8,6 +8,7 @@ This is part of [[https://github.com/xiaohanyu/oh-my-laptop][oh-my-laptop]].
 
 - [[http://git-scm.com/][git]]
 - [[https://github.com/tj/git-extras][git-extras]]
+- [[https://git-lfs.github.com/][git-lfs]]
 - [[http://jonas.nitro.dk/tig/][tig]]
 
 
@@ -16,6 +17,28 @@ This is part of [[https://github.com/xiaohanyu/oh-my-laptop][oh-my-laptop]].
 The [[http://en.wikipedia.org/wiki/Revision_control][VCS]] world is dominated by [[http://git-scm.com/][git]], however, we still need cvs/svn/mercurial
 when we have to check out code for some old-fashioned package.
 
-[[https://github.com/tj/git-extras][git-extras]] provides some useful [[https://github.com/tj/git-extras/wiki/Commands][commands]] for daily use, type =git summary= for
-a tiny demo. [[http://jonas.nitro.dk/tig/][tig]] is a ncurses-based text-mode interface for git, for CLI
+
+* git-extras
+
+[[https://github.com/tj/git-extras][git-extras]] is a [[https://github.com/tj/git-extras/tree/master/bin][collection]] of shell script which extents git with tens of
+utilities, like repo summary, repl, changelog population, author commit
+percentages and more.
+
+My favourite command is ~git summary~, which, as its name, provides a summary
+report for your repository.
+
+Another fun command is ~git repl~, give it a try you will fall in love with it.
+
+
+* git-lfs
+
+[[https://git-lfs.github.com/][Git Large File Storage]] is an open source Git extension for versioning large
+files. It replaces large files such as audio samples, videos, datasets, and
+graphics with text pointers inside Git, while storing the file contents on a
+remote server like GitHub.com or GitHub Enterprise.
+
+
+* tig
+
+[[http://jonas.nitro.dk/tig/][tig]] is a ncurses-based text-mode interface for git, for CLI
 gurus, check [[http://jonas.nitro.dk/tig/screenshots/][screenshots]] for demo.

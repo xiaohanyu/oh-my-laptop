@@ -11,3 +11,6 @@
     repo: https://github.com/syl20bnr/spacemacs
     dest: "{{user_home}}/.emacs.d"
     update: yes
+
+- set_fact:
+    role_emacs_done: true

@@ -80,3 +80,6 @@
   file:
     path: "{{user_home}}/.oh-my-laptop"
     state: directory
+
+- set_fact:
+    role_zsh_done: true

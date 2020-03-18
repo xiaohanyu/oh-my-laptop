@@ -63,10 +63,10 @@ as simple as bundle install.
 
 oh-my-laptop provides two aliases for bundler:
 
-#+BEGIN_SRC sh
+#+begin_src sh
 alias b="bundle "
 alias be="bundle exec "
-#+END_SRC
+#+end_src
 
 
 ** pry

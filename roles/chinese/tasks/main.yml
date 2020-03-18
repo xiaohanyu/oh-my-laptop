@@ -5,3 +5,6 @@
     name:
       - qingg
     state: present
+
+- set_fact:
+    role_chinese_done: true

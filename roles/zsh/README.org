@@ -14,7 +14,7 @@ This is part of [[https://github.com/xiaohanyu/oh-my-laptop][oh-my-laptop]].
 When you install packages(such as mactex) via homebrew, you may see the
 following text:
 
-#+BEGIN_SRC sh
+#+begin_src sh
 # $ brew cask install mactex
 # ==> Caveats
 # To use mactex, zsh users may need to add the following line to their
@@ -25,7 +25,7 @@ following text:
 if [[ -f /usr/libexec/path_helper ]]; then
     eval `/usr/libexec/path_helper -s`
 fi
-#+END_SRC
+#+end_src
 
 Seems strange, ha? [[https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man8/path_helper.8.html][path_helper]] is a binary executable which helps you to
 construct proper ~$PATH~ variable through ~/etc/paths/~ and files in

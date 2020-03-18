@@ -9,6 +9,7 @@
     git_user_name: "Xiao Hanyu"
     git_user_email: "xiaohanyu1988@gmail.com"
     role_basic_done: false
+    role_cask_done: false
     role_cc_done: false
     role_chinese_done: false
     role_clojure_done: false
@@ -21,11 +22,13 @@
     role_javascript_done: false
     role_python_done: false
     role_ruby_done: false
+    role_tex_done: false
     role_vagrant_done: false
     role_zsh_done: false
   roles:
     - basic
     - cc
+    - cask
     - chinese
     - clojure
     - docker
@@ -37,5 +40,6 @@
     - javascript
     - python
     - ruby
+    - tex
     - vagrant
     - zsh
