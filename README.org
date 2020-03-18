@@ -1,8 +1,5 @@
 #+TITLE: Oh My Laptop
 
-[[https://circleci.com/gh/xiaohanyu/oh-my-laptop][https://circleci.com/gh/xiaohanyu/oh-my-laptop.svg?style=shield&circle-token=8e3f2e95c4217e6db0c4ad3ccc2cb506479d65ec]]
-
-
 * Introduction
 
 Tired of spending a whole day configuring your Mac/Linux? Then you've come to

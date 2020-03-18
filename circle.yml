@@ -1,7 +1,0 @@
-machine:
-  ruby:
-    version:
-      2.4.0
-test:
-  override:
-    - bash -x ./.circleci/init-and-test-on-linux.sh
