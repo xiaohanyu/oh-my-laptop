@@ -53,16 +53,6 @@ most popular. It's quite easy to install:
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 #+end_src
 
-Then you also get [[http://caskroom.io/][homebrew cask]] via:
-
-#+begin_src sh
-brew tap caskroom/cask
-#+end_src
-
-Homebrew cask is really great if you want to install some huge binary packages
-such as Emacs, [[https://www.jetbrains.com/pycharm/][pycharm]], etc.
-
-
 ** Ansible
 
 The only thing oh-my-laptop depends is ansible, please do [[http://docs.ansible.com/intro_installation.html][install]] it before you
