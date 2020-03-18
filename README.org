@@ -125,6 +125,7 @@ curl -L https://raw.githubusercontent.com/xiaohanyu/oh-my-laptop/master/bootstra
 - [[file:./roles/git][git]]
   - [[http://git-scm.com/][git]]
   - [[https://github.com/tj/git-extras][git-extras]]
+  - [[https://git-lfs.github.com/][git-lfs]]
   - [[http://jonas.nitro.dk/tig/][tig]]
 - [[file:./roles/go][go]]
   - [[https://golang.org/][go]]
@@ -180,7 +181,7 @@ ansible-playbook -i localhost -K oh-my-laptop.yml
 
 * Quickstart
 
-[[https://github.com/xiaohanyu/oh-my-laptop/blob/master/roles/basic/README.org#tmux][tmux]] and [[https://github.com/xiaohanyu/oh-my-laptop/blob/master/roles/zsh/README.org][zsh]] is at the core of oh-my-laptop. Please read the docs carefully
+[[https://github.com/xiaohanyu/oh-my-laptop/blob/master/roles/basic/README.org#tmux][tmux]] and [[https://github.com/xiaohanyu/oh-my-laptop/blob/master/roles/zsh/README.org][zsh]] are at the core of oh-my-laptop. Please read the docs carefully
 before you start the journey. The key point here is, I've rebind tmux prefix key
 to ~ctrl-l~ since ~ctrl-b~ is not easy to type and is conflict with readline key
 bindings.
