@@ -21,7 +21,7 @@
       - wechat
       - whatsapp
       - wireshark
-      - zoomus
+      - zoom
     state: present
 
 - set_fact:
